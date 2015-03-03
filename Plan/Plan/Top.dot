@@ -1,0 +1,27 @@
+digraph x{
+	rankdir = HD;
+	edge [
+		fontname = "SimHei",
+		fontcolor = "#00AAAA",
+		fontsize = 12;
+		color = "#00AAAA"];
+	node [
+		fontname = "MSYaHei",
+		fontcolor = white,
+		fontsize = 14;
+		shape = box,
+		style = filled,
+		color = "#00AAAA"];
+	Start [label="图像采集\nFPGA"];
+	Judge [label="起始判定\nFPGA"];
+	Reco [label="棋盘轮廓识别\nFPGA"];
+	Loc [label="棋子定位\nFPGA"];
+	Pre [label="分支预测\nSoftware"];
+	Act [label="行为\nFPGA"];
+	Start -> {Judge Reco} [label = "RGB点阵"];
+	Judge -> Reco [label = "开始识别指令"];
+	Reco -> Loc [label = "识别完成，坐标系修正"];
+	Loc -> Pre [label = "棋子坐标"];
+	Pre -> Act [label = "预测完成，走棋"];
+	Act -> Start [label = "等待下一次"];
+}
