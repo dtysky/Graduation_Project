@@ -1,0 +1,23 @@
+digraph Loc{
+	fontname = "MSYaHei";
+	fontsize = 18;
+	label = "棋子定位";
+	rankdir = TB;
+	edge [
+		fontname = "SimHei",
+		fontcolor = "#00AAAA",
+		fontsize = 12;
+		color = "#00AAAA"];
+	node [
+		fontname = "MSYaHei",
+		fontcolor = white,
+		fontsize = 14;
+		shape = box,
+		style = filled,
+		color = "#00AAAA"];
+	Scan [label="逐块扫描"];
+	List [label="坐标抽象，列表生成"];
+	Out [label="列表输出"];
+	Scan -> List [label = "有棋子的块"];
+	List -> Out [label = "AXI"];
+}
