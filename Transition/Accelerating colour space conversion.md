@@ -143,69 +143,69 @@ cijk元素（输出图像的色彩空间构成）能够被下面的等式所计�
 ## 引用
 
 [1] B. Payette, Color space converter: R0G0B0 to Y0CrCb, Xilinx
-Aplication Note, XAPP637, V1.0, September, 2002.
+Aplication Note, XAPP637, V1.0, September, 2002.  
 [2] C. Poynton, A Technical Introduction to Digital Video, Wiley, New
-York, 1996.
+York, 1996.  
 [3] R.C. Gonzalez, R.E. Woods, Digital Image Processing, second ed.,
-Prentice-Hall, Englewood Cliffs, NJ, 2002.
+Prentice-Hall, Englewood Cliffs, NJ, 2002.  
 [4] Data sheet (www.amphion.com), Color Space Converters, Amphion
-semiconductor Ltd, DS6400 V1.1, April, 2002.
+semiconductor Ltd, DS6400 V1.1, April, 2002.  
 [5] Application Note (www.cast-inc.com), CSC Color Space Converter,
-CAST Inc., April, 2002.
+CAST Inc., April, 2002.  
 [6] Datasheet (www.alma-tech.com), High Performance Color Space
-Converter, ALMA Technologies, May 2002.
+Converter, ALMA Technologies, May 2002.  
 [7] M. Sima, S. Vassiliadis, S.D. Cotofana, J.T.J. van Eijndhoven, Color
 space conversion for MPEG decoding on FPGA-augmented TriMedia
 processor The 14th IEEE International Conference on Applicationspecific
 Systems, Architectures, and Processors (ASAP’03), Netherlands,
-June (2003) pp. 250–259.
+June (2003) pp. 250–259.  
 [8] F. Bensaali, A. Amira, Design and efficient FPGA implementation of
 an RGB to YCrCb color space converter using distributed arithmetic,
 Proceedings of the International Conference on Field Programmable
 Logic (FPL), Lecture Notes in Computer Science, to be published by
-Springer, August, 2004.
+Springer, August, 2004.  
 [9] A. Amira, A Custom Coprocessor for Matrix Algorithm, PhD thesis,
-Queen’s University of Belfast, 2001.
+Queen’s University of Belfast, 2001.  
 [10] F. Bensaali, A. Amira, I.S. Uzun, A. Ahmedsaid, An FPGA
 implementation of 3D affine transformations The 10th IEEE
 International Conference on Electronics, Circuits and Systems
-(ICECS’03), Sharjah, UAE, December (2003).
+(ICECS’03), Sharjah, UAE, December (2003).  
 [11] F. Bensaali, A. Amira, I.S. Uzun, A. Ahmedsaid, Efficient
 implementation of large parallel matrix product for DOTs The
 International Conference on Computer, Communication and Control
-Technologies (CCCT’03), Florida, USA, July (2003).
+Technologies (CCCT’03), Florida, USA, July (2003).  
 [12] Datasheet, (www.celoxica.com), RC1000 Reconfigurable hardware
-development platform, Celocixa Ltd, 2001.
-[13] URL:www.xilinx.com.
+development platform, Celocixa Ltd, 2001.  
+[13] URL:www.xilinx.com.  
 [14] A. Albiol, L. Torres, E.J. Delp, An unsupervised color image
 segmentation algorithm for face detection applications Proceedings of
 the International Conference on Image Processing, October vol. 2
-(2001) pp. 681–684.
+(2001) pp. 681–684.  
 [15] P. Kuchi, P. Gabbur, P.S. Bhat, S. David, Human face detection and
 tracking using skin color modelling and connected component
 operators, The IETE Journal of Research, Special issue on Visual
-Media Processing May (2002).
+Media Processing May (2002).  
 [16] M. Bartkowiak, Optimisations of color transformation for real time
 video decoding Digital Signal Processing for Multimedia Communications
 and Services, EURASIP ECMCS 2001, Budapest, September
-(2001).
+(2001).  
 [17] J.L. Mitchell, W.B. Pennebaker, MPEG Video Compression Standard,
-Chapman and Hall, London, 1996.
+Chapman and Hall, London, 1996.  
 [18] J. Bracamonte, P. Standelmann, M. Ansorge, F. Pellandini, A
 multiplierless implementation scheme for the JPEG image coding
 algorithm IEEE Nordic Signal Processing Symposium, Kolmarden,
-Sweden, June 13–15 (2000).
+Sweden, June 13–15 (2000).  
 [19] A. Amira, An FPGA based parameterisable system for discrete Hartley
 transforms implementation Proceedings of the International Conference
-on Image Processing (ICIP), Barcelona, Spain, September (2003).
+on Image Processing (ICIP), Barcelona, Spain, September (2003).  
 [20] H. Ohlsson, L. Wanhammer, Maximally fast numerically equivalent
 state-space recursive digital filters using distributed arithmetic
 Proceedings of the IEEE Symposium in Nordic Signal Processing
-(NORSIG2000), Kolmarden, Sweden, June (2000) pp. 295–298.
+(NORSIG2000), Kolmarden, Sweden, June (2000) pp. 295–298.  
 [21] O. Gustafsson, L. Wanhammar, Implementation of a digital
 beamformer in an FPGA using distributed arithmetic Proceedings of
 the IEEE Symposium in Nordic Signal Processing (NORSIG2000)
-Kolmarden, Sweden, June (2000) pp. 295–298.
-[22] Application Note, Xilinx CoreGen, Handel-C, AN 58 v1.0, 2001.
+Kolmarden, Sweden, June (2000) pp. 295–298.  
+[22] Application Note, Xilinx CoreGen, Handel-C, AN 58 v1.0, 2001.  
 [23] Manual, (www.celoxica.com) Handel-C Language Reference
-Manual, Celocixa Ltd, 2003.
+Manual, Celocixa Ltd, 2003.  
