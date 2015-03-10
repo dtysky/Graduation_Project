@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:synthFlowMode="None" bd:tool_version="2014.4" bd:top="BINARIZATION" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>BINARIZATION</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>CLK.XCLK</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>xclk</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters/>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>CLK.CLK_IN1</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>clk_in1</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>100000000</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="BINARIZATION_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>xclk</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>clk_in1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vga_red</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vga_green</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vga_blue</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vga_hsync</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vga_vsync</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>mode</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>1</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>pclk</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vsync</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>href</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>d</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>I2C_SCLK</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>I2C_SDAT</spirit:name>
+          <spirit:wire>
+            <spirit:direction>inout</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>BINARIZATION_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>bram_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="XUP" spirit:name="bram" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_bram_0_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>vga_readBRAM_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="vga_readBRAM" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_vga_readBRAM_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>clk_wiz_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="5.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_clk_wiz_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">25.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="USE_LOCKED">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="USE_RESET">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">320.187</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">246.739</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">130.958</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">98.575</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>Color16to24_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="XUP" spirit:name="Color16to24" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_Color16to24_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ColorGray2Rgb_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="XUP" spirit:name="ColorGray2Rgb" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_ColorGray2Rgb_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ColorBin2Rgb_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="XUP" spirit:name="ColorBin2Rgb" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_ColorBin2Rgb_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ColorRgbMux_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="XUP" spirit:name="ColorRgbMux" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_ColorRgbMux_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>RGB2GRAY_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="XUP" spirit:name="RGB2GRAY" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_RGB2GRAY_0_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>GRAY2BIN_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="XUP" spirit:name="GRAY2BIN" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_GRAY2BIN_0_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>camCap_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="XUP" spirit:name="camCap" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_camCap_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>IICctrl_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="XUP" spirit:name="IICctrl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_IICctrl_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ColorRgb2Vga_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="XUP" spirit:name="ColorRgb2Vga" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_ColorRgb2Vga_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>BinThCreat_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="BinThCreat" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BINARIZATION_BinThCreat_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="th">128</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>bram_0_doutb</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bram_0" spirit:portRef="doutb"/>
+        <spirit:internalPortReference spirit:componentRef="Color16to24_0" spirit:portRef="rgb16"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Color16to24_0_rgb24</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="Color16to24_0" spirit:portRef="rgb24"/>
+        <spirit:internalPortReference spirit:componentRef="ColorRgbMux_0" spirit:portRef="rgb_i0"/>
+        <spirit:internalPortReference spirit:componentRef="RGB2GRAY_0" spirit:portRef="rgb"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>RGB2GRAY_0_gray</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="RGB2GRAY_0" spirit:portRef="gray"/>
+        <spirit:internalPortReference spirit:componentRef="ColorGray2Rgb_0" spirit:portRef="gray"/>
+        <spirit:internalPortReference spirit:componentRef="GRAY2BIN_0" spirit:portRef="gray"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>GRAY2BIN_0_b</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="GRAY2BIN_0" spirit:portRef="b"/>
+        <spirit:internalPortReference spirit:componentRef="ColorBin2Rgb_0" spirit:portRef="b"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ColorRgb2Vga_0_vga</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ColorRgb2Vga_0" spirit:portRef="vga"/>
+        <spirit:internalPortReference spirit:componentRef="vga_readBRAM_0" spirit:portRef="vga_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_wiz_0_clk_out1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
+        <spirit:externalPortReference spirit:portRef="xclk"/>
+        <spirit:internalPortReference spirit:componentRef="bram_0" spirit:portRef="clkb"/>
+        <spirit:internalPortReference spirit:componentRef="vga_readBRAM_0" spirit:portRef="clk25"/>
+        <spirit:internalPortReference spirit:componentRef="IICctrl_0" spirit:portRef="iCLK"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vga_readBRAM_0_frame_addr</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vga_readBRAM_0" spirit:portRef="frame_addr"/>
+        <spirit:internalPortReference spirit:componentRef="bram_0" spirit:portRef="addrb"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_in1_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clk_in1"/>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_in1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vga_readBRAM_0_vga_red</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vga_readBRAM_0" spirit:portRef="vga_red"/>
+        <spirit:externalPortReference spirit:portRef="vga_red"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vga_readBRAM_0_vga_green</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vga_readBRAM_0" spirit:portRef="vga_green"/>
+        <spirit:externalPortReference spirit:portRef="vga_green"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vga_readBRAM_0_vga_blue</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vga_readBRAM_0" spirit:portRef="vga_blue"/>
+        <spirit:externalPortReference spirit:portRef="vga_blue"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vga_readBRAM_0_vga_hsync</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vga_readBRAM_0" spirit:portRef="vga_hsync"/>
+        <spirit:externalPortReference spirit:portRef="vga_hsync"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vga_readBRAM_0_vga_vsync</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vga_readBRAM_0" spirit:portRef="vga_vsync"/>
+        <spirit:externalPortReference spirit:portRef="vga_vsync"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ColorBin2Rgb_0_rgb24</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ColorBin2Rgb_0" spirit:portRef="rgb24"/>
+        <spirit:internalPortReference spirit:componentRef="ColorRgbMux_0" spirit:portRef="rgb_i2"/>
+        <spirit:internalPortReference spirit:componentRef="ColorRgbMux_0" spirit:portRef="rgb_i3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ColorGray2Rgb_0_rgb24</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ColorGray2Rgb_0" spirit:portRef="rgb24"/>
+        <spirit:internalPortReference spirit:componentRef="ColorRgbMux_0" spirit:portRef="rgb_i1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ColorRgbMux_0_rgb_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ColorRgbMux_0" spirit:portRef="rgb_o"/>
+        <spirit:internalPortReference spirit:componentRef="ColorRgb2Vga_0" spirit:portRef="rgb24"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>mode_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="mode"/>
+        <spirit:internalPortReference spirit:componentRef="ColorRgbMux_0" spirit:portRef="sel"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pclk_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="pclk"/>
+        <spirit:internalPortReference spirit:componentRef="camCap_0" spirit:portRef="pclk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vsync_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="vsync"/>
+        <spirit:internalPortReference spirit:componentRef="camCap_0" spirit:portRef="vsync"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>href_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="href"/>
+        <spirit:internalPortReference spirit:componentRef="camCap_0" spirit:portRef="href"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>d_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="d"/>
+        <spirit:internalPortReference spirit:componentRef="camCap_0" spirit:portRef="d"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>IICctrl_0_I2C_SCLK</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="IICctrl_0" spirit:portRef="I2C_SCLK"/>
+        <spirit:externalPortReference spirit:portRef="I2C_SCLK"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Net</spirit:name>
+        <spirit:externalPortReference spirit:portRef="I2C_SDAT"/>
+        <spirit:internalPortReference spirit:componentRef="IICctrl_0" spirit:portRef="I2C_SDAT"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>camCap_0_addr</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="camCap_0" spirit:portRef="addr"/>
+        <spirit:internalPortReference spirit:componentRef="bram_0" spirit:portRef="addra"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>camCap_0_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="camCap_0" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="bram_0" spirit:portRef="dina"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>camCap_0_we</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="camCap_0" spirit:portRef="we"/>
+        <spirit:internalPortReference spirit:componentRef="bram_0" spirit:portRef="wea"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>camCap_0_wclk</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="camCap_0" spirit:portRef="wclk"/>
+        <spirit:internalPortReference spirit:componentRef="bram_0" spirit:portRef="clka"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>BinThCreat_0_th_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="BinThCreat_0" spirit:portRef="th_o"/>
+        <spirit:internalPortReference spirit:componentRef="GRAY2BIN_0" spirit:portRef="th"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>
