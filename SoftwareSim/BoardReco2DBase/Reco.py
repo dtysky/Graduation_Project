@@ -6,17 +6,23 @@ from PIL import Image
 import os,re
 import Trans
 
-LeftTop = (30,21)
-RightBottom = (455,480)
+LeftTop = (137,50)
+RightBottom = (536,434)
 GridWidth = 13
-GridHeight = 14
-Width = 485
-Height = 496
-GridDia = 35
-GridRad = GridDia/2
+GridHeight = 13
+Width = 640
+Height = 480
+#12
+GridDia = ((RightBottom[0] - LeftTop[0]) >> 4) + ((RightBottom[0] - LeftTop[0]) >> 6) + ((RightBottom[0] - LeftTop[0]) >> 7)
+GridRad = GridDia >> 1
 
-th_black = 100
-th_white = 200
+print GridDia
+
+th_black = 60
+th_white = 130
+
+reco_th_black = 500
+reco_th_white = 500
 
 FileAll = []
 
@@ -50,6 +56,7 @@ def reco(im,color):
 					now_grid_col = 0
 					if one_grid_row == GridDia-1:
 						one_grid_row = 0
+						print now_row,now_col
 						if now_grid_row == GridHeight-1:
 							now_grid_row = 0
 						else:
@@ -76,7 +83,17 @@ def reco(im,color):
 	res = ''
 	for l in res_grids:
 		for p in l:
-			res += str(p)+' , '
+			# res += str(p) + ' , '
+			if color == 0:
+				if p >= reco_th_black:
+					res += '1 , '
+				else:
+					res += '0 , '
+			else:
+				if p >= reco_th_white:
+					res += '1 , '
+				else:
+					res += '0 , '
 		res = res[:-3]
 		res += '\n'
 	return res[:-1]
