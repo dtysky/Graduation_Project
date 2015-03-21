@@ -1,0 +1,32 @@
+digraph Matrix{
+	fontname = "MSYaHei";
+	fontsize = 18;
+	label = "网络像素矩阵生成";
+	rankdir = TB;
+	edge [
+		fontname = "SimHei",
+		fontcolor = "#00AAAA",
+		fontsize = 12;
+		color = "#00AAAA"];
+	node [
+		fontname = "MSYaHei",
+		fontcolor = white,
+		fontsize = 14;
+		shape = box,
+		style = filled,
+		color = "#00AAAA"];
+	Gary [label="灰度化"];
+	Bin [label="黑白子分别二值化"];
+	Matrix1 [label="黑子识别"];
+	Matrix2 [label="白子识别"];
+	Out1 [label="黑子结果输出"];
+	Out2 [label="白子结果输出"];
+	Upload [label="AXI提交"];
+	Gary -> Bin [label = "灰度图"];
+	Bin -> Matrix1 [label = "黑子二值图"];
+	Bin -> Matrix2 [label = "白子二值图"];
+	Matrix1 -> Out1 [label = "黑子网格表"];
+	Matrix2 -> Out2 [label = "白子网格表"];
+	Out1 -> Upload [label = "黑子结果"];
+	Out2 -> Upload [label = "白子结果"];
+}

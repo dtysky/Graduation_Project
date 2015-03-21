@@ -8,10 +8,10 @@ import Trans
 
 GridWidth = 13
 GridHeight = 13
-Width = 640
-Height = 480
+Width = 320
+Height = 240
 
-th_white = 155
+th_white = 100
 
 FileAll = []
 
