@@ -2,7 +2,9 @@ digraph Top{
 	fontname = "MSYaHei";
 	fontsize = 18;
 	label = "顶层";
-	rankdir = TB;
+	rankdir = LR;
+	rank = min;
+	size = "400,400";
 	edge [
 		fontname = "SimHei",
 		fontcolor = "#00AAAA",
@@ -15,7 +17,7 @@ digraph Top{
 		shape = box,
 		style = filled,
 		color = "#00AAAA"];
-	Start [label="初始化，图像采集\nFPGA"];
+	Start [label="初始化\nFPGA"];
 	Colt [label="图像采集\nFPGA"];
 	Judge [label="起始判定\nFPGA"];
 	Reco [label="棋盘轮廓识别\nFPGA"];
@@ -26,6 +28,6 @@ digraph Top{
 	Reco -> Loc [label = "坐标系确定"];
 	{Judge Colt} -> Loc [label = "识别指令"];
 	Loc -> Pre [label = "棋子坐标，AXI"];
-	Pre -> Act [label = "预测完成，走棋，AXI"];
+	Pre -> Act [label = "走棋，AXI"];
 	Act -> Judge [label = "一次完成"];
 }
