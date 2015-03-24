@@ -1,10 +1,9 @@
 digraph Top{
 	fontname = "MSYaHei";
 	fontsize = 18;
-	label = "顶层";
-	rankdir = LR;
+	#label = "顶层";
+	rankdir = TB;
 	rank = min;
-	size = "400,400";
 	edge [
 		fontname = "SimHei",
 		fontcolor = "#00AAAA",
