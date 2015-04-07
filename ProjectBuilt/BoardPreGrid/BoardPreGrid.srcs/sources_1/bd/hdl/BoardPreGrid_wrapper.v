@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
-//Date        : Wed Apr 08 00:29:49 2015
+//Date        : Wed Apr 08 02:08:53 2015
 //Host        : Dtysky running 64-bit major release  (build 9200)
 //Command     : generate_target BoardPreGrid_wrapper.bd
 //Design      : BoardPreGrid_wrapper

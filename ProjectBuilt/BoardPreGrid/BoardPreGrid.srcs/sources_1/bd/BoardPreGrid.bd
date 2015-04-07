@@ -89,12 +89,6 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>clk_in1</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>rst_n</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
@@ -142,6 +136,12 @@
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>clk_in1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -182,17 +182,10 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>Window_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="Window" spirit:vendor="dtysky" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Window_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>Frame_0</spirit:instanceName>
         <spirit:componentRef spirit:library="Image" spirit:name="Frame" spirit:vendor="dtysky" spirit:version="1.1"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Frame_0_2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Frame_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="mode">1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
@@ -214,13 +207,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>Window_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="Window" spirit:vendor="dtysky" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Window_1_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>Harris_0</spirit:instanceName>
         <spirit:componentRef spirit:library="Image" spirit:name="Harris" spirit:vendor="dtysky" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -231,7 +217,7 @@
         <spirit:instanceName>Bram8x320x240_0</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="Bram8x320x240" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Bram8x320x240_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Bram8x320x240_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -250,15 +236,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>Window_2</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="Window" spirit:vendor="dtysky" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Window_2_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="color_width">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>Frame_2</spirit:instanceName>
         <spirit:componentRef spirit:library="Image" spirit:name="Frame" spirit:vendor="dtysky" spirit:version="1.1"/>
         <spirit:configurableElementValues>
@@ -268,44 +245,11 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>ErosionDilationBin_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="ErosionDilationBin" spirit:vendor="dtysky" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_ErosionDilationBin_0_2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="pip_counter">3</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>MeanFitter_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="MeanFitter" spirit:vendor="dtysky" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_MeanFitter_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>Rows1x512_1</spirit:instanceName>
         <spirit:componentRef spirit:library="Image" spirit:name="Rows1x512" spirit:vendor="dtysky" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Rows1x512_1_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="rows_width">5</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>Window_3</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="Window" spirit:vendor="dtysky" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Window_3_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="color_width">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="window_size">5</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>ErosionDilationBin_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="ErosionDilationBin" spirit:vendor="dtysky" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_ErosionDilationBin_1_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -321,7 +265,7 @@
         <spirit:instanceName>Frame_4</spirit:instanceName>
         <spirit:componentRef spirit:library="Image" spirit:name="Frame" spirit:vendor="dtysky" spirit:version="1.1"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Frame_3_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Frame_4_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="color_width">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="row_init">2</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -348,50 +292,6 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Rows1x512_2_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="rows_width">3</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>Window_4</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="Window" spirit:vendor="dtysky" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Window_4_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="color_width">1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>ErosionDilationBin_2</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="ErosionDilationBin" spirit:vendor="dtysky" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_ErosionDilationBin_2_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="pip_counter">3</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>ErosionDilationBin_3</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="ErosionDilationBin" spirit:vendor="dtysky" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_ErosionDilationBin_2_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="pip_counter">3</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>ErosionDilationBin_4</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="ErosionDilationBin" spirit:vendor="dtysky" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_ErosionDilationBin_4_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="pip_counter">3</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>ErosionDilationBin_5</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="ErosionDilationBin" spirit:vendor="dtysky" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_ErosionDilationBin_5_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="pip_counter">3</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -456,7 +356,7 @@
         <spirit:instanceName>Mux2_1</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="Mux2" spirit:vendor="dtysky" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Mux2_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Mux2_1_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="data_width">1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
@@ -464,34 +364,8 @@
         <spirit:instanceName>Mux2_2</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="Mux2" spirit:vendor="dtysky" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Mux2_0_2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Mux2_2_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="data_width">17</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>DataDelay_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="Image" spirit:name="DataDelay" spirit:vendor="dtysky" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_DataDelay_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>clk_wiz_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="5.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_clk_wiz_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT3_USED">false</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">100</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">25</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="USE_RESET">false</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">130.958</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">98.575</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">175.402</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">98.575</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT3_JITTER">130.958</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT3_PHASE_ERROR">98.575</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -506,6 +380,128 @@
         <spirit:componentRef spirit:library="Image" spirit:name="BoardPreGridInit" spirit:vendor="dtysky" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_BoardPreGridInit_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>DataDelay_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="DataDelay" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_DataDelay_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ErosionDilationBin_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="ErosionDilationBin" spirit:vendor="dtysky" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_ErosionDilationBin_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="pip_counter">3</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ErosionDilationBin_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="ErosionDilationBin" spirit:vendor="dtysky" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_ErosionDilationBin_1_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="window_size">5</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ErosionDilationBin_2</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="ErosionDilationBin" spirit:vendor="dtysky" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_ErosionDilationBin_2_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="pip_counter">3</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ErosionDilationBin_3</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="ErosionDilationBin" spirit:vendor="dtysky" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_ErosionDilationBin_3_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="pip_counter">3</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ErosionDilationBin_4</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="ErosionDilationBin" spirit:vendor="dtysky" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_ErosionDilationBin_4_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="pip_counter">3</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ErosionDilationBin_5</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="ErosionDilationBin" spirit:vendor="dtysky" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_ErosionDilationBin_5_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="pip_counter">3</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>MeanFitter_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="MeanFitter" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_MeanFitter_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>Window_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="Window" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Window_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>Window_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="Window" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Window_1_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>Window_2</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="Window" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Window_2_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="color_width">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="window_size">3</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>Window_3</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="Window" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Window_3_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="color_width">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="window_size">5</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>Window_4</spirit:instanceName>
+        <spirit:componentRef spirit:library="Image" spirit:name="Window" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_Window_4_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="color_width">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>clk_wiz_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="5.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">BoardPreGrid_clk_wiz_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">25</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="USE_LOCKED">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="USE_RESET">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">175.402</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">98.575</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -738,20 +734,20 @@
       <spirit:adHocConnection>
         <spirit:name>Window_4_out_enable</spirit:name>
         <spirit:internalPortReference spirit:componentRef="Window_4" spirit:portRef="out_enable"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_3" spirit:portRef="in_enable"/>
         <spirit:internalPortReference spirit:componentRef="MatchTemplateBin_0" spirit:portRef="in_enable"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_2" spirit:portRef="in_enable"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_3" spirit:portRef="in_enable"/>
         <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_4" spirit:portRef="in_enable"/>
         <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_5" spirit:portRef="in_enable"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_2" spirit:portRef="in_enable"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>Window_4_out_data</spirit:name>
         <spirit:internalPortReference spirit:componentRef="Window_4" spirit:portRef="out_data"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_3" spirit:portRef="in_data"/>
         <spirit:internalPortReference spirit:componentRef="MatchTemplateBin_0" spirit:portRef="in_data"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_2" spirit:portRef="in_data"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_3" spirit:portRef="in_data"/>
         <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_4" spirit:portRef="in_data"/>
         <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_5" spirit:portRef="in_data"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_2" spirit:portRef="in_data"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>xlconstant_3_dout</spirit:name>
@@ -888,30 +884,31 @@
         <spirit:internalPortReference spirit:componentRef="Bram1x320x240_2" spirit:portRef="clka"/>
         <spirit:internalPortReference spirit:componentRef="Bram1x320x240_2" spirit:portRef="clkb"/>
         <spirit:internalPortReference spirit:componentRef="Bram8x320x240_0" spirit:portRef="clkb"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_1" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_2" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_3" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_4" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Frame_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Frame_1" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Frame_2" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Frame_3" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Frame_4" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Frame_5" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="MeanFitter_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Rows1x512_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Rows1x512_1" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Rows1x512_2" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Rows8x512_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Rows8x512_1" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="BoardPreGridInit_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="DataDelay_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_1" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_2" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_3" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_4" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_5" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="MeanFitter_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Window_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Window_1" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Window_2" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Window_3" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="Window_4" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_5" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="BoardPreGridInit_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_out2</spirit:name>
@@ -920,40 +917,35 @@
         <spirit:internalPortReference spirit:componentRef="IICctrl_0" spirit:portRef="iCLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>clk_wiz_0_locked</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="locked"/>
-        <spirit:internalPortReference spirit:componentRef="BoardPreGridInit_0" spirit:portRef="pll_locked"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>BoardPreGridInit_0_rst_all_n</spirit:name>
         <spirit:internalPortReference spirit:componentRef="BoardPreGridInit_0" spirit:portRef="rst_all_n"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_0" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_1" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_2" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_3" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_4" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_5" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="Frame_0" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="Frame_1" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="Frame_2" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="Frame_3" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="Frame_4" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="Frame_5" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="MeanFitter_0" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="Rows1x512_0" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="Rows1x512_1" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="Rows1x512_2" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="Rows8x512_0" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="Rows8x512_1" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="Window_0" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="Window_1" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="Window_3" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="Window_4" spirit:portRef="rst_n"/>
-        <spirit:internalPortReference spirit:componentRef="Window_2" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="Frame_2" spirit:portRef="in_enable"/>
         <spirit:internalPortReference spirit:componentRef="Frame_0" spirit:portRef="in_enable"/>
         <spirit:internalPortReference spirit:componentRef="Frame_5" spirit:portRef="in_enable"/>
         <spirit:internalPortReference spirit:componentRef="RGB2GRAY_0" spirit:portRef="in_enable"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_0" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_1" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_2" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_3" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_4" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="ErosionDilationBin_5" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="MeanFitter_0" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="Window_0" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="Window_1" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="Window_2" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="Window_3" spirit:portRef="rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="Window_4" spirit:portRef="rst_n"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>BoardPreGridInit_0_mode_dilation</spirit:name>
@@ -1023,8 +1015,8 @@
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>Net</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="IICctrl_0" spirit:portRef="I2C_SDAT"/>
         <spirit:externalPortReference spirit:portRef="I2C_SDAT"/>
+        <spirit:internalPortReference spirit:componentRef="IICctrl_0" spirit:portRef="I2C_SDAT"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>pclk_1</spirit:name>
@@ -1045,11 +1037,6 @@
         <spirit:name>d_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="d"/>
         <spirit:internalPortReference spirit:componentRef="camCap_0" spirit:portRef="d"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>clk_in1_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="clk_in1"/>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_in1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_n_1</spirit:name>
@@ -1080,6 +1067,16 @@
         <spirit:name>vga_readBRAM_0_vga_vsync</spirit:name>
         <spirit:internalPortReference spirit:componentRef="vga_readBRAM_0" spirit:portRef="vga_vsync"/>
         <spirit:externalPortReference spirit:portRef="vga_vsync"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_in1_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clk_in1"/>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_in1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_wiz_0_locked</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="locked"/>
+        <spirit:internalPortReference spirit:componentRef="BoardPreGridInit_0" spirit:portRef="pll_locked"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 08 00:29:49 2015" VIVADOVERSION="2014.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 08 02:08:52 2015" VIVADOVERSION="2014.4">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="BoardPreGrid_imp" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -16,7 +16,7 @@
         <CONNECTION INSTANCE="IICctrl_0" PORT="I2C_SCLK"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" NAME="I2C_SDAT" SIGIS="undef" SIGNAME="IICctrl_0_I2C_SDAT">
+    <PORT DIR="IO" NAME="I2C_SDAT" SIGIS="undef" SIGNAME="External_Ports_I2C_SDAT">
       <CONNECTIONS>
         <CONNECTION INSTANCE="IICctrl_0" PORT="I2C_SDAT"/>
       </CONNECTIONS>
@@ -39,11 +39,6 @@
     <PORT DIR="I" LEFT="7" NAME="d" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_d">
       <CONNECTIONS>
         <CONNECTION INSTANCE="camCap_0" PORT="d"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_clk_in1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="External_Ports_rst_n">
@@ -76,6 +71,11 @@
         <CONNECTION INSTANCE="vga_readBRAM_0" PORT="vga_vsync"/>
       </CONNECTIONS>
     </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_clk_in1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <MODULES>
@@ -104,33 +104,33 @@
         </PORT>
         <PORT DIR="O" NAME="rst_all_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="rst_n"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_1" PORT="rst_n"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="rst_n"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="rst_n"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="rst_n"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="rst_n"/>
             <CONNECTION INSTANCE="Frame_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="Frame_1" PORT="rst_n"/>
             <CONNECTION INSTANCE="Frame_2" PORT="rst_n"/>
             <CONNECTION INSTANCE="Frame_3" PORT="rst_n"/>
             <CONNECTION INSTANCE="Frame_4" PORT="rst_n"/>
             <CONNECTION INSTANCE="Frame_5" PORT="rst_n"/>
-            <CONNECTION INSTANCE="MeanFitter_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="Rows1x512_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="Rows1x512_1" PORT="rst_n"/>
             <CONNECTION INSTANCE="Rows1x512_2" PORT="rst_n"/>
             <CONNECTION INSTANCE="Rows8x512_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="Rows8x512_1" PORT="rst_n"/>
-            <CONNECTION INSTANCE="Window_0" PORT="rst_n"/>
-            <CONNECTION INSTANCE="Window_1" PORT="rst_n"/>
-            <CONNECTION INSTANCE="Window_3" PORT="rst_n"/>
-            <CONNECTION INSTANCE="Window_4" PORT="rst_n"/>
-            <CONNECTION INSTANCE="Window_2" PORT="rst_n"/>
             <CONNECTION INSTANCE="Frame_2" PORT="in_enable"/>
             <CONNECTION INSTANCE="Frame_0" PORT="in_enable"/>
             <CONNECTION INSTANCE="Frame_5" PORT="in_enable"/>
             <CONNECTION INSTANCE="RGB2GRAY_0" PORT="in_enable"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_1" PORT="rst_n"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="rst_n"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="rst_n"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="rst_n"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="rst_n"/>
+            <CONNECTION INSTANCE="MeanFitter_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Window_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Window_1" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Window_2" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Window_3" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Window_4" PORT="rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="mode_erosion" SIGIS="undef" SIGNAME="BoardPreGridInit_0_mode_erosion">
@@ -328,7 +328,7 @@
     <MODULE FULLNAME="/Bram8x320x240_0" HWVERSION="1.0" INSTANCE="Bram8x320x240_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Bram8x320x240" VLNV="xilinx.com:ip:Bram8x320x240:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Bram8x320x240_0_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Bram8x320x240_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -439,6 +439,11 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="7" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="MatchTemplateBin_0_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="MatchTemplateBin_0" PORT="out_data"/>
@@ -457,8 +462,7 @@
       <PARAMETERS>
         <PARAMETER NAME="window_size" VALUE="3"/>
         <PARAMETER NAME="pip_counter" VALUE="3"/>
-        <PARAMETER NAME="full_win_size" VALUE="25"/>
-        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_0_2"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -508,9 +512,8 @@
     <MODULE FULLNAME="/ErosionDilationBin_1" HWVERSION="1.1" INSTANCE="ErosionDilationBin_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ErosionDilationBin" VLNV="dtysky:Image:ErosionDilationBin:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="window_size" VALUE="5"/>
+        <PARAMETER NAME="window_size" VALUE="3"/>
         <PARAMETER NAME="pip_counter" VALUE="4"/>
-        <PARAMETER NAME="full_win_size" VALUE="25"/>
         <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -530,7 +533,7 @@
             <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="mode_erosion"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="24" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_erosion0">
+        <PORT DIR="I" LEFT="8" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_erosion0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="erosion0"/>
           </CONNECTIONS>
@@ -540,7 +543,7 @@
             <CONNECTION INSTANCE="Window_3" PORT="out_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="24" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_3_out_data">
+        <PORT DIR="I" LEFT="8" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_3_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Window_3" PORT="out_data"/>
           </CONNECTIONS>
@@ -563,7 +566,6 @@
       <PARAMETERS>
         <PARAMETER NAME="window_size" VALUE="3"/>
         <PARAMETER NAME="pip_counter" VALUE="3"/>
-        <PARAMETER NAME="full_win_size" VALUE="25"/>
         <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_2_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -616,8 +618,7 @@
       <PARAMETERS>
         <PARAMETER NAME="window_size" VALUE="3"/>
         <PARAMETER NAME="pip_counter" VALUE="3"/>
-        <PARAMETER NAME="full_win_size" VALUE="25"/>
-        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_2_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_3_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -665,7 +666,6 @@
       <PARAMETERS>
         <PARAMETER NAME="window_size" VALUE="3"/>
         <PARAMETER NAME="pip_counter" VALUE="3"/>
-        <PARAMETER NAME="full_win_size" VALUE="25"/>
         <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_4_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -714,7 +714,6 @@
       <PARAMETERS>
         <PARAMETER NAME="window_size" VALUE="3"/>
         <PARAMETER NAME="pip_counter" VALUE="3"/>
-        <PARAMETER NAME="full_win_size" VALUE="25"/>
         <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_5_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -768,7 +767,7 @@
         <PARAMETER NAME="addr_width" VALUE="17"/>
         <PARAMETER NAME="ram_read_latency" VALUE="1"/>
         <PARAMETER NAME="row_init" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Frame_0_2"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Frame_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -976,7 +975,7 @@
         <PARAMETER NAME="addr_width" VALUE="17"/>
         <PARAMETER NAME="ram_read_latency" VALUE="1"/>
         <PARAMETER NAME="row_init" VALUE="2"/>
-        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Frame_3_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Frame_4_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1126,7 +1125,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="I2C_SCLK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="IO" NAME="I2C_SDAT" SIGIS="undef" SIGNAME="IICctrl_0_I2C_SDAT">
+        <PORT DIR="IO" NAME="I2C_SDAT" SIGIS="undef" SIGNAME="External_Ports_I2C_SDAT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="I2C_SDAT"/>
           </CONNECTIONS>
@@ -1172,7 +1171,6 @@
         <PARAMETER NAME="color_width" VALUE="8"/>
         <PARAMETER NAME="window_size" VALUE="3"/>
         <PARAMETER NAME="sum_counter" VALUE="4"/>
-        <PARAMETER NAME="full_win_size" VALUE="25"/>
         <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_MeanFitter_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1246,7 +1244,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="data_width" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Mux2_0_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Mux2_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1278,7 +1276,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="data_width" VALUE="17"/>
-        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Mux2_0_2"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Mux2_2_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1607,7 +1605,6 @@
       <PARAMETERS>
         <PARAMETER NAME="color_width" VALUE="8"/>
         <PARAMETER NAME="window_size" VALUE="3"/>
-        <PARAMETER NAME="window_size_half" VALUE="1"/>
         <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Window_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1650,7 +1647,6 @@
       <PARAMETERS>
         <PARAMETER NAME="color_width" VALUE="8"/>
         <PARAMETER NAME="window_size" VALUE="3"/>
-        <PARAMETER NAME="window_size_half" VALUE="1"/>
         <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Window_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1693,7 +1689,6 @@
       <PARAMETERS>
         <PARAMETER NAME="color_width" VALUE="1"/>
         <PARAMETER NAME="window_size" VALUE="3"/>
-        <PARAMETER NAME="window_size_half" VALUE="1"/>
         <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Window_2_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1736,7 +1731,6 @@
       <PARAMETERS>
         <PARAMETER NAME="color_width" VALUE="1"/>
         <PARAMETER NAME="window_size" VALUE="5"/>
-        <PARAMETER NAME="window_size_half" VALUE="1"/>
         <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Window_3_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1779,7 +1773,6 @@
       <PARAMETERS>
         <PARAMETER NAME="color_width" VALUE="1"/>
         <PARAMETER NAME="window_size" VALUE="3"/>
-        <PARAMETER NAME="window_size_half" VALUE="1"/>
         <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Window_4_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1806,20 +1799,20 @@
         </PORT>
         <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Window_4_out_enable">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="in_enable"/>
             <CONNECTION INSTANCE="MatchTemplateBin_0" PORT="in_enable"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="in_enable"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="in_enable"/>
             <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="in_enable"/>
             <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="in_enable"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="in_enable"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="8" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_4_out_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="in_data"/>
             <CONNECTION INSTANCE="MatchTemplateBin_0" PORT="in_data"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="in_data"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="in_data"/>
             <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="in_data"/>
             <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="in_data"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="in_data"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1942,7 +1935,7 @@
         <PARAMETER NAME="C_OUTCLK_SUM_ROW5" VALUE="no_CLK_OUT5_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW6" VALUE="no_CLK_OUT6_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW7" VALUE="no_CLK_OUT7_output"/>
-        <PARAMETER NAME="C_CLKOUT1_REQUESTED_OUT_FREQ" VALUE="100"/>
+        <PARAMETER NAME="C_CLKOUT1_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT2_REQUESTED_OUT_FREQ" VALUE="25"/>
         <PARAMETER NAME="C_CLKOUT3_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT4_REQUESTED_OUT_FREQ" VALUE="100.000"/>
@@ -2172,7 +2165,7 @@
         <PARAMETER NAME="PSEN_PORT" VALUE="psen"/>
         <PARAMETER NAME="PSINCDEC_PORT" VALUE="psincdec"/>
         <PARAMETER NAME="PSDONE_PORT" VALUE="psdone"/>
-        <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="100"/>
+        <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="CLKOUT2_REQUESTED_OUT_FREQ" VALUE="25"/>
@@ -2328,8 +2321,8 @@
         <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="98.575"/>
         <PARAMETER NAME="CLKOUT2_JITTER" VALUE="175.402"/>
         <PARAMETER NAME="CLKOUT2_PHASE_ERROR" VALUE="98.575"/>
-        <PARAMETER NAME="CLKOUT3_JITTER" VALUE="130.958"/>
-        <PARAMETER NAME="CLKOUT3_PHASE_ERROR" VALUE="98.575"/>
+        <PARAMETER NAME="CLKOUT3_JITTER" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT3_PHASE_ERROR" VALUE="0.0"/>
         <PARAMETER NAME="CLKOUT4_JITTER" VALUE="0.0"/>
         <PARAMETER NAME="CLKOUT4_PHASE_ERROR" VALUE="0.0"/>
         <PARAMETER NAME="CLKOUT5_JITTER" VALUE="0.0"/>
@@ -2357,30 +2350,31 @@
             <CONNECTION INSTANCE="Bram1x320x240_2" PORT="clka"/>
             <CONNECTION INSTANCE="Bram1x320x240_2" PORT="clkb"/>
             <CONNECTION INSTANCE="Bram8x320x240_0" PORT="clkb"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="clk"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_1" PORT="clk"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="clk"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="clk"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="clk"/>
             <CONNECTION INSTANCE="Frame_0" PORT="clk"/>
             <CONNECTION INSTANCE="Frame_1" PORT="clk"/>
             <CONNECTION INSTANCE="Frame_2" PORT="clk"/>
             <CONNECTION INSTANCE="Frame_3" PORT="clk"/>
             <CONNECTION INSTANCE="Frame_4" PORT="clk"/>
             <CONNECTION INSTANCE="Frame_5" PORT="clk"/>
-            <CONNECTION INSTANCE="MeanFitter_0" PORT="clk"/>
             <CONNECTION INSTANCE="Rows1x512_0" PORT="clk"/>
             <CONNECTION INSTANCE="Rows1x512_1" PORT="clk"/>
             <CONNECTION INSTANCE="Rows1x512_2" PORT="clk"/>
             <CONNECTION INSTANCE="Rows8x512_0" PORT="clk"/>
             <CONNECTION INSTANCE="Rows8x512_1" PORT="clk"/>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="clk"/>
+            <CONNECTION INSTANCE="DataDelay_0" PORT="clk"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="clk"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_1" PORT="clk"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="clk"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="clk"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="clk"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="clk"/>
+            <CONNECTION INSTANCE="MeanFitter_0" PORT="clk"/>
             <CONNECTION INSTANCE="Window_0" PORT="clk"/>
             <CONNECTION INSTANCE="Window_1" PORT="clk"/>
             <CONNECTION INSTANCE="Window_2" PORT="clk"/>
             <CONNECTION INSTANCE="Window_3" PORT="clk"/>
             <CONNECTION INSTANCE="Window_4" PORT="clk"/>
-            <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="clk"/>
-            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="25000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out2">

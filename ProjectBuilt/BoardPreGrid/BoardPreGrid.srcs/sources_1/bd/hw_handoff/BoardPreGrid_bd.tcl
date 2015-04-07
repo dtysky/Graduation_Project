@@ -193,6 +193,7 @@ proc create_root_design { parentCell } {
 
   # Create instance: ErosionDilationBin_1, and set properties
   set ErosionDilationBin_1 [ create_bd_cell -type ip -vlnv dtysky:Image:ErosionDilationBin:1.1 ErosionDilationBin_1 ]
+  set_property -dict [ list CONFIG.window_size {5}  ] $ErosionDilationBin_1
 
   # Create instance: ErosionDilationBin_2, and set properties
   set ErosionDilationBin_2 [ create_bd_cell -type ip -vlnv dtysky:Image:ErosionDilationBin:1.1 ErosionDilationBin_2 ]
@@ -308,7 +309,7 @@ proc create_root_design { parentCell } {
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.1 clk_wiz_0 ]
-  set_property -dict [ list CONFIG.CLKOUT1_JITTER {130.958} CONFIG.CLKOUT1_PHASE_ERROR {98.575} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} CONFIG.CLKOUT2_JITTER {175.402} CONFIG.CLKOUT2_PHASE_ERROR {98.575} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {25} CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT3_JITTER {130.958} CONFIG.CLKOUT3_PHASE_ERROR {98.575} CONFIG.CLKOUT3_USED {false} CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {10.000} CONFIG.MMCM_CLKOUT1_DIVIDE {40} CONFIG.MMCM_CLKOUT2_DIVIDE {1} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.NUM_OUT_CLKS {2} CONFIG.USE_RESET {false}  ] $clk_wiz_0
+  set_property -dict [ list CONFIG.CLKOUT2_JITTER {175.402} CONFIG.CLKOUT2_PHASE_ERROR {98.575} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {25} CONFIG.CLKOUT2_USED {true} CONFIG.NUM_OUT_CLKS {2} CONFIG.USE_LOCKED {true} CONFIG.USE_RESET {false}  ] $clk_wiz_0
 
   # Create instance: vga_readBRAM_0, and set properties
   set vga_readBRAM_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:vga_readBRAM:1.0 vga_readBRAM_0 ]
@@ -401,7 +402,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net camCap_0_wclk [get_bd_pins Bram8x320x240_0/clka] [get_bd_pins camCap_0/wclk]
   connect_bd_net -net camCap_0_we [get_bd_pins Bram8x320x240_0/wea] [get_bd_pins camCap_0/we]
   connect_bd_net -net clk_in1_1 [get_bd_ports clk_in1] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins BoardPreGridInit_0/clk] [get_bd_pins Bram1x320x240_0/clka] [get_bd_pins Bram1x320x240_0/clkb] [get_bd_pins Bram1x320x240_1/clka] [get_bd_pins Bram1x320x240_1/clkb] [get_bd_pins Bram1x320x240_2/clka] [get_bd_pins Bram1x320x240_2/clkb] [get_bd_pins Bram8x320x240_0/clkb] [get_bd_pins ErosionDilationBin_0/clk] [get_bd_pins ErosionDilationBin_1/clk] [get_bd_pins ErosionDilationBin_2/clk] [get_bd_pins ErosionDilationBin_3/clk] [get_bd_pins ErosionDilationBin_4/clk] [get_bd_pins ErosionDilationBin_5/clk] [get_bd_pins Frame_0/clk] [get_bd_pins Frame_1/clk] [get_bd_pins Frame_2/clk] [get_bd_pins Frame_3/clk] [get_bd_pins Frame_4/clk] [get_bd_pins Frame_5/clk] [get_bd_pins MeanFitter_0/clk] [get_bd_pins Rows1x512_0/clk] [get_bd_pins Rows1x512_1/clk] [get_bd_pins Rows1x512_2/clk] [get_bd_pins Rows8x512_0/clk] [get_bd_pins Rows8x512_1/clk] [get_bd_pins Window_0/clk] [get_bd_pins Window_1/clk] [get_bd_pins Window_2/clk] [get_bd_pins Window_3/clk] [get_bd_pins Window_4/clk] [get_bd_pins clk_wiz_0/clk_out1]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins BoardPreGridInit_0/clk] [get_bd_pins Bram1x320x240_0/clka] [get_bd_pins Bram1x320x240_0/clkb] [get_bd_pins Bram1x320x240_1/clka] [get_bd_pins Bram1x320x240_1/clkb] [get_bd_pins Bram1x320x240_2/clka] [get_bd_pins Bram1x320x240_2/clkb] [get_bd_pins Bram8x320x240_0/clkb] [get_bd_pins DataDelay_0/clk] [get_bd_pins ErosionDilationBin_0/clk] [get_bd_pins ErosionDilationBin_1/clk] [get_bd_pins ErosionDilationBin_2/clk] [get_bd_pins ErosionDilationBin_3/clk] [get_bd_pins ErosionDilationBin_4/clk] [get_bd_pins ErosionDilationBin_5/clk] [get_bd_pins Frame_0/clk] [get_bd_pins Frame_1/clk] [get_bd_pins Frame_2/clk] [get_bd_pins Frame_3/clk] [get_bd_pins Frame_4/clk] [get_bd_pins Frame_5/clk] [get_bd_pins MeanFitter_0/clk] [get_bd_pins Rows1x512_0/clk] [get_bd_pins Rows1x512_1/clk] [get_bd_pins Rows1x512_2/clk] [get_bd_pins Rows8x512_0/clk] [get_bd_pins Rows8x512_1/clk] [get_bd_pins Window_0/clk] [get_bd_pins Window_1/clk] [get_bd_pins Window_2/clk] [get_bd_pins Window_3/clk] [get_bd_pins Window_4/clk] [get_bd_pins clk_wiz_0/clk_out1]
   connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins IICctrl_0/iCLK] [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins vga_readBRAM_0/clk25]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins BoardPreGridInit_0/pll_locked] [get_bd_pins clk_wiz_0/locked]
   connect_bd_net -net d_1 [get_bd_ports d] [get_bd_pins camCap_0/d]

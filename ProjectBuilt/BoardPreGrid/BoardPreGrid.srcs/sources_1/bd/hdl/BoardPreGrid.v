@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
-//Date        : Wed Apr 08 00:29:49 2015
+//Date        : Wed Apr 08 02:08:53 2015
 //Host        : Dtysky running 64-bit major release  (build 9200)
 //Command     : generate_target BoardPreGrid.bd
 //Design      : BoardPreGrid
@@ -191,7 +191,7 @@ BoardPreGrid_Bram1x320x240_2_0 Bram1x320x240_2
         .dina(Mux2_1_o),
         .doutb(Bram1x320x240_2_doutb),
         .wea(Mux2_0_o));
-BoardPreGrid_Bram8x320x240_0_1 Bram8x320x240_0
+BoardPreGrid_Bram8x320x240_0_0 Bram8x320x240_0
        (.addra(camCap_0_addr),
         .addrb(Frame_0_ram_addr),
         .clka(camCap_0_wclk),
@@ -209,9 +209,10 @@ BoardPreGrid_ColorRgb2Vga_0_0 ColorRgb2Vga_0
        (.rgb24(ColorBin2Rgb_0_rgb24),
         .vga(ColorRgb2Vga_0_vga));
 BoardPreGrid_DataDelay_0_0 DataDelay_0
-       (.in_data({MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data}),
+       (.clk(clk_wiz_0_clk_out1),
+        .in_data({MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data,MatchTemplateBin_0_out_data}),
         .out_data(DataDelay_0_out_data));
-BoardPreGrid_ErosionDilationBin_0_2 ErosionDilationBin_0
+BoardPreGrid_ErosionDilationBin_0_0 ErosionDilationBin_0
        (.clk(clk_wiz_0_clk_out1),
         .in_data(Window_2_out_data),
         .in_enable(Window_2_out_enable),
@@ -222,13 +223,13 @@ BoardPreGrid_ErosionDilationBin_0_2 ErosionDilationBin_0
         .template(BoardPreGridInit_0_dilation0));
 BoardPreGrid_ErosionDilationBin_1_0 ErosionDilationBin_1
        (.clk(clk_wiz_0_clk_out1),
-        .in_data(Window_3_out_data),
+        .in_data(Window_3_out_data[8:0]),
         .in_enable(Window_3_out_enable),
         .mode(BoardPreGridInit_0_mode_erosion),
         .out_data(ErosionDilationBin_1_out_data),
         .out_enable(ErosionDilationBin_1_out_enable),
         .rst_n(BoardPreGridInit_0_rst_all_n),
-        .template(BoardPreGridInit_0_erosion0));
+        .template(BoardPreGridInit_0_erosion0[8:0]));
 BoardPreGrid_ErosionDilationBin_2_0 ErosionDilationBin_2
        (.clk(clk_wiz_0_clk_out1),
         .in_data(Window_4_out_data),
@@ -238,7 +239,7 @@ BoardPreGrid_ErosionDilationBin_2_0 ErosionDilationBin_2
         .out_enable(ErosionDilationBin_2_out_enable),
         .rst_n(BoardPreGridInit_0_rst_all_n),
         .template(BoardPreGridInit_0_erosion1));
-BoardPreGrid_ErosionDilationBin_2_1 ErosionDilationBin_3
+BoardPreGrid_ErosionDilationBin_3_0 ErosionDilationBin_3
        (.clk(clk_wiz_0_clk_out1),
         .in_data(Window_4_out_data),
         .in_enable(Window_4_out_enable),
@@ -262,7 +263,7 @@ BoardPreGrid_ErosionDilationBin_5_0 ErosionDilationBin_5
         .out_data(ErosionDilationBin_5_out_data),
         .rst_n(BoardPreGridInit_0_rst_all_n),
         .template(BoardPreGridInit_0_erosion4));
-BoardPreGrid_Frame_0_2 Frame_0
+BoardPreGrid_Frame_0_0 Frame_0
        (.clk(clk_wiz_0_clk_out1),
         .in_data(Bram8x320x240_0_doutb),
         .in_enable(BoardPreGridInit_0_rst_all_n),
@@ -294,7 +295,7 @@ BoardPreGrid_Frame_3_0 Frame_3
         .out_enable(Frame_3_out_enable),
         .ram_addr(Frame_3_ram_addr),
         .rst_n(BoardPreGridInit_0_rst_all_n));
-BoardPreGrid_Frame_3_1 Frame_4
+BoardPreGrid_Frame_4_0 Frame_4
        (.clk(clk_wiz_0_clk_out1),
         .in_data(ErosionDilationBin_1_out_data),
         .in_enable(ErosionDilationBin_1_out_enable),
@@ -337,12 +338,12 @@ BoardPreGrid_Mux2_0_0 Mux2_0
         .i1(Frame_3_out_enable),
         .o(Mux2_0_o),
         .sel(sel_1));
-BoardPreGrid_Mux2_0_1 Mux2_1
+BoardPreGrid_Mux2_1_0 Mux2_1
        (.i0(Frame_4_out_data),
         .i1(Frame_3_out_data),
         .o(Mux2_1_o),
         .sel(sel_1));
-BoardPreGrid_Mux2_0_2 Mux2_2
+BoardPreGrid_Mux2_2_0 Mux2_2
        (.i0(Frame_4_ram_addr),
         .i1(Frame_3_ram_addr),
         .o(Mux2_2_o),
