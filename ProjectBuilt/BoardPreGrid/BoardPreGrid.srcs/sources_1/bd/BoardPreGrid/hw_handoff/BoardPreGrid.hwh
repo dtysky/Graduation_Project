@@ -1,0 +1,2485 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 08 00:29:49 2015" VIVADOVERSION="2014.4">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="BoardPreGrid_imp" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_sel">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Mux2_0" PORT="sel"/>
+        <CONNECTION INSTANCE="Mux2_1" PORT="sel"/>
+        <CONNECTION INSTANCE="Mux2_2" PORT="sel"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="I2C_SCLK" SIGIS="undef" SIGNAME="IICctrl_0_I2C_SCLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="IICctrl_0" PORT="I2C_SCLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="I2C_SDAT" SIGIS="undef" SIGNAME="IICctrl_0_I2C_SDAT">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="IICctrl_0" PORT="I2C_SDAT"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pclk" SIGIS="undef" SIGNAME="External_Ports_pclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="camCap_0" PORT="pclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="vsync" SIGIS="undef" SIGNAME="External_Ports_vsync">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="camCap_0" PORT="vsync"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="href" SIGIS="undef" SIGNAME="External_Ports_href">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="camCap_0" PORT="href"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="d" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_d">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="camCap_0" PORT="d"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_clk_in1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="External_Ports_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="vga_red" RIGHT="0" SIGIS="undef" SIGNAME="vga_readBRAM_0_vga_red">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="vga_readBRAM_0" PORT="vga_red"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="vga_green" RIGHT="0" SIGIS="undef" SIGNAME="vga_readBRAM_0_vga_green">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="vga_readBRAM_0" PORT="vga_green"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="vga_blue" RIGHT="0" SIGIS="undef" SIGNAME="vga_readBRAM_0_vga_blue">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="vga_readBRAM_0" PORT="vga_blue"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vga_hsync" SIGIS="undef" SIGNAME="vga_readBRAM_0_vga_hsync">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="vga_readBRAM_0" PORT="vga_hsync"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vga_vsync" SIGIS="undef" SIGNAME="vga_readBRAM_0_vga_vsync">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="vga_readBRAM_0" PORT="vga_vsync"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <MODULES>
+    <MODULE FULLNAME="/BoardPreGridInit_0" HWVERSION="1.0" INSTANCE="BoardPreGridInit_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BoardPreGridInit" VLNV="dtysky:Image:BoardPreGridInit:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="init_delay" VALUE="2000"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_BoardPreGridInit_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="External_Ports_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pll_locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="locked"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rst_all_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_1" PORT="rst_n"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="rst_n"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="rst_n"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="rst_n"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Frame_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Frame_1" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Frame_2" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Frame_3" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Frame_4" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Frame_5" PORT="rst_n"/>
+            <CONNECTION INSTANCE="MeanFitter_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Rows1x512_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Rows1x512_1" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Rows1x512_2" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Rows8x512_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Rows8x512_1" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Window_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Window_1" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Window_3" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Window_4" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Window_2" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Frame_2" PORT="in_enable"/>
+            <CONNECTION INSTANCE="Frame_0" PORT="in_enable"/>
+            <CONNECTION INSTANCE="Frame_5" PORT="in_enable"/>
+            <CONNECTION INSTANCE="RGB2GRAY_0" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="mode_erosion" SIGIS="undef" SIGNAME="BoardPreGridInit_0_mode_erosion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_1" PORT="mode"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="mode"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="mode"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="mode"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="mode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="mode_dilation" SIGIS="undef" SIGNAME="BoardPreGridInit_0_mode_dilation">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="mode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="dilation0" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_dilation0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="template"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="24" NAME="erosion0" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_erosion0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_1" PORT="template"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="erosion1" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_erosion1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="template"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="erosion2" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_erosion2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="template"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="erosion3" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_erosion3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="template"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="erosion4" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_erosion4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="template"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="match0" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_match0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MatchTemplateBin_0" PORT="template"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="harris_th" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_harris_th">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Harris_0" PORT="diff_th"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Bram1x320x240_0" HWVERSION="1.0" INSTANCE="Bram1x320x240_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Bram1x320x240" VLNV="xilinx.com:ip:Bram1x320x240:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Bram1x320x240_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="dina" SIGIS="undef" SIGNAME="Frame_1_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_1" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="16" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="Frame_1_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_1" PORT="ram_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clka" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="wea" SIGIS="undef" SIGNAME="Frame_1_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_1" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clkb" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="doutb" SIGIS="undef" SIGNAME="Bram1x320x240_0_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_2" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="16" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="Frame_2_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_2" PORT="ram_addr"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Bram1x320x240_1" HWVERSION="1.0" INSTANCE="Bram1x320x240_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Bram1x320x240" VLNV="xilinx.com:ip:Bram1x320x240:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Bram1x320x240_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="dina" SIGIS="undef" SIGNAME="Mux2_1_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_1" PORT="o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="16" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_2_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_2" PORT="o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clka" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="wea" SIGIS="undef" SIGNAME="Mux2_0_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_0" PORT="o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clkb" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="doutb" SIGIS="undef" SIGNAME="Bram1x320x240_1_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_5" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="16" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="Frame_5_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_5" PORT="ram_addr"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Bram1x320x240_2" HWVERSION="1.0" INSTANCE="Bram1x320x240_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Bram1x320x240" VLNV="xilinx.com:ip:Bram1x320x240:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Bram1x320x240_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="dina" SIGIS="undef" SIGNAME="Mux2_1_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_1" PORT="o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="16" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_2_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_2" PORT="o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clka" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="wea" SIGIS="undef" SIGNAME="Mux2_0_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_0" PORT="o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clkb" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="doutb" SIGIS="undef" SIGNAME="Bram1x320x240_2_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ColorBin2Rgb_0" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="16" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="vga_readBRAM_0_frame_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vga_readBRAM_0" PORT="frame_addr"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Bram8x320x240_0" HWVERSION="1.0" INSTANCE="Bram8x320x240_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Bram8x320x240" VLNV="xilinx.com:ip:Bram8x320x240:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Bram8x320x240_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="RGB2GRAY_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RGB2GRAY_0" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="16" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="camCap_0_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="camCap_0" PORT="addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clka" SIGIS="undef" SIGNAME="camCap_0_wclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="camCap_0" PORT="wclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="wea" SIGIS="undef" SIGNAME="camCap_0_we">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="camCap_0" PORT="we"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clkb" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="Bram8x320x240_0_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_0" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="16" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="Frame_0_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_0" PORT="ram_addr"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Color16to24_0" HWVERSION="1.0" INSTANCE="Color16to24_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Color16to24" VLNV="dtysky:Image:Color16to24:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Color16to24_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="rgb16" RIGHT="0" SIGIS="undef" SIGNAME="camCap_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="camCap_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="rgb24" RIGHT="0" SIGIS="undef" SIGNAME="Color16to24_0_rgb24">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RGB2GRAY_0" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ColorBin2Rgb_0" HWVERSION="1.0" INSTANCE="ColorBin2Rgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ColorBin2Rgb" VLNV="dtysky:Image:ColorBin2Rgb:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ColorBin2Rgb_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="Bram1x320x240_2_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_2" PORT="doutb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="rgb24" RIGHT="0" SIGIS="undef" SIGNAME="ColorBin2Rgb_0_rgb24">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ColorRgb2Vga_0" PORT="rgb24"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ColorRgb2Vga_0" HWVERSION="1.0" INSTANCE="ColorRgb2Vga_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ColorRgb2Vga" VLNV="dtysky:Image:ColorRgb2Vga:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ColorRgb2Vga_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="23" NAME="rgb24" RIGHT="0" SIGIS="undef" SIGNAME="ColorBin2Rgb_0_rgb24">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ColorBin2Rgb_0" PORT="rgb24"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="vga" RIGHT="0" SIGIS="undef" SIGNAME="ColorRgb2Vga_0_vga">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vga_readBRAM_0" PORT="vga_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/DataDelay_0" HWVERSION="1.0" INSTANCE="DataDelay_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DataDelay" VLNV="dtysky:Image:DataDelay:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="data_width" VALUE="8"/>
+        <PARAMETER NAME="delay" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_DataDelay_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="MatchTemplateBin_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MatchTemplateBin_0" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="DataDelay_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Or8_0" PORT="i2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ErosionDilationBin_0" HWVERSION="1.1" INSTANCE="ErosionDilationBin_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ErosionDilationBin" VLNV="dtysky:Image:ErosionDilationBin:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="pip_counter" VALUE="3"/>
+        <PARAMETER NAME="full_win_size" VALUE="25"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mode" SIGIS="undef" SIGNAME="BoardPreGridInit_0_mode_dilation">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="mode_dilation"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_dilation0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="dilation0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Window_2_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_2" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_2_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_2" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="ErosionDilationBin_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows1x512_1" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_data" SIGIS="undef" SIGNAME="ErosionDilationBin_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows1x512_1" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ErosionDilationBin_1" HWVERSION="1.1" INSTANCE="ErosionDilationBin_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ErosionDilationBin" VLNV="dtysky:Image:ErosionDilationBin:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="window_size" VALUE="5"/>
+        <PARAMETER NAME="pip_counter" VALUE="4"/>
+        <PARAMETER NAME="full_win_size" VALUE="25"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mode" SIGIS="undef" SIGNAME="BoardPreGridInit_0_mode_erosion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="mode_erosion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="24" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_erosion0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="erosion0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Window_3_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_3" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="24" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_3_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_3" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="ErosionDilationBin_1_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_4" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_data" SIGIS="undef" SIGNAME="ErosionDilationBin_1_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_4" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ErosionDilationBin_2" HWVERSION="1.1" INSTANCE="ErosionDilationBin_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ErosionDilationBin" VLNV="dtysky:Image:ErosionDilationBin:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="pip_counter" VALUE="3"/>
+        <PARAMETER NAME="full_win_size" VALUE="25"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mode" SIGIS="undef" SIGNAME="BoardPreGridInit_0_mode_erosion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="mode_erosion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_erosion1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="erosion1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Window_4_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_4" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_4_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_4" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="ErosionDilationBin_2_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_3" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_data" SIGIS="undef" SIGNAME="ErosionDilationBin_2_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Or8_0" PORT="i0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ErosionDilationBin_3" HWVERSION="1.1" INSTANCE="ErosionDilationBin_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ErosionDilationBin" VLNV="dtysky:Image:ErosionDilationBin:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="pip_counter" VALUE="3"/>
+        <PARAMETER NAME="full_win_size" VALUE="25"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_2_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mode" SIGIS="undef" SIGNAME="BoardPreGridInit_0_mode_erosion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="mode_erosion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_erosion2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="erosion2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Window_4_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_4" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_4_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_4" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="out_data" SIGIS="undef" SIGNAME="ErosionDilationBin_3_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Or8_0" PORT="i1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ErosionDilationBin_4" HWVERSION="1.1" INSTANCE="ErosionDilationBin_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ErosionDilationBin" VLNV="dtysky:Image:ErosionDilationBin:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="pip_counter" VALUE="3"/>
+        <PARAMETER NAME="full_win_size" VALUE="25"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_4_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mode" SIGIS="undef" SIGNAME="BoardPreGridInit_0_mode_erosion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="mode_erosion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_erosion3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="erosion3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Window_4_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_4" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_4_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_4" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="out_data" SIGIS="undef" SIGNAME="ErosionDilationBin_4_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Or8_0" PORT="i3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ErosionDilationBin_5" HWVERSION="1.1" INSTANCE="ErosionDilationBin_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ErosionDilationBin" VLNV="dtysky:Image:ErosionDilationBin:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="pip_counter" VALUE="3"/>
+        <PARAMETER NAME="full_win_size" VALUE="25"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_ErosionDilationBin_5_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mode" SIGIS="undef" SIGNAME="BoardPreGridInit_0_mode_erosion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="mode_erosion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_erosion4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="erosion4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Window_4_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_4" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_4_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_4" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="out_data" SIGIS="undef" SIGNAME="ErosionDilationBin_5_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Or8_0" PORT="i4"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Frame_0" HWVERSION="1.1" INSTANCE="Frame_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Frame" VLNV="dtysky:Image:Frame:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="mode" VALUE="1"/>
+        <PARAMETER NAME="color_width" VALUE="8"/>
+        <PARAMETER NAME="im_width" VALUE="320"/>
+        <PARAMETER NAME="im_height" VALUE="240"/>
+        <PARAMETER NAME="addr_width" VALUE="17"/>
+        <PARAMETER NAME="ram_read_latency" VALUE="1"/>
+        <PARAMETER NAME="row_init" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Frame_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Bram8x320x240_0_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram8x320x240_0" PORT="doutb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Frame_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows8x512_0" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows8x512_0" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="16" NAME="ram_addr" RIGHT="0" SIGIS="undef" SIGNAME="Frame_0_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram8x320x240_0" PORT="addrb"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Frame_1" HWVERSION="1.1" INSTANCE="Frame_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Frame" VLNV="dtysky:Image:Frame:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="mode" VALUE="0"/>
+        <PARAMETER NAME="color_width" VALUE="1"/>
+        <PARAMETER NAME="im_width" VALUE="320"/>
+        <PARAMETER NAME="im_height" VALUE="240"/>
+        <PARAMETER NAME="addr_width" VALUE="17"/>
+        <PARAMETER NAME="ram_read_latency" VALUE="1"/>
+        <PARAMETER NAME="row_init" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Frame_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Harris_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Harris_0" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Harris_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Harris_0" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Frame_1_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_0" PORT="wea"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_1_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_0" PORT="dina"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="16" NAME="ram_addr" RIGHT="0" SIGIS="undef" SIGNAME="Frame_1_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_0" PORT="addra"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Frame_2" HWVERSION="1.1" INSTANCE="Frame_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Frame" VLNV="dtysky:Image:Frame:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="mode" VALUE="1"/>
+        <PARAMETER NAME="color_width" VALUE="1"/>
+        <PARAMETER NAME="im_width" VALUE="320"/>
+        <PARAMETER NAME="im_height" VALUE="240"/>
+        <PARAMETER NAME="addr_width" VALUE="17"/>
+        <PARAMETER NAME="ram_read_latency" VALUE="1"/>
+        <PARAMETER NAME="row_init" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Frame_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Bram1x320x240_0_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_0" PORT="doutb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Frame_2_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows1x512_0" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_2_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows1x512_0" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="16" NAME="ram_addr" RIGHT="0" SIGIS="undef" SIGNAME="Frame_2_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_0" PORT="addrb"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Frame_3" HWVERSION="1.1" INSTANCE="Frame_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Frame" VLNV="dtysky:Image:Frame:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="mode" VALUE="0"/>
+        <PARAMETER NAME="color_width" VALUE="1"/>
+        <PARAMETER NAME="im_width" VALUE="320"/>
+        <PARAMETER NAME="im_height" VALUE="240"/>
+        <PARAMETER NAME="addr_width" VALUE="17"/>
+        <PARAMETER NAME="ram_read_latency" VALUE="1"/>
+        <PARAMETER NAME="row_init" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Frame_3_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="ErosionDilationBin_2_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Or8_0_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Or8_0" PORT="o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Frame_3_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_0" PORT="i1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_3_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_1" PORT="i1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="16" NAME="ram_addr" RIGHT="0" SIGIS="undef" SIGNAME="Frame_3_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_2" PORT="i1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Frame_4" HWVERSION="1.1" INSTANCE="Frame_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Frame" VLNV="dtysky:Image:Frame:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="mode" VALUE="0"/>
+        <PARAMETER NAME="color_width" VALUE="1"/>
+        <PARAMETER NAME="im_width" VALUE="320"/>
+        <PARAMETER NAME="im_height" VALUE="240"/>
+        <PARAMETER NAME="addr_width" VALUE="17"/>
+        <PARAMETER NAME="ram_read_latency" VALUE="1"/>
+        <PARAMETER NAME="row_init" VALUE="2"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Frame_3_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="ErosionDilationBin_1_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_1" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="ErosionDilationBin_1_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_1" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Frame_4_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_0" PORT="i0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_4_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_1" PORT="i0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="16" NAME="ram_addr" RIGHT="0" SIGIS="undef" SIGNAME="Frame_4_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_2" PORT="i0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Frame_5" HWVERSION="1.1" INSTANCE="Frame_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Frame" VLNV="dtysky:Image:Frame:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="mode" VALUE="1"/>
+        <PARAMETER NAME="color_width" VALUE="1"/>
+        <PARAMETER NAME="im_width" VALUE="320"/>
+        <PARAMETER NAME="im_height" VALUE="240"/>
+        <PARAMETER NAME="addr_width" VALUE="17"/>
+        <PARAMETER NAME="ram_read_latency" VALUE="1"/>
+        <PARAMETER NAME="row_init" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Frame_5_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Bram1x320x240_1_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_1" PORT="doutb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Frame_5_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows1x512_2" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_5_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows1x512_2" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="16" NAME="ram_addr" RIGHT="0" SIGIS="undef" SIGNAME="Frame_5_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_1" PORT="addrb"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Harris_0" HWVERSION="1.0" INSTANCE="Harris_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Harris" VLNV="dtysky:Image:Harris:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="color_width" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Harris_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="diff_th" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_harris_th">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="harris_th"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Window_1_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_1" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="71" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_1_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_1" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Harris_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_1" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_data" SIGIS="undef" SIGNAME="Harris_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_1" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/IICctrl_0" HWVERSION="1.0" INSTANCE="IICctrl_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="IICctrl" VLNV="xilinx.com:XUP:IICctrl:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="LUT_SIZE" VALUE="170"/>
+        <PARAMETER NAME="CLK_Freq" VALUE="25000000"/>
+        <PARAMETER NAME="I2C_Freq" VALUE="10000"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_IICctrl_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="iCLK" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="I2C_SCLK" SIGIS="undef" SIGNAME="IICctrl_0_I2C_SCLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="I2C_SCLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" NAME="I2C_SDAT" SIGIS="undef" SIGNAME="IICctrl_0_I2C_SDAT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="I2C_SDAT"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/MatchTemplateBin_0" HWVERSION="1.0" INSTANCE="MatchTemplateBin_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MatchTemplateBin" VLNV="dtysky:Image:MatchTemplateBin:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_MatchTemplateBin_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="8" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardPreGridInit_0_match0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="match0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Window_4_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_4" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_4_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_4" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="out_data" SIGIS="undef" SIGNAME="MatchTemplateBin_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataDelay_0" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/MeanFitter_0" HWVERSION="1.0" INSTANCE="MeanFitter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MeanFitter" VLNV="dtysky:Image:MeanFitter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="color_width" VALUE="8"/>
+        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="sum_counter" VALUE="4"/>
+        <PARAMETER NAME="full_win_size" VALUE="25"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_MeanFitter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Window_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_0" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="71" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_0" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="MeanFitter_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows8x512_1" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="MeanFitter_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows8x512_1" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Mux2_0" HWVERSION="1.0" INSTANCE="Mux2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2" VLNV="dtysky:user:Mux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="data_width" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Mux2_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_sel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="i0" RIGHT="0" SIGIS="undef" SIGNAME="Frame_4_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_4" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="i1" RIGHT="0" SIGIS="undef" SIGNAME="Frame_3_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_3" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="o" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_0_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_1" PORT="wea"/>
+            <CONNECTION INSTANCE="Bram1x320x240_2" PORT="wea"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Mux2_1" HWVERSION="1.0" INSTANCE="Mux2_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2" VLNV="dtysky:user:Mux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="data_width" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Mux2_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_sel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="i0" RIGHT="0" SIGIS="undef" SIGNAME="Frame_4_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_4" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="i1" RIGHT="0" SIGIS="undef" SIGNAME="Frame_3_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_3" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="o" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_1_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_1" PORT="dina"/>
+            <CONNECTION INSTANCE="Bram1x320x240_2" PORT="dina"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Mux2_2" HWVERSION="1.0" INSTANCE="Mux2_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2" VLNV="dtysky:user:Mux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="data_width" VALUE="17"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Mux2_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_sel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="16" NAME="i0" RIGHT="0" SIGIS="undef" SIGNAME="Frame_4_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_4" PORT="ram_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="16" NAME="i1" RIGHT="0" SIGIS="undef" SIGNAME="Frame_3_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_3" PORT="ram_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="16" NAME="o" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_2_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_1" PORT="addra"/>
+            <CONNECTION INSTANCE="Bram1x320x240_2" PORT="addra"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Or8_0" HWVERSION="1.0" INSTANCE="Or8_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Or8" VLNV="dtysky:user:Or8:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Or8_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="i0" SIGIS="undef" SIGNAME="ErosionDilationBin_2_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i1" SIGIS="undef" SIGNAME="ErosionDilationBin_3_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i2" SIGIS="undef" SIGNAME="DataDelay_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataDelay_0" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i3" SIGIS="undef" SIGNAME="ErosionDilationBin_4_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i4" SIGIS="undef" SIGNAME="ErosionDilationBin_5_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i5" SIGIS="undef" SIGNAME="xlconstant_3_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_3" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i6" SIGIS="undef" SIGNAME="xlconstant_3_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_3" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i7" SIGIS="undef" SIGNAME="xlconstant_3_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_3" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o" SIGIS="undef" SIGNAME="Or8_0_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_3" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/RGB2GRAY_0" HWVERSION="1.0" INSTANCE="RGB2GRAY_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="RGB2GRAY" VLNV="dtysky:Image:RGB2GRAY:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_RGB2GRAY_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Color16to24_0_rgb24">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Color16to24_0" PORT="rgb24"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="RGB2GRAY_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram8x320x240_0" PORT="dina"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Rows1x512_0" HWVERSION="1.0" INSTANCE="Rows1x512_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Rows1x512" VLNV="dtysky:Image:Rows1x512:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="im_width" VALUE="320"/>
+        <PARAMETER NAME="rows_width" VALUE="3"/>
+        <PARAMETER NAME="color_width" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Rows1x512_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Frame_2_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_2" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_2_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_2" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Rows1x512_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_2" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_2" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Rows1x512_1" HWVERSION="1.0" INSTANCE="Rows1x512_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Rows1x512" VLNV="dtysky:Image:Rows1x512:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="im_width" VALUE="320"/>
+        <PARAMETER NAME="rows_width" VALUE="5"/>
+        <PARAMETER NAME="color_width" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Rows1x512_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="ErosionDilationBin_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="ErosionDilationBin_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Rows1x512_1_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_3" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_1_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_3" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Rows1x512_2" HWVERSION="1.0" INSTANCE="Rows1x512_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Rows1x512" VLNV="dtysky:Image:Rows1x512:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="im_width" VALUE="320"/>
+        <PARAMETER NAME="rows_width" VALUE="3"/>
+        <PARAMETER NAME="color_width" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Rows1x512_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Frame_5_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_5" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_5_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_5" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Rows1x512_2_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_4" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_2_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_4" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Rows8x512_0" HWVERSION="1.0" INSTANCE="Rows8x512_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Rows8x512" VLNV="dtysky:Image:Rows8x512:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="im_width" VALUE="320"/>
+        <PARAMETER NAME="rows_width" VALUE="3"/>
+        <PARAMETER NAME="color_width" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Rows8x512_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Frame_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_0" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_0" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Rows8x512_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_0" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows8x512_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_0" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Rows8x512_1" HWVERSION="1.0" INSTANCE="Rows8x512_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Rows8x512" VLNV="dtysky:Image:Rows8x512:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="im_width" VALUE="320"/>
+        <PARAMETER NAME="rows_width" VALUE="3"/>
+        <PARAMETER NAME="color_width" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Rows8x512_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="MeanFitter_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MeanFitter_0" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="MeanFitter_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MeanFitter_0" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Rows8x512_1_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_1" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows8x512_1_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Window_1" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Window_0" HWVERSION="1.0" INSTANCE="Window_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Window" VLNV="dtysky:Image:Window:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="color_width" VALUE="8"/>
+        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="window_size_half" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Window_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Rows8x512_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows8x512_0" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows8x512_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows8x512_0" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Window_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MeanFitter_0" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="71" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MeanFitter_0" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Window_1" HWVERSION="1.0" INSTANCE="Window_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Window" VLNV="dtysky:Image:Window:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="color_width" VALUE="8"/>
+        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="window_size_half" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Window_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Rows8x512_1_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows8x512_1" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows8x512_1_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows8x512_1" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Window_1_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Harris_0" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="71" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_1_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Harris_0" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Window_2" HWVERSION="1.0" INSTANCE="Window_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Window" VLNV="dtysky:Image:Window:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="color_width" VALUE="1"/>
+        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="window_size_half" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Window_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Rows1x512_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows1x512_0" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows1x512_0" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Window_2_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_2_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Window_3" HWVERSION="1.0" INSTANCE="Window_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Window" VLNV="dtysky:Image:Window:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="color_width" VALUE="1"/>
+        <PARAMETER NAME="window_size" VALUE="5"/>
+        <PARAMETER NAME="window_size_half" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Window_3_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Rows1x512_1_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows1x512_1" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_1_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows1x512_1" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Window_3_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_1" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="24" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_3_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_1" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Window_4" HWVERSION="1.0" INSTANCE="Window_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Window" VLNV="dtysky:Image:Window:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="color_width" VALUE="1"/>
+        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="window_size_half" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_Window_4_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="BoardPreGridInit_0_rst_all_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="rst_all_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Rows1x512_2_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows1x512_2" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_2_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Rows1x512_2" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Window_4_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="in_enable"/>
+            <CONNECTION INSTANCE="MatchTemplateBin_0" PORT="in_enable"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="in_enable"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="in_enable"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_4_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="in_data"/>
+            <CONNECTION INSTANCE="MatchTemplateBin_0" PORT="in_data"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="in_data"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="in_data"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/camCap_0" HWVERSION="1.0" INSTANCE="camCap_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="camCap" VLNV="xilinx.com:XUP:camCap:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_camCap_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="pclk" SIGIS="undef" SIGNAME="External_Ports_pclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync" SIGIS="undef" SIGNAME="External_Ports_vsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vsync"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="href" SIGIS="undef" SIGNAME="External_Ports_href">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="href"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="d" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_d">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="d"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="16" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="camCap_0_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram8x320x240_0" PORT="addra"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="camCap_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Color16to24_0" PORT="rgb16"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="we" SIGIS="undef" SIGNAME="camCap_0_we">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram8x320x240_0" PORT="wea"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="wclk" SIGIS="undef" SIGNAME="camCap_0_wclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram8x320x240_0" PORT="clka"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/clk_wiz_0" HWVERSION="5.1" INSTANCE="clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:5.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v5_1;d=pg065-clk-wiz.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_CLKOUT2_USED" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT3_USED" VALUE="0"/>
+        <PARAMETER NAME="C_CLKOUT4_USED" VALUE="0"/>
+        <PARAMETER NAME="C_CLKOUT5_USED" VALUE="0"/>
+        <PARAMETER NAME="C_CLKOUT6_USED" VALUE="0"/>
+        <PARAMETER NAME="C_CLKOUT7_USED" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLKOUT1_BAR" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLKOUT2_BAR" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLKOUT3_BAR" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLKOUT4_BAR" VALUE="0"/>
+        <PARAMETER NAME="c_component_name" VALUE="BoardPreGrid_clk_wiz_0_0"/>
+        <PARAMETER NAME="C_PLATFORM" VALUE="UNKNOWN"/>
+        <PARAMETER NAME="C_USE_FREQ_SYNTH" VALUE="1"/>
+        <PARAMETER NAME="C_USE_PHASE_ALIGNMENT" VALUE="1"/>
+        <PARAMETER NAME="C_PRIM_IN_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="C_SECONDARY_IN_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="C_JITTER_SEL" VALUE="No_Jitter"/>
+        <PARAMETER NAME="C_USE_MIN_POWER" VALUE="0"/>
+        <PARAMETER NAME="C_USE_MIN_O_JITTER" VALUE="0"/>
+        <PARAMETER NAME="C_USE_MAX_I_JITTER" VALUE="0"/>
+        <PARAMETER NAME="C_USE_DYN_PHASE_SHIFT" VALUE="0"/>
+        <PARAMETER NAME="C_USE_INCLK_SWITCHOVER" VALUE="0"/>
+        <PARAMETER NAME="C_USE_DYN_RECONFIG" VALUE="0"/>
+        <PARAMETER NAME="C_USE_SPREAD_SPECTRUM" VALUE="0"/>
+        <PARAMETER NAME="C_USE_FAST_SIMULATION" VALUE="0"/>
+        <PARAMETER NAME="C_PRIMTYPE_SEL" VALUE="AUTO"/>
+        <PARAMETER NAME="C_USE_CLK_VALID" VALUE="0"/>
+        <PARAMETER NAME="C_PRIM_IN_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_IN_FREQ_UNITS" VALUE="Units_MHz"/>
+        <PARAMETER NAME="C_SECONDARY_IN_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_FEEDBACK_SOURCE" VALUE="FDBK_AUTO"/>
+        <PARAMETER NAME="C_PRIM_SOURCE" VALUE="Single_ended_clock_capable_pin"/>
+        <PARAMETER NAME="C_SECONDARY_SOURCE" VALUE="Single_ended_clock_capable_pin"/>
+        <PARAMETER NAME="C_CLKFB_IN_SIGNALING" VALUE="SINGLE"/>
+        <PARAMETER NAME="C_USE_RESET" VALUE="0"/>
+        <PARAMETER NAME="C_RESET_LOW" VALUE="0"/>
+        <PARAMETER NAME="C_USE_LOCKED" VALUE="1"/>
+        <PARAMETER NAME="C_USE_INCLK_STOPPED" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLKFB_STOPPED" VALUE="0"/>
+        <PARAMETER NAME="C_USE_POWER_DOWN" VALUE="0"/>
+        <PARAMETER NAME="C_USE_STATUS" VALUE="0"/>
+        <PARAMETER NAME="C_USE_FREEZE" VALUE="0"/>
+        <PARAMETER NAME="C_NUM_OUT_CLKS" VALUE="2"/>
+        <PARAMETER NAME="C_CLKOUT1_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_CLKOUT2_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_CLKOUT3_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_CLKOUT4_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_CLKOUT5_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_CLKOUT6_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_CLKOUT7_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_INCLK_SUM_ROW0" VALUE="Input Clock   Freq (MHz)    Input Jitter (UI)"/>
+        <PARAMETER NAME="C_INCLK_SUM_ROW1" VALUE="__primary_________100.000____________0.010"/>
+        <PARAMETER NAME="C_INCLK_SUM_ROW2" VALUE="no_secondary_input_clock"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW0A" VALUE="Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW0B" VALUE="Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="CLK_OUT1___100.000______0.000______50.0______130.958_____98.575"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="CLK_OUT2____25.000______0.000______50.0______175.402_____98.575"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW3" VALUE="no_CLK_OUT3_output"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW4" VALUE="no_CLK_OUT4_output"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW5" VALUE="no_CLK_OUT5_output"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW6" VALUE="no_CLK_OUT6_output"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW7" VALUE="no_CLK_OUT7_output"/>
+        <PARAMETER NAME="C_CLKOUT1_REQUESTED_OUT_FREQ" VALUE="100"/>
+        <PARAMETER NAME="C_CLKOUT2_REQUESTED_OUT_FREQ" VALUE="25"/>
+        <PARAMETER NAME="C_CLKOUT3_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT4_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT5_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT6_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT7_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT2_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT3_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT4_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT5_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT6_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT7_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT1_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT2_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT3_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT4_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT5_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT6_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT7_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT1_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT2_OUT_FREQ" VALUE="25.000"/>
+        <PARAMETER NAME="C_CLKOUT3_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT4_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT5_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT6_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT7_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT1_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT2_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT3_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT4_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT5_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT6_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT7_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT1_DUTY_CYCLE" VALUE="50.0"/>
+        <PARAMETER NAME="C_CLKOUT2_DUTY_CYCLE" VALUE="50.0"/>
+        <PARAMETER NAME="C_CLKOUT3_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT4_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT5_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT6_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT7_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_USE_SAFE_CLOCK_STARTUP" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLOCK_SEQUENCING" VALUE="0"/>
+        <PARAMETER NAME="C_CLKOUT1_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT2_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT3_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT4_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT5_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT6_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT7_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_NOTES" VALUE="None"/>
+        <PARAMETER NAME="C_MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
+        <PARAMETER NAME="C_MMCM_CLKFBOUT_MULT_F" VALUE="10.000"/>
+        <PARAMETER NAME="C_MMCM_CLKIN1_PERIOD" VALUE="10.0"/>
+        <PARAMETER NAME="C_MMCM_CLKIN2_PERIOD" VALUE="10.0"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT4_CASCADE" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLOCK_HOLD" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_COMPENSATION" VALUE="ZHOLD"/>
+        <PARAMETER NAME="C_MMCM_DIVCLK_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_REF_JITTER1" VALUE="0.010"/>
+        <PARAMETER NAME="C_MMCM_REF_JITTER2" VALUE="0.010"/>
+        <PARAMETER NAME="C_MMCM_STARTUP_WAIT" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT0_DIVIDE_F" VALUE="10.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT1_DIVIDE" VALUE="40"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT2_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT3_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT4_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT5_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT6_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT1_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT2_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT3_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT4_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT5_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT6_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKFBOUT_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT0_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT1_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT2_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT3_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT4_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT5_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT6_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKFBOUT_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT0_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT1_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT2_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT3_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT4_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT5_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT6_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_PLL_NOTES" VALUE="No notes"/>
+        <PARAMETER NAME="C_PLL_BANDWIDTH" VALUE="OPTIMIZED"/>
+        <PARAMETER NAME="C_PLL_CLK_FEEDBACK" VALUE="CLKFBOUT"/>
+        <PARAMETER NAME="C_PLL_CLKFBOUT_MULT" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKIN_PERIOD" VALUE="1.000"/>
+        <PARAMETER NAME="C_PLL_COMPENSATION" VALUE="SYSTEM_SYNCHRONOUS"/>
+        <PARAMETER NAME="C_PLL_DIVCLK_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_REF_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="C_PLL_CLKOUT0_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKOUT1_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKOUT2_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKOUT3_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKOUT4_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKOUT5_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_PLL_CLKOUT1_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_PLL_CLKOUT2_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_PLL_CLKOUT3_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_PLL_CLKOUT4_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_PLL_CLKOUT5_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_PLL_CLKFBOUT_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_PLL_CLKOUT0_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_PLL_CLKOUT1_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_PLL_CLKOUT2_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_PLL_CLKOUT3_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_PLL_CLKOUT4_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_PLL_CLKOUT5_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLOCK_MGR_TYPE" VALUE="NA"/>
+        <PARAMETER NAME="C_OVERRIDE_MMCM" VALUE="0"/>
+        <PARAMETER NAME="C_OVERRIDE_PLL" VALUE="0"/>
+        <PARAMETER NAME="C_PRIMARY_PORT" VALUE="clk_in1"/>
+        <PARAMETER NAME="C_SECONDARY_PORT" VALUE="clk_in2"/>
+        <PARAMETER NAME="C_CLK_OUT1_PORT" VALUE="clk_out1"/>
+        <PARAMETER NAME="C_CLK_OUT2_PORT" VALUE="clk_out2"/>
+        <PARAMETER NAME="C_CLK_OUT3_PORT" VALUE="clk_out3"/>
+        <PARAMETER NAME="C_CLK_OUT4_PORT" VALUE="clk_out4"/>
+        <PARAMETER NAME="C_CLK_OUT5_PORT" VALUE="clk_out5"/>
+        <PARAMETER NAME="C_CLK_OUT6_PORT" VALUE="clk_out6"/>
+        <PARAMETER NAME="C_CLK_OUT7_PORT" VALUE="clk_out7"/>
+        <PARAMETER NAME="C_RESET_PORT" VALUE="reset"/>
+        <PARAMETER NAME="C_LOCKED_PORT" VALUE="locked"/>
+        <PARAMETER NAME="C_CLKFB_IN_PORT" VALUE="clkfb_in"/>
+        <PARAMETER NAME="C_CLKFB_IN_P_PORT" VALUE="clkfb_in_p"/>
+        <PARAMETER NAME="C_CLKFB_IN_N_PORT" VALUE="clkfb_in_n"/>
+        <PARAMETER NAME="C_CLKFB_OUT_PORT" VALUE="clkfb_out"/>
+        <PARAMETER NAME="C_CLKFB_OUT_P_PORT" VALUE="clkfb_out_p"/>
+        <PARAMETER NAME="C_CLKFB_OUT_N_PORT" VALUE="clkfb_out_n"/>
+        <PARAMETER NAME="C_POWER_DOWN_PORT" VALUE="power_down"/>
+        <PARAMETER NAME="C_DADDR_PORT" VALUE="daddr"/>
+        <PARAMETER NAME="C_DCLK_PORT" VALUE="dclk"/>
+        <PARAMETER NAME="C_DRDY_PORT" VALUE="drdy"/>
+        <PARAMETER NAME="C_DWE_PORT" VALUE="dwe"/>
+        <PARAMETER NAME="C_DIN_PORT" VALUE="din"/>
+        <PARAMETER NAME="C_DOUT_PORT" VALUE="dout"/>
+        <PARAMETER NAME="C_DEN_PORT" VALUE="den"/>
+        <PARAMETER NAME="C_PSCLK_PORT" VALUE="psclk"/>
+        <PARAMETER NAME="C_PSEN_PORT" VALUE="psen"/>
+        <PARAMETER NAME="C_PSINCDEC_PORT" VALUE="psincdec"/>
+        <PARAMETER NAME="C_PSDONE_PORT" VALUE="psdone"/>
+        <PARAMETER NAME="C_CLK_VALID_PORT" VALUE="CLK_VALID"/>
+        <PARAMETER NAME="C_STATUS_PORT" VALUE="STATUS"/>
+        <PARAMETER NAME="C_CLK_IN_SEL_PORT" VALUE="clk_in_sel"/>
+        <PARAMETER NAME="C_INPUT_CLK_STOPPED_PORT" VALUE="input_clk_stopped"/>
+        <PARAMETER NAME="C_CLKFB_STOPPED_PORT" VALUE="clkfb_stopped"/>
+        <PARAMETER NAME="C_CLKIN1_JITTER_PS" VALUE="100.0"/>
+        <PARAMETER NAME="C_CLKIN2_JITTER_PS" VALUE="100.0"/>
+        <PARAMETER NAME="C_PRIMITIVE" VALUE="MMCM"/>
+        <PARAMETER NAME="C_SS_MODE" VALUE="CENTER_HIGH"/>
+        <PARAMETER NAME="C_SS_MOD_PERIOD" VALUE="4000"/>
+        <PARAMETER NAME="C_HAS_CDDC" VALUE="0"/>
+        <PARAMETER NAME="C_CDDCDONE_PORT" VALUE="cddcdone"/>
+        <PARAMETER NAME="C_CDDCREQ_PORT" VALUE="cddcreq"/>
+        <PARAMETER NAME="C_CLKOUTPHY_MODE" VALUE="VCO"/>
+        <PARAMETER NAME="C_ENABLE_CLKOUTPHY" VALUE="0"/>
+        <PARAMETER NAME="C_INTERFACE_SELECTION" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="11"/>
+        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_clk_wiz_0_0"/>
+        <PARAMETER NAME="PRIMITIVE" VALUE="MMCM"/>
+        <PARAMETER NAME="PRIMTYPE_SEL" VALUE="mmcm_adv"/>
+        <PARAMETER NAME="CLOCK_MGR_TYPE" VALUE="auto"/>
+        <PARAMETER NAME="USE_FREQ_SYNTH" VALUE="true"/>
+        <PARAMETER NAME="USE_SPREAD_SPECTRUM" VALUE="false"/>
+        <PARAMETER NAME="USE_PHASE_ALIGNMENT" VALUE="true"/>
+        <PARAMETER NAME="USE_MIN_POWER" VALUE="false"/>
+        <PARAMETER NAME="USE_DYN_PHASE_SHIFT" VALUE="false"/>
+        <PARAMETER NAME="USE_DYN_RECONFIG" VALUE="false"/>
+        <PARAMETER NAME="JITTER_SEL" VALUE="No_Jitter"/>
+        <PARAMETER NAME="PRIM_IN_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="IN_FREQ_UNITS" VALUE="Units_MHz"/>
+        <PARAMETER NAME="IN_JITTER_UNITS" VALUE="Units_UI"/>
+        <PARAMETER NAME="RELATIVE_INCLK" VALUE="REL_PRIMARY"/>
+        <PARAMETER NAME="USE_INCLK_SWITCHOVER" VALUE="false"/>
+        <PARAMETER NAME="SECONDARY_IN_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="SECONDARY_PORT" VALUE="clk_in2"/>
+        <PARAMETER NAME="SECONDARY_SOURCE" VALUE="Single_ended_clock_capable_pin"/>
+        <PARAMETER NAME="JITTER_OPTIONS" VALUE="UI"/>
+        <PARAMETER NAME="CLKIN1_UI_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="CLKIN2_UI_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="PRIM_IN_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="SECONDARY_IN_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="CLKIN1_JITTER_PS" VALUE="100.0"/>
+        <PARAMETER NAME="CLKIN2_JITTER_PS" VALUE="100.0"/>
+        <PARAMETER NAME="CLKOUT1_USED" VALUE="true"/>
+        <PARAMETER NAME="CLKOUT2_USED" VALUE="true"/>
+        <PARAMETER NAME="CLKOUT3_USED" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT4_USED" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT5_USED" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT6_USED" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT7_USED" VALUE="false"/>
+        <PARAMETER NAME="NUM_OUT_CLKS" VALUE="2"/>
+        <PARAMETER NAME="CLK_OUT1_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="CLK_OUT2_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="CLK_OUT3_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="CLK_OUT4_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="CLK_OUT5_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="CLK_OUT6_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="CLK_OUT7_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="PRIMARY_PORT" VALUE="clk_in1"/>
+        <PARAMETER NAME="CLK_OUT1_PORT" VALUE="clk_out1"/>
+        <PARAMETER NAME="CLK_OUT2_PORT" VALUE="clk_out2"/>
+        <PARAMETER NAME="CLK_OUT3_PORT" VALUE="clk_out3"/>
+        <PARAMETER NAME="CLK_OUT4_PORT" VALUE="clk_out4"/>
+        <PARAMETER NAME="CLK_OUT5_PORT" VALUE="clk_out5"/>
+        <PARAMETER NAME="CLK_OUT6_PORT" VALUE="clk_out6"/>
+        <PARAMETER NAME="CLK_OUT7_PORT" VALUE="clk_out7"/>
+        <PARAMETER NAME="DADDR_PORT" VALUE="daddr"/>
+        <PARAMETER NAME="DCLK_PORT" VALUE="dclk"/>
+        <PARAMETER NAME="DRDY_PORT" VALUE="drdy"/>
+        <PARAMETER NAME="DWE_PORT" VALUE="dwe"/>
+        <PARAMETER NAME="DIN_PORT" VALUE="din"/>
+        <PARAMETER NAME="DOUT_PORT" VALUE="dout"/>
+        <PARAMETER NAME="DEN_PORT" VALUE="den"/>
+        <PARAMETER NAME="PSCLK_PORT" VALUE="psclk"/>
+        <PARAMETER NAME="PSEN_PORT" VALUE="psen"/>
+        <PARAMETER NAME="PSINCDEC_PORT" VALUE="psincdec"/>
+        <PARAMETER NAME="PSDONE_PORT" VALUE="psdone"/>
+        <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="100"/>
+        <PARAMETER NAME="CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT1_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT2_REQUESTED_OUT_FREQ" VALUE="25"/>
+        <PARAMETER NAME="CLKOUT2_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT2_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT3_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="CLKOUT3_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT3_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT4_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="CLKOUT4_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT4_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT5_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="CLKOUT5_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT5_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT6_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="CLKOUT6_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT6_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT7_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="CLKOUT7_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT7_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="USE_MAX_I_JITTER" VALUE="false"/>
+        <PARAMETER NAME="USE_MIN_O_JITTER" VALUE="false"/>
+        <PARAMETER NAME="PRIM_SOURCE" VALUE="Single_ended_clock_capable_pin"/>
+        <PARAMETER NAME="CLKOUT1_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT2_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT3_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT4_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT5_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT6_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT7_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="FEEDBACK_SOURCE" VALUE="FDBK_AUTO"/>
+        <PARAMETER NAME="CLKFB_IN_SIGNALING" VALUE="SINGLE"/>
+        <PARAMETER NAME="CLKFB_IN_PORT" VALUE="clkfb_in"/>
+        <PARAMETER NAME="CLKFB_IN_P_PORT" VALUE="clkfb_in_p"/>
+        <PARAMETER NAME="CLKFB_IN_N_PORT" VALUE="clkfb_in_n"/>
+        <PARAMETER NAME="CLKFB_OUT_PORT" VALUE="clkfb_out"/>
+        <PARAMETER NAME="CLKFB_OUT_P_PORT" VALUE="clkfb_out_p"/>
+        <PARAMETER NAME="CLKFB_OUT_N_PORT" VALUE="clkfb_out_n"/>
+        <PARAMETER NAME="PLATFORM" VALUE="UNKNOWN"/>
+        <PARAMETER NAME="SUMMARY_STRINGS" VALUE="empty"/>
+        <PARAMETER NAME="USE_LOCKED" VALUE="true"/>
+        <PARAMETER NAME="CALC_DONE" VALUE="empty"/>
+        <PARAMETER NAME="USE_RESET" VALUE="false"/>
+        <PARAMETER NAME="USE_POWER_DOWN" VALUE="false"/>
+        <PARAMETER NAME="USE_STATUS" VALUE="false"/>
+        <PARAMETER NAME="USE_FREEZE" VALUE="false"/>
+        <PARAMETER NAME="USE_CLK_VALID" VALUE="false"/>
+        <PARAMETER NAME="USE_INCLK_STOPPED" VALUE="false"/>
+        <PARAMETER NAME="USE_CLKFB_STOPPED" VALUE="false"/>
+        <PARAMETER NAME="RESET_PORT" VALUE="reset"/>
+        <PARAMETER NAME="LOCKED_PORT" VALUE="locked"/>
+        <PARAMETER NAME="POWER_DOWN_PORT" VALUE="power_down"/>
+        <PARAMETER NAME="CLK_VALID_PORT" VALUE="CLK_VALID"/>
+        <PARAMETER NAME="STATUS_PORT" VALUE="STATUS"/>
+        <PARAMETER NAME="CLK_IN_SEL_PORT" VALUE="clk_in_sel"/>
+        <PARAMETER NAME="INPUT_CLK_STOPPED_PORT" VALUE="input_clk_stopped"/>
+        <PARAMETER NAME="CLKFB_STOPPED_PORT" VALUE="clkfb_stopped"/>
+        <PARAMETER NAME="SS_MODE" VALUE="CENTER_HIGH"/>
+        <PARAMETER NAME="SS_MOD_FREQ" VALUE="250"/>
+        <PARAMETER NAME="OVERRIDE_MMCM" VALUE="false"/>
+        <PARAMETER NAME="MMCM_NOTES" VALUE="None"/>
+        <PARAMETER NAME="MMCM_DIVCLK_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
+        <PARAMETER NAME="MMCM_CLKFBOUT_MULT_F" VALUE="10.000"/>
+        <PARAMETER NAME="MMCM_CLKFBOUT_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKFBOUT_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKIN1_PERIOD" VALUE="10.0"/>
+        <PARAMETER NAME="MMCM_CLKIN2_PERIOD" VALUE="10.0"/>
+        <PARAMETER NAME="MMCM_CLKOUT4_CASCADE" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLOCK_HOLD" VALUE="false"/>
+        <PARAMETER NAME="MMCM_COMPENSATION" VALUE="ZHOLD"/>
+        <PARAMETER NAME="MMCM_REF_JITTER1" VALUE="0.010"/>
+        <PARAMETER NAME="MMCM_REF_JITTER2" VALUE="0.010"/>
+        <PARAMETER NAME="MMCM_STARTUP_WAIT" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT0_DIVIDE_F" VALUE="10.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT0_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT0_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT1_DIVIDE" VALUE="40"/>
+        <PARAMETER NAME="MMCM_CLKOUT1_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT1_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT1_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT2_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_CLKOUT2_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT2_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT2_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT3_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_CLKOUT3_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT3_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT3_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT4_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_CLKOUT4_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT4_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT4_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT5_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_CLKOUT5_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT5_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT5_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT6_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_CLKOUT6_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT6_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT6_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="OVERRIDE_PLL" VALUE="false"/>
+        <PARAMETER NAME="PLL_NOTES" VALUE="None"/>
+        <PARAMETER NAME="PLL_BANDWIDTH" VALUE="OPTIMIZED"/>
+        <PARAMETER NAME="PLL_CLKFBOUT_MULT" VALUE="4"/>
+        <PARAMETER NAME="PLL_CLKFBOUT_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="PLL_CLK_FEEDBACK" VALUE="CLKFBOUT"/>
+        <PARAMETER NAME="PLL_DIVCLK_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKIN_PERIOD" VALUE="10.000"/>
+        <PARAMETER NAME="PLL_COMPENSATION" VALUE="SYSTEM_SYNCHRONOUS"/>
+        <PARAMETER NAME="PLL_REF_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="PLL_CLKOUT0_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="PLL_CLKOUT0_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="PLL_CLKOUT1_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKOUT1_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="PLL_CLKOUT1_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="PLL_CLKOUT2_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKOUT2_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="PLL_CLKOUT2_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="PLL_CLKOUT3_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKOUT3_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="PLL_CLKOUT3_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="PLL_CLKOUT4_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKOUT4_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="PLL_CLKOUT4_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="PLL_CLKOUT5_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKOUT5_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="PLL_CLKOUT5_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="RESET_TYPE" VALUE="ACTIVE_HIGH"/>
+        <PARAMETER NAME="USE_SAFE_CLOCK_STARTUP" VALUE="false"/>
+        <PARAMETER NAME="USE_CLOCK_SEQUENCING" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT1_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="CLKOUT2_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="CLKOUT3_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="CLKOUT4_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="CLKOUT5_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="CLKOUT6_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="CLKOUT7_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="CLK_IN1_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="CLK_IN2_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="DIFF_CLK_IN1_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="DIFF_CLK_IN2_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="ENABLE_CDDC" VALUE="false"/>
+        <PARAMETER NAME="CDDCDONE_PORT" VALUE="cddcdone"/>
+        <PARAMETER NAME="CDDCREQ_PORT" VALUE="cddcreq"/>
+        <PARAMETER NAME="ENABLE_CLKOUTPHY" VALUE="false"/>
+        <PARAMETER NAME="CLKOUTPHY_REQUESTED_FREQ" VALUE="600.000"/>
+        <PARAMETER NAME="CLKOUT1_JITTER" VALUE="130.958"/>
+        <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="98.575"/>
+        <PARAMETER NAME="CLKOUT2_JITTER" VALUE="175.402"/>
+        <PARAMETER NAME="CLKOUT2_PHASE_ERROR" VALUE="98.575"/>
+        <PARAMETER NAME="CLKOUT3_JITTER" VALUE="130.958"/>
+        <PARAMETER NAME="CLKOUT3_PHASE_ERROR" VALUE="98.575"/>
+        <PARAMETER NAME="CLKOUT4_JITTER" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT4_PHASE_ERROR" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT5_JITTER" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT5_PHASE_ERROR" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT6_JITTER" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT6_PHASE_ERROR" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT7_JITTER" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT7_PHASE_ERROR" VALUE="0.0"/>
+        <PARAMETER NAME="INTERFACE_SELECTION" VALUE="Enable_AXI"/>
+        <PARAMETER NAME="PHASE_DUTY_CONFIG" VALUE="false"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_clk_in1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_in1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_0" PORT="clka"/>
+            <CONNECTION INSTANCE="Bram1x320x240_0" PORT="clkb"/>
+            <CONNECTION INSTANCE="Bram1x320x240_1" PORT="clka"/>
+            <CONNECTION INSTANCE="Bram1x320x240_1" PORT="clkb"/>
+            <CONNECTION INSTANCE="Bram1x320x240_2" PORT="clka"/>
+            <CONNECTION INSTANCE="Bram1x320x240_2" PORT="clkb"/>
+            <CONNECTION INSTANCE="Bram8x320x240_0" PORT="clkb"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="clk"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_1" PORT="clk"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_2" PORT="clk"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_3" PORT="clk"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_4" PORT="clk"/>
+            <CONNECTION INSTANCE="Frame_0" PORT="clk"/>
+            <CONNECTION INSTANCE="Frame_1" PORT="clk"/>
+            <CONNECTION INSTANCE="Frame_2" PORT="clk"/>
+            <CONNECTION INSTANCE="Frame_3" PORT="clk"/>
+            <CONNECTION INSTANCE="Frame_4" PORT="clk"/>
+            <CONNECTION INSTANCE="Frame_5" PORT="clk"/>
+            <CONNECTION INSTANCE="MeanFitter_0" PORT="clk"/>
+            <CONNECTION INSTANCE="Rows1x512_0" PORT="clk"/>
+            <CONNECTION INSTANCE="Rows1x512_1" PORT="clk"/>
+            <CONNECTION INSTANCE="Rows1x512_2" PORT="clk"/>
+            <CONNECTION INSTANCE="Rows8x512_0" PORT="clk"/>
+            <CONNECTION INSTANCE="Rows8x512_1" PORT="clk"/>
+            <CONNECTION INSTANCE="Window_0" PORT="clk"/>
+            <CONNECTION INSTANCE="Window_1" PORT="clk"/>
+            <CONNECTION INSTANCE="Window_2" PORT="clk"/>
+            <CONNECTION INSTANCE="Window_3" PORT="clk"/>
+            <CONNECTION INSTANCE="Window_4" PORT="clk"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_5" PORT="clk"/>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="25000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vga_readBRAM_0" PORT="clk25"/>
+            <CONNECTION INSTANCE="IICctrl_0" PORT="iCLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardPreGridInit_0" PORT="pll_locked"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/vga_readBRAM_0" HWVERSION="1.0" INSTANCE="vga_readBRAM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="vga_readBRAM" VLNV="xilinx.com:user:vga_readBRAM:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="hRez" VALUE="640"/>
+        <PARAMETER NAME="hStartSync" VALUE="656"/>
+        <PARAMETER NAME="hEndSync" VALUE="752"/>
+        <PARAMETER NAME="hMaxCount" VALUE="800"/>
+        <PARAMETER NAME="vRez" VALUE="480"/>
+        <PARAMETER NAME="vStartSync" VALUE="490"/>
+        <PARAMETER NAME="vEndSync" VALUE="492"/>
+        <PARAMETER NAME="vMaxCount" VALUE="525"/>
+        <PARAMETER NAME="hsync_active" VALUE="0"/>
+        <PARAMETER NAME="vsync_active" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_vga_readBRAM_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk25" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="vga_red" RIGHT="0" SIGIS="undef" SIGNAME="vga_readBRAM_0_vga_red">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vga_red"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="vga_green" RIGHT="0" SIGIS="undef" SIGNAME="vga_readBRAM_0_vga_green">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vga_green"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="vga_blue" RIGHT="0" SIGIS="undef" SIGNAME="vga_readBRAM_0_vga_blue">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vga_blue"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vga_hsync" SIGIS="undef" SIGNAME="vga_readBRAM_0_vga_hsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vga_hsync"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vga_vsync" SIGIS="undef" SIGNAME="vga_readBRAM_0_vga_vsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vga_vsync"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="HCnt" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="9" NAME="VCnt" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="16" NAME="frame_addr" RIGHT="0" SIGIS="undef" SIGNAME="vga_readBRAM_0_frame_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_2" PORT="addrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="vga_in" RIGHT="0" SIGIS="undef" SIGNAME="ColorRgb2Vga_0_vga">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ColorRgb2Vga_0" PORT="vga"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xlconstant_3" HWVERSION="1.1" INSTANCE="xlconstant_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="BoardPreGrid_xlconstant_3_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_3_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Or8_0" PORT="i5"/>
+            <CONNECTION INSTANCE="Or8_0" PORT="i6"/>
+            <CONNECTION INSTANCE="Or8_0" PORT="i7"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+  <REPOSITORIES/>
+
+</EDKSYSTEM>
