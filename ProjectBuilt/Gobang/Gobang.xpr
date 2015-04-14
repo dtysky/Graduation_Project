@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2014.4 (64-bit)              -->
+<!--                                                         -->
+<!-- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.   -->
+
+<Project Version="7" Minor="2" Path="B:/Complex_Mind/Graduation_Project/ProjectBuilt/Gobang/Gobang.xpr">
+  <DefaultLaunch Dir="$PRUNDIR"/>
+  <Configuration>
+    <Option Name="Id" Val="cbcc7b7b9bf64b80a3b92d079cf6b775"/>
+    <Option Name="Part" Val="xc7z010clg400-1"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="BoardPart" Val=""/>
+    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../XUP_IMAGE/SUB_MODULE/OTHER_IP/BoardInit_AXI/BoardInit_AXI_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../XUP_IMAGE/SUB_MODULE"/>
+  </Configuration>
+  <FileSets Version="1" Minor="31">
+    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/Gobang.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_clk_wiz_0_0/Gobang_clk_wiz_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="hdl/Gobang.v"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows1x512_0_0/Gobang_Rows1x512_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows1x512_2_0/Gobang_Rows1x512_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows1x512_1_0/Gobang_Rows1x512_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram8x320x240_1_0/Gobang_Bram8x320x240_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram8x320x240_0_0/Gobang_Bram8x320x240_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_3_0/Gobang_Bram1x320x240_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_2_0/Gobang_Bram1x320x240_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_1_0/Gobang_Bram1x320x240_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_0_0/Gobang_Bram1x320x240_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows8x512_1_0/Gobang_Rows8x512_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows8x512_0_0/Gobang_Rows8x512_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_IICctrl_0_0/Gobang_IICctrl_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ColorBin2Rgb_1_0/Gobang_ColorBin2Rgb_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_2_0/Gobang_Frame_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Harris_0_0/Gobang_Harris_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_1_0/Gobang_Frame_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_0_0/Gobang_Frame_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_RGB2GRAY_0_0/Gobang_RGB2GRAY_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Color16to24_0_0/Gobang_Color16to24_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_camCap_0_0/Gobang_camCap_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ColorGray2Rgb_0_0/Gobang_ColorGray2Rgb_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux4_0_0/Gobang_Mux4_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_6_0/Gobang_Frame_6_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_vga_readBRAM_0_0/Gobang_vga_readBRAM_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ColorRgb2Vga_0_0/Gobang_ColorRgb2Vga_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_4_0/Gobang_Window_4_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_3_0/Gobang_Window_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_2_0/Gobang_Window_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_1_0/Gobang_Window_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_0_0/Gobang_Window_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_MeanFitter_0_0/Gobang_MeanFitter_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_5_0/Gobang_ErosionDilationBin_5_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_4_0/Gobang_ErosionDilationBin_4_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_3_0/Gobang_ErosionDilationBin_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_2_0/Gobang_ErosionDilationBin_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_1_0/Gobang_ErosionDilationBin_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_0_0/Gobang_ErosionDilationBin_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_DataDelay_0_0/Gobang_DataDelay_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux2_2_0/Gobang_Mux2_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux2_1_0/Gobang_Mux2_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ColorBin2Rgb_0_0/Gobang_ColorBin2Rgb_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Or8_0_0/Gobang_Or8_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_xlconstant_3_0/Gobang_xlconstant_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux2_0_0/Gobang_Mux2_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_5_0/Gobang_Frame_5_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_4_0/Gobang_Frame_4_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_3_0/Gobang_Frame_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_MatchTemplateBin_0_0/Gobang_MatchTemplateBin_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_axi_interconnect_0_0/Gobang_axi_interconnect_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_BoardInit_AXI_0_0/Gobang_BoardInit_AXI_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_proc_sys_reset_0_0/Gobang_proc_sys_reset_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_processing_system7_0_0/Gobang_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_7_0/Gobang_Frame_7_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_6_0/Gobang_ErosionDilationBin_6_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_8_0/Gobang_Frame_8_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Crop_0_1/Gobang_Crop_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_4_0/Gobang_Bram1x320x240_4_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_5_0/Gobang_Window_5_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows1x512_3_0/Gobang_Rows1x512_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_auto_pc_0/Gobang_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="hw_handoff/Gobang_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="hw_handoff/Gobang.hwh"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="Gobang_ooc.xdc"/>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/hdl/Gobang_wrapper.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_bram_0_0/bram_ip.srcs/sources_1/ip/frame_buffer/frame_buffer.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_bram_0_0/Gobang_bram_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Rows1x512_0_1/Gobang_Rows1x512_0_1.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Frame_0_0/Gobang_Frame_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Frame_1_0/Gobang_Frame_1_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Frame_2_0/Gobang_Frame_2_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Frame_3_0/Gobang_Frame_3_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Frame_4_0/Gobang_Frame_4_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Frame_5_0/Gobang_Frame_5_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Frame_6_0/Gobang_Frame_6_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_BoardInit_AXI_0_0/Gobang_BoardInit_AXI_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Rows1x512_0_0/Gobang_Rows1x512_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Rows1x512_1_0/Gobang_Rows1x512_1_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Rows1x512_2_0/Gobang_Rows1x512_2_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Rows1x512_3_0/Gobang_Rows1x512_3_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Rows8x512_0_0/Gobang_Rows8x512_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Gobang/ip/Gobang_Rows8x512_1_0/Gobang_Rows8x512_1_0.upgrade_log"/>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="Gobang_wrapper"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+      <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/new/Gobang.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/Gobang.xdc"/>
+        <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="Gobang_wrapper"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+  </FileSets>
+  <Simulators>
+    <Simulator Name="XSim">
+      <Option Name="Description" Val="Vivado Simulator"/>
+      <Option Name="CompiledLib" Val="0"/>
+    </Simulator>
+    <Simulator Name="ModelSim">
+      <Option Name="Description" Val="QuestaSim/ModelSim Simulator"/>
+    </Simulator>
+    <Simulator Name="IES">
+      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
+  </Simulators>
+  <Runs Version="1" Minor="9">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+  </Runs>
+  <HWSession Dir="hw_1" File="hw.xml"/>
+  <MsgRule>
+    <MsgAttr Name="RuleType" Val="0"/>
+    <MsgAttr Name="Limit" Val="-1"/>
+    <MsgAttr Name="NewSeverity" Val="ANY"/>
+    <MsgAttr Name="Id" Val="filemgmt 20-1741"/>
+    <MsgAttr Name="Severity" Val="ANY"/>
+    <MsgAttr Name="ShowRule" Val="1"/>
+    <MsgAttr Name="RuleSource" Val="8"/>
+    <MsgAttr Name="StringIsRegExp" Val="0"/>
+    <MsgAttr Name="StringsToMatch" Val="CRITICAL WARNING: [filemgmt 20-1741] File &apos;Bram.vhd&apos; is used by one or more modules, but with different contents, and may lead to unpredictable results:
+* Bram (b:/Complex_Mind/Graduation_Project/ProjectBuilt/Gobang/Gobang.srcs/sources_1/bd/Gobang/ip/Gobang_Bram8x320x240_0_0/src/Bram/synth/Bram.vhd)
+* Bram (b:/Complex_Mind/Graduation_Project/ProjectBuilt/Gobang/Gobang.srcs/sources_1/bd/Gobang/ip/Gobang_Bram1x320x240_0_0/src/Bram/synth/Bram.vhd)
+Please reset and regenerate these modules to resolve the differences, or synthesize them independently."/>
+  </MsgRule>
+  <MsgRule>
+    <MsgAttr Name="RuleType" Val="0"/>
+    <MsgAttr Name="Limit" Val="-1"/>
+    <MsgAttr Name="NewSeverity" Val="ANY"/>
+    <MsgAttr Name="Id" Val="filemgmt 20-1741"/>
+    <MsgAttr Name="Severity" Val="ANY"/>
+    <MsgAttr Name="ShowRule" Val="1"/>
+    <MsgAttr Name="RuleSource" Val="8"/>
+    <MsgAttr Name="StringIsRegExp" Val="0"/>
+    <MsgAttr Name="StringsToMatch" Val="CRITICAL WARNING: [filemgmt 20-1741] File &apos;Fifo.vhd&apos; is used by one or more modules, but with different contents, and may lead to unpredictable results:
+* Fifo (b:/Complex_Mind/Graduation_Project/ProjectBuilt/Gobang/Gobang.srcs/sources_1/bd/Gobang/ip/Gobang_Rows8x512_0_0/sources_1/ip/Fifo/synth/Fifo.vhd)
+* Fifo (b:/Complex_Mind/Graduation_Project/ProjectBuilt/Gobang/Gobang.srcs/sources_1/bd/Gobang/ip/Gobang_Rows8x512_1_0/sources_1/ip/Fifo/synth/Fifo.vhd)
+* Fifo (b:/Complex_Mind/Graduation_Project/ProjectBuilt/Gobang/Gobang.srcs/sources_1/bd/Gobang/ip/Gobang_Rows1x512_0_0/ip/Fifo/synth/Fifo.vhd)
+Please reset and regenerate these modules to resolve the differences, or synthesize them independently."/>
+  </MsgRule>
+  <MsgRule>
+    <MsgAttr Name="RuleType" Val="0"/>
+    <MsgAttr Name="Limit" Val="-1"/>
+    <MsgAttr Name="NewSeverity" Val="ANY"/>
+    <MsgAttr Name="Id" Val="Synth 8-2488"/>
+    <MsgAttr Name="Severity" Val="ANY"/>
+    <MsgAttr Name="ShowRule" Val="1"/>
+    <MsgAttr Name="RuleSource" Val="8"/>
+    <MsgAttr Name="StringIsRegExp" Val="0"/>
+    <MsgAttr Name="StringsToMatch" Val="CRITICAL WARNING: [Synth 8-2488] overwriting existing primary unit bram [b:/Complex_Mind/Graduation_Project/ProjectBuilt/Gobang/Gobang.srcs/sources_1/bd/Gobang/ip/Gobang_Bram1x320x240_0_0/src/Bram/synth/Bram.vhd:59]"/>
+  </MsgRule>
+  <MsgRule>
+    <MsgAttr Name="RuleType" Val="0"/>
+    <MsgAttr Name="Limit" Val="-1"/>
+    <MsgAttr Name="NewSeverity" Val="ANY"/>
+    <MsgAttr Name="Id" Val="Synth 8-2488"/>
+    <MsgAttr Name="Severity" Val="ANY"/>
+    <MsgAttr Name="ShowRule" Val="1"/>
+    <MsgAttr Name="RuleSource" Val="8"/>
+    <MsgAttr Name="StringIsRegExp" Val="0"/>
+    <MsgAttr Name="StringsToMatch" Val="CRITICAL WARNING: [Synth 8-2488] overwriting existing primary unit fifo [b:/Complex_Mind/Graduation_Project/ProjectBuilt/Gobang/Gobang.srcs/sources_1/bd/Gobang/ip/Gobang_Rows1x512_0_0/ip/Fifo/synth/Fifo.vhd:59]"/>
+  </MsgRule>
+</Project>

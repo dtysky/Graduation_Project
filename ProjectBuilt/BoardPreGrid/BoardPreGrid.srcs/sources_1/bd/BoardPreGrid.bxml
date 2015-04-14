@@ -6,224 +6,8 @@
     <Generation Name="IMPLEMENTATION" State="GENERATED"/>
     <Generation Name="SIMULATION" State="GENERATED"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="ip\BoardPreGrid_camCap_0_0\BoardPreGrid_camCap_0_0.xci" Type="IP">
-        <Instance HierarchyPath="camCap_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Color16to24_0_0\BoardPreGrid_Color16to24_0_0.xci" Type="IP">
-        <Instance HierarchyPath="Color16to24_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_RGB2GRAY_0_0\BoardPreGrid_RGB2GRAY_0_0.xci" Type="IP">
-        <Instance HierarchyPath="RGB2GRAY_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Rows8x512_0_0\BoardPreGrid_Rows8x512_0_0.xci" Type="IP">
-        <Instance HierarchyPath="Rows8x512_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Frame_0_0\BoardPreGrid_Frame_0_0.xci" Type="IP">
-        <Instance HierarchyPath="Frame_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Frame_1_0\BoardPreGrid_Frame_1_0.xci" Type="IP">
-        <Instance HierarchyPath="Frame_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Rows8x512_1_0\BoardPreGrid_Rows8x512_1_0.xci" Type="IP">
-        <Instance HierarchyPath="Rows8x512_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Harris_0_0\BoardPreGrid_Harris_0_0.xci" Type="IP">
-        <Instance HierarchyPath="Harris_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Bram8x320x240_0_0\BoardPreGrid_Bram8x320x240_0_0.xci" Type="IP">
-        <Instance HierarchyPath="Bram8x320x240_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Bram1x320x240_0_0\BoardPreGrid_Bram1x320x240_0_0.xci" Type="IP">
-        <Instance HierarchyPath="Bram1x320x240_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Rows1x512_0_0\BoardPreGrid_Rows1x512_0_0.xci" Type="IP">
-        <Instance HierarchyPath="Rows1x512_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Frame_2_0\BoardPreGrid_Frame_2_0.xci" Type="IP">
-        <Instance HierarchyPath="Frame_2"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Rows1x512_1_0\BoardPreGrid_Rows1x512_1_0.xci" Type="IP">
-        <Instance HierarchyPath="Rows1x512_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Frame_3_0\BoardPreGrid_Frame_3_0.xci" Type="IP">
-        <Instance HierarchyPath="Frame_3"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Frame_4_0\BoardPreGrid_Frame_4_0.xci" Type="IP">
-        <Instance HierarchyPath="Frame_4"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Bram1x320x240_1_0\BoardPreGrid_Bram1x320x240_1_0.xci" Type="IP">
-        <Instance HierarchyPath="Bram1x320x240_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Frame_5_0\BoardPreGrid_Frame_5_0.xci" Type="IP">
-        <Instance HierarchyPath="Frame_5"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Rows1x512_2_0\BoardPreGrid_Rows1x512_2_0.xci" Type="IP">
-        <Instance HierarchyPath="Rows1x512_2"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_MatchTemplateBin_0_0\BoardPreGrid_MatchTemplateBin_0_0.xci" Type="IP">
-        <Instance HierarchyPath="MatchTemplateBin_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_xlconstant_3_0\BoardPreGrid_xlconstant_3_0.xci" Type="IP">
-        <Instance HierarchyPath="xlconstant_3"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Or8_0_0\BoardPreGrid_Or8_0_0.xci" Type="IP">
-        <Instance HierarchyPath="Or8_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Bram1x320x240_2_0\BoardPreGrid_Bram1x320x240_2_0.xci" Type="IP">
-        <Instance HierarchyPath="Bram1x320x240_2"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_ColorBin2Rgb_0_0\BoardPreGrid_ColorBin2Rgb_0_0.xci" Type="IP">
-        <Instance HierarchyPath="ColorBin2Rgb_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_ColorRgb2Vga_0_0\BoardPreGrid_ColorRgb2Vga_0_0.xci" Type="IP">
-        <Instance HierarchyPath="ColorRgb2Vga_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_vga_readBRAM_0_0\BoardPreGrid_vga_readBRAM_0_0.xci" Type="IP">
-        <Instance HierarchyPath="vga_readBRAM_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Mux2_0_0\BoardPreGrid_Mux2_0_0.xci" Type="IP">
-        <Instance HierarchyPath="Mux2_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Mux2_1_0\BoardPreGrid_Mux2_1_0.xci" Type="IP">
-        <Instance HierarchyPath="Mux2_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Mux2_2_0\BoardPreGrid_Mux2_2_0.xci" Type="IP">
-        <Instance HierarchyPath="Mux2_2"/>
+      <File Name="ip\BoardPreGrid_clk_wiz_0_1\BoardPreGrid_clk_wiz_0_1.xci" Type="IP">
+        <Instance HierarchyPath="clk_wiz_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -238,120 +22,80 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\BoardPreGrid_BoardPreGridInit_0_0\BoardPreGrid_BoardPreGridInit_0_0.xci" Type="IP">
-        <Instance HierarchyPath="BoardPreGridInit_0"/>
+      <File Name="ip\BoardPreGrid_camCap_0_1\BoardPreGrid_camCap_0_1.xci" Type="IP">
+        <Instance HierarchyPath="camCap_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\BoardPreGrid_DataDelay_0_0\BoardPreGrid_DataDelay_0_0.xci" Type="IP">
-        <Instance HierarchyPath="DataDelay_0"/>
+      <File Name="ip\BoardPreGrid_vga_readBRAM_0_1\BoardPreGrid_vga_readBRAM_0_1.xci" Type="IP">
+        <Instance HierarchyPath="vga_readBRAM_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\BoardPreGrid_ErosionDilationBin_0_0\BoardPreGrid_ErosionDilationBin_0_0.xci" Type="IP">
-        <Instance HierarchyPath="ErosionDilationBin_0"/>
+      <File Name="ip\BoardPreGrid_Color16to24_0_1\BoardPreGrid_Color16to24_0_1.xci" Type="IP">
+        <Instance HierarchyPath="Color16to24_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\BoardPreGrid_ErosionDilationBin_1_0\BoardPreGrid_ErosionDilationBin_1_0.xci" Type="IP">
-        <Instance HierarchyPath="ErosionDilationBin_1"/>
+      <File Name="ip\BoardPreGrid_ColorGray2Rgb_0_1\BoardPreGrid_ColorGray2Rgb_0_1.xci" Type="IP">
+        <Instance HierarchyPath="ColorGray2Rgb_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\BoardPreGrid_ErosionDilationBin_2_0\BoardPreGrid_ErosionDilationBin_2_0.xci" Type="IP">
-        <Instance HierarchyPath="ErosionDilationBin_2"/>
+      <File Name="ip\BoardPreGrid_ColorRgb2Vga_0_1\BoardPreGrid_ColorRgb2Vga_0_1.xci" Type="IP">
+        <Instance HierarchyPath="ColorRgb2Vga_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\BoardPreGrid_ErosionDilationBin_3_0\BoardPreGrid_ErosionDilationBin_3_0.xci" Type="IP">
-        <Instance HierarchyPath="ErosionDilationBin_3"/>
+      <File Name="ip\BoardPreGrid_Frame_0_1\BoardPreGrid_Frame_0_1.xci" Type="IP">
+        <Instance HierarchyPath="Frame_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\BoardPreGrid_ErosionDilationBin_4_0\BoardPreGrid_ErosionDilationBin_4_0.xci" Type="IP">
-        <Instance HierarchyPath="ErosionDilationBin_4"/>
+      <File Name="ip\BoardPreGrid_Frame_1_1\BoardPreGrid_Frame_1_1.xci" Type="IP">
+        <Instance HierarchyPath="Frame_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\BoardPreGrid_ErosionDilationBin_5_0\BoardPreGrid_ErosionDilationBin_5_0.xci" Type="IP">
-        <Instance HierarchyPath="ErosionDilationBin_5"/>
+      <File Name="ip\BoardPreGrid_Bram8x320x240_0_1\BoardPreGrid_Bram8x320x240_0_1.xci" Type="IP">
+        <Instance HierarchyPath="Bram8x320x240_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\BoardPreGrid_MeanFitter_0_0\BoardPreGrid_MeanFitter_0_0.xci" Type="IP">
-        <Instance HierarchyPath="MeanFitter_0"/>
+      <File Name="ip\BoardPreGrid_RGB2GRAY_0_1\BoardPreGrid_RGB2GRAY_0_1.xci" Type="IP">
+        <Instance HierarchyPath="RGB2GRAY_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\BoardPreGrid_Window_0_0\BoardPreGrid_Window_0_0.xci" Type="IP">
-        <Instance HierarchyPath="Window_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Window_1_0\BoardPreGrid_Window_1_0.xci" Type="IP">
-        <Instance HierarchyPath="Window_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Window_2_0\BoardPreGrid_Window_2_0.xci" Type="IP">
-        <Instance HierarchyPath="Window_2"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Window_3_0\BoardPreGrid_Window_3_0.xci" Type="IP">
-        <Instance HierarchyPath="Window_3"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_Window_4_0\BoardPreGrid_Window_4_0.xci" Type="IP">
-        <Instance HierarchyPath="Window_4"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\BoardPreGrid_clk_wiz_0_0\BoardPreGrid_clk_wiz_0_0.xci" Type="IP">
-        <Instance HierarchyPath="clk_wiz_0"/>
+      <File Name="ip\BoardPreGrid_Bram8x320x240_0_2\BoardPreGrid_Bram8x320x240_0_2.xci" Type="IP">
+        <Instance HierarchyPath="Bram8x320x240_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -360,6 +104,22 @@
       </File>
       <File Name="hdl\BoardPreGrid.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\BoardPreGrid_Bram8x320x240_2_0\BoardPreGrid_Bram8x320x240_2_0.xci" Type="IP">
+        <Instance HierarchyPath="Bram8x320x240_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\BoardPreGrid_Mux2_0_0\BoardPreGrid_Mux2_0_0.xci" Type="IP">
+        <Instance HierarchyPath="Mux2_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>

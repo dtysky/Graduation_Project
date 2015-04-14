@@ -23,22 +23,22 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_BinThCreat_0_0/BINARIZATION_BinThCreat_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="hw_handoff/BINARIZATION_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="hw_handoff/BINARIZATION.hwh"/>
+        <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="hw_handoff/BINARIZATION_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="BINARIZATION_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="hdl/BINARIZATION.v"/>
+        <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_BinThCreat_0_0/BINARIZATION_BinThCreat_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_IICctrl_0_0/BINARIZATION_IICctrl_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_camCap_0_0/BINARIZATION_camCap_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_ColorGray2Rgb_0_0/BINARIZATION_ColorGray2Rgb_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_ColorRgbMux_0_0/BINARIZATION_ColorRgbMux_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_clk_wiz_0_0/BINARIZATION_clk_wiz_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_camCap_0_0/BINARIZATION_camCap_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_RGB2GRAY_0_1/BINARIZATION_RGB2GRAY_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_bram_0_1/BINARIZATION_bram_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_ColorGray2Rgb_0_0/BINARIZATION_ColorGray2Rgb_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_GRAY2BIN_0_1/BINARIZATION_GRAY2BIN_0_1.xci"/>
         <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_ColorRgb2Vga_0_0/BINARIZATION_ColorRgb2Vga_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_ColorBin2Rgb_0_0/BINARIZATION_ColorBin2Rgb_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_Color16to24_0_0/BINARIZATION_Color16to24_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_ColorBin2Rgb_0_0/BINARIZATION_ColorBin2Rgb_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_bram_0_1/BINARIZATION_bram_0_1.xci"/>
         <CompFileExtendedInfo CompFileName="BINARIZATION.bd" FileRelPathName="ip/BINARIZATION_vga_readBRAM_0_0/BINARIZATION_vga_readBRAM_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/BINARIZATION/hdl/BINARIZATION_wrapper.v">
@@ -84,12 +84,12 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="SimBoard.bd" FileRelPathName="SimBoard_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="SimBoard.bd" FileRelPathName="ip/SimBoard_GRAY2BIN_0_0/SimBoard_GRAY2BIN_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="SimBoard.bd" FileRelPathName="hw_handoff/SimBoard_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="SimBoard.bd" FileRelPathName="hdl/SimBoard.v"/>
         <CompFileExtendedInfo CompFileName="SimBoard.bd" FileRelPathName="hw_handoff/SimBoard.hwh"/>
+        <CompFileExtendedInfo CompFileName="SimBoard.bd" FileRelPathName="hdl/SimBoard.v"/>
+        <CompFileExtendedInfo CompFileName="SimBoard.bd" FileRelPathName="ip/SimBoard_GRAY2BIN_0_0/SimBoard_GRAY2BIN_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="SimBoard.bd" FileRelPathName="ip/SimBoard_RGB2GRAY_0_0/SimBoard_RGB2GRAY_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="SimBoard.bd" FileRelPathName="hw_handoff/SimBoard_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="SimBoard.bd" FileRelPathName="SimBoard_ooc.xdc"/>
       </File>
       <File Path="$PSRCDIR/sim_1/bd/SimBoard/hdl/SimBoard_wrapper.v">
         <FileInfo>
