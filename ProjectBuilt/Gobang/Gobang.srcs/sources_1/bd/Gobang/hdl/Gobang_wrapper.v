@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
-//Date        : Tue Apr 14 21:55:20 2015
+//Date        : Wed Apr 15 18:33:19 2015
 //Host        : Dtysky running 64-bit major release  (build 9200)
 //Command     : generate_target Gobang_wrapper.bd
 //Design      : Gobang_wrapper
@@ -16,9 +16,6 @@ module Gobang_wrapper
     d,
     href,
     pclk,
-    rst_n,
-    sel_act,
-    sel_view,
     vga_blue,
     vga_green,
     vga_hsync,
@@ -32,9 +29,6 @@ module Gobang_wrapper
   input [7:0]d;
   input href;
   input pclk;
-  input rst_n;
-  input sel_act;
-  input [1:0]sel_view;
   output [4:0]vga_blue;
   output [5:0]vga_green;
   output vga_hsync;
@@ -49,9 +43,6 @@ module Gobang_wrapper
   wire [7:0]d;
   wire href;
   wire pclk;
-  wire rst_n;
-  wire sel_act;
-  wire [1:0]sel_view;
   wire [4:0]vga_blue;
   wire [5:0]vga_green;
   wire vga_hsync;
@@ -67,9 +58,6 @@ Gobang Gobang_i
         .d(d),
         .href(href),
         .pclk(pclk),
-        .rst_n(rst_n),
-        .sel_act(sel_act),
-        .sel_view(sel_view),
         .vga_blue(vga_blue),
         .vga_green(vga_green),
         .vga_hsync(vga_hsync),

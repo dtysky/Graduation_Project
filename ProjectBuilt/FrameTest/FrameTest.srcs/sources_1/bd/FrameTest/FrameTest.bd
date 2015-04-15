@@ -43,13 +43,13 @@
       </spirit:views>
       <spirit:ports>
         <spirit:port>
-          <spirit:name>rst_n</spirit:name>
+          <spirit:name>clk_in1</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>clk_in1</spirit:name>
+          <spirit:name>rst_n</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
           </spirit:wire>

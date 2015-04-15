@@ -1,218 +1,240 @@
 {
    guistr: "# # String gsaved with Nlview 6.4.10  2014-10-02 bk=1.3207 VDI=35 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port vga_hsync -pg 1 -y 1330 -defaultsOSRD
-preplace port vsync -pg 1 -y 1160 -defaultsOSRD
-preplace port xclk -pg 1 -y 1110 -defaultsOSRD
-preplace port clk_in1 -pg 1 -y 1050 -defaultsOSRD
-preplace port I2C_SCLK -pg 1 -y 1040 -defaultsOSRD
-preplace port href -pg 1 -y 1180 -defaultsOSRD
-preplace port I2C_SDAT -pg 1 -y 1060 -defaultsOSRD
-preplace port vga_vsync -pg 1 -y 1350 -defaultsOSRD
-preplace port pclk -pg 1 -y 1140 -defaultsOSRD
-preplace port sel_act -pg 1 -y 1330 -defaultsOSRD
-preplace port rst_n -pg 1 -y 850 -defaultsOSRD
-preplace portBus vga_green -pg 1 -y 1290 -defaultsOSRD
-preplace portBus vga_red -pg 1 -y 1270 -defaultsOSRD
-preplace portBus sel_view -pg 1 -y 1470 -defaultsOSRD
-preplace portBus vga_blue -pg 1 -y 1310 -defaultsOSRD
-preplace portBus d -pg 1 -y 1200 -defaultsOSRD
-preplace inst Window_5 -pg 1 -lvl 25 -y 1070 -defaultsOSRD
-preplace inst Frame_1 -pg 1 -lvl 15 -y 1010 -defaultsOSRD
-preplace inst ErosionDilationBin_2 -pg 1 -lvl 37 -y 630 -defaultsOSRD
-preplace inst Frame_2 -pg 1 -lvl 17 -y 1070 -defaultsOSRD
-preplace inst Bram1x320x240_0 -pg 1 -lvl 16 -y 1040 -defaultsOSRD
-preplace inst vga_readBRAM_0 -pg 1 -lvl 45 -y 1340 -defaultsOSRD
-preplace inst ErosionDilationBin_3 -pg 1 -lvl 37 -y 90 -defaultsOSRD
-preplace inst Mux2_0 -pg 1 -lvl 31 -y 1410 -defaultsOSRD
-preplace inst Crop_0 -pg 1 -lvl 11 -y 1050 -defaultsOSRD
-preplace inst Frame_3 -pg 1 -lvl 39 -y 1060 -defaultsOSRD
-preplace inst Bram1x320x240_1 -pg 1 -lvl 32 -y 1330 -defaultsOSRD
-preplace inst ErosionDilationBin_4 -pg 1 -lvl 37 -y 270 -defaultsOSRD
-preplace inst Mux2_1 -pg 1 -lvl 40 -y 1300 -defaultsOSRD
-preplace inst Or8_0 -pg 1 -lvl 38 -y 710 -defaultsOSRD
-preplace inst Frame_4 -pg 1 -lvl 30 -y 1250 -defaultsOSRD
-preplace inst Bram1x320x240_2 -pg 1 -lvl 41 -y 1160 -defaultsOSRD
-preplace inst MeanFitter_0 -pg 1 -lvl 10 -y 930 -defaultsOSRD
-preplace inst ErosionDilationBin_5 -pg 1 -lvl 37 -y 450 -defaultsOSRD
-preplace inst Mux2_2 -pg 1 -lvl 31 -y 1240 -defaultsOSRD
-preplace inst ErosionDilationBin_6 -pg 1 -lvl 20 -y 1040 -defaultsOSRD
-preplace inst Frame_5 -pg 1 -lvl 33 -y 1060 -defaultsOSRD
-preplace inst Bram1x320x240_3 -pg 1 -lvl 41 -y 950 -defaultsOSRD
-preplace inst Rows1x512_0 -pg 1 -lvl 18 -y 1070 -defaultsOSRD
-preplace inst Bram1x320x240_4 -pg 1 -lvl 22 -y 1040 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y 940 -defaultsOSRD
-preplace inst Frame_6 -pg 1 -lvl 40 -y 1120 -defaultsOSRD
-preplace inst xlconstant_3 -pg 1 -lvl 37 -y 760 -defaultsOSRD
-preplace inst Rows1x512_1 -pg 1 -lvl 27 -y 1060 -defaultsOSRD
-preplace inst Frame_7 -pg 1 -lvl 21 -y 1020 -defaultsOSRD
-preplace inst RGB2GRAY_0 -pg 1 -lvl 5 -y 1090 -defaultsOSRD
-preplace inst Rows8x512_0 -pg 1 -lvl 8 -y 910 -defaultsOSRD
-preplace inst Rows1x512_2 -pg 1 -lvl 34 -y 1060 -defaultsOSRD
-preplace inst Frame_8 -pg 1 -lvl 23 -y 1070 -defaultsOSRD
-preplace inst ColorBin2Rgb_0 -pg 1 -lvl 42 -y 1160 -defaultsOSRD
-preplace inst MatchTemplateBin_0 -pg 1 -lvl 36 -y 840 -defaultsOSRD
-preplace inst Rows8x512_1 -pg 1 -lvl 12 -y 1000 -defaultsOSRD
-preplace inst Rows1x512_3 -pg 1 -lvl 24 -y 1070 -defaultsOSRD
-preplace inst ColorBin2Rgb_1 -pg 1 -lvl 42 -y 950 -defaultsOSRD
-preplace inst Mux4_0 -pg 1 -lvl 43 -y 1370 -defaultsOSRD
-preplace inst Window_0 -pg 1 -lvl 9 -y 910 -defaultsOSRD
-preplace inst axi_interconnect_0 -pg 1 -lvl 3 -y 790 -defaultsOSRD
-preplace inst ColorRgb2Vga_0 -pg 1 -lvl 44 -y 1370 -defaultsOSRD
-preplace inst Window_1 -pg 1 -lvl 13 -y 1010 -defaultsOSRD
-preplace inst Harris_0 -pg 1 -lvl 14 -y 1030 -defaultsOSRD
-preplace inst BoardInit_AXI_0 -pg 1 -lvl 4 -y 830 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 1050 -defaultsOSRD
-preplace inst Bram8x320x240_0 -pg 1 -lvl 6 -y 1170 -defaultsOSRD
-preplace inst ColorGray2Rgb_0 -pg 1 -lvl 42 -y 1360 -defaultsOSRD
-preplace inst Window_2 -pg 1 -lvl 19 -y 1070 -defaultsOSRD
-preplace inst DataDelay_0 -pg 1 -lvl 37 -y 880 -defaultsOSRD
-preplace inst Color16to24_0 -pg 1 -lvl 4 -y 1100 -defaultsOSRD
-preplace inst Bram8x320x240_1 -pg 1 -lvl 41 -y 1360 -defaultsOSRD
-preplace inst IICctrl_0 -pg 1 -lvl 45 -y 1050 -defaultsOSRD
-preplace inst Window_3 -pg 1 -lvl 28 -y 1060 -defaultsOSRD
-preplace inst ErosionDilationBin_0 -pg 1 -lvl 26 -y 1040 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -y 730 -defaultsOSRD
-preplace inst Frame_0 -pg 1 -lvl 7 -y 1090 -defaultsOSRD
-preplace inst Window_4 -pg 1 -lvl 35 -y 1040 -defaultsOSRD
-preplace inst ErosionDilationBin_1 -pg 1 -lvl 29 -y 1060 -defaultsOSRD
-preplace inst camCap_0 -pg 1 -lvl 3 -y 1170 -defaultsOSRD
-preplace netloc Rows1x512_3_out_enable 1 24 1 6670
-preplace netloc Crop_0_out_enable 1 11 29 3350 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 1010 NJ 1010 NJ 1010 NJ 950 NJ
-preplace netloc Frame_1_out_enable 1 15 26 4380 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 980 NJ 980 NJ 980 NJ 920 NJ 960 NJ
-preplace netloc ErosionDilationBin_4_out_data 1 37 1 10090
-preplace netloc Frame_5_ram_addr 1 31 3 8490 1160 NJ 1140 8970
-preplace netloc camCap_0_we 1 3 3 NJ 1180 NJ 1180 N
+preplace port vga_hsync -pg 1 -y 1370 -defaultsOSRD
+preplace port vsync -pg 1 -y 1180 -defaultsOSRD
+preplace port xclk -pg 1 -y 1160 -defaultsOSRD
+preplace port clk_in1 -pg 1 -y 1310 -defaultsOSRD
+preplace port I2C_SCLK -pg 1 -y 1210 -defaultsOSRD
+preplace port href -pg 1 -y 1200 -defaultsOSRD
+preplace port I2C_SDAT -pg 1 -y 1230 -defaultsOSRD
+preplace port vga_vsync -pg 1 -y 1390 -defaultsOSRD
+preplace port pclk -pg 1 -y 1160 -defaultsOSRD
+preplace portBus vga_green -pg 1 -y 1330 -defaultsOSRD
+preplace portBus vga_red -pg 1 -y 1310 -defaultsOSRD
+preplace portBus vga_blue -pg 1 -y 1350 -defaultsOSRD
+preplace portBus d -pg 1 -y 1220 -defaultsOSRD
+preplace inst Mux2_4 -pg 1 -lvl 37 -y 690 -defaultsOSRD
+preplace inst Bram1x320x240_2 -pg 1 -lvl 38 -y 970 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y 830 -defaultsOSRD
+preplace inst ColorBin2Rgb_0 -pg 1 -lvl 39 -y 970 -defaultsOSRD
+preplace inst Mux2_5 -pg 1 -lvl 37 -y 810 -defaultsOSRD
+preplace inst Bram1x320x240_3 -pg 1 -lvl 38 -y 1180 -defaultsOSRD
+preplace inst ColorBin2Rgb_1 -pg 1 -lvl 39 -y 1160 -defaultsOSRD
+preplace inst Bram1x320x240_4 -pg 1 -lvl 38 -y 790 -defaultsOSRD
+preplace inst BoardInit_AXI_0 -pg 1 -lvl 4 -y 760 -defaultsOSRD
+preplace inst ColorBin2Rgb_2 -pg 1 -lvl 39 -y 1240 -defaultsOSRD
+preplace inst Frame_0 -pg 1 -lvl 7 -y 1140 -defaultsOSRD
+preplace inst Frame_1 -pg 1 -lvl 15 -y 1100 -defaultsOSRD
+preplace inst DataDelay_0 -pg 1 -lvl 34 -y 850 -defaultsOSRD
+preplace inst Rows8x512_0 -pg 1 -lvl 8 -y 1320 -defaultsOSRD
+preplace inst Frame_2 -pg 1 -lvl 17 -y 1300 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 1310 -defaultsOSRD
+preplace inst Rows8x512_1 -pg 1 -lvl 12 -y 1150 -defaultsOSRD
+preplace inst Frame_3 -pg 1 -lvl 36 -y 870 -defaultsOSRD
+preplace inst ErosionDilationBin_0 -pg 1 -lvl 23 -y 1230 -defaultsOSRD
+preplace inst Harris_0 -pg 1 -lvl 14 -y 1120 -defaultsOSRD
+preplace inst Frame_4 -pg 1 -lvl 27 -y 1220 -defaultsOSRD
+preplace inst ErosionDilationBin_1 -pg 1 -lvl 26 -y 1240 -defaultsOSRD
+preplace inst Frame_5 -pg 1 -lvl 30 -y 1080 -defaultsOSRD
+preplace inst Frame_6 -pg 1 -lvl 37 -y 1400 -defaultsOSRD
+preplace inst ErosionDilationBin_2 -pg 1 -lvl 34 -y 630 -defaultsOSRD
+preplace inst Frame_7 -pg 1 -lvl 36 -y 590 -defaultsOSRD
+preplace inst RGB2GRAY_0 -pg 1 -lvl 5 -y 1120 -defaultsOSRD
+preplace inst ErosionDilationBin_3 -pg 1 -lvl 34 -y 90 -defaultsOSRD
+preplace inst Frame_8 -pg 1 -lvl 36 -y 730 -defaultsOSRD
+preplace inst ErosionDilationBin_4 -pg 1 -lvl 34 -y 270 -defaultsOSRD
+preplace inst DataCombin2_0 -pg 1 -lvl 39 -y 1070 -defaultsOSRD
+preplace inst ErosionDilationBin_5 -pg 1 -lvl 34 -y 450 -defaultsOSRD
+preplace inst ErosionDilationBin_6 -pg 1 -lvl 20 -y 1220 -defaultsOSRD
+preplace inst ColorGray2Rgb_0 -pg 1 -lvl 39 -y 1400 -defaultsOSRD
+preplace inst Window_0 -pg 1 -lvl 9 -y 1320 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 4 -y 1030 -defaultsOSRD
+preplace inst Window_1 -pg 1 -lvl 13 -y 1130 -defaultsOSRD
+preplace inst Window_2 -pg 1 -lvl 19 -y 1280 -defaultsOSRD
+preplace inst Window_3 -pg 1 -lvl 25 -y 1500 -defaultsOSRD
+preplace inst Crop_0 -pg 1 -lvl 11 -y 1130 -defaultsOSRD
+preplace inst DataSplit4_0 -pg 1 -lvl 27 -y 1000 -defaultsOSRD
+preplace inst Window_4 -pg 1 -lvl 32 -y 1080 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y 1000 -defaultsOSRD
+preplace inst IICctrl_0 -pg 1 -lvl 42 -y 1220 -defaultsOSRD
+preplace inst Window_5 -pg 1 -lvl 22 -y 1290 -defaultsOSRD
+preplace inst GRAY2BIN_0 -pg 1 -lvl 35 -y 730 -defaultsOSRD
+preplace inst Or8_0 -pg 1 -lvl 35 -y 560 -defaultsOSRD
+preplace inst vga_readBRAM_0 -pg 1 -lvl 42 -y 1380 -defaultsOSRD
+preplace inst GRAY2BIN_1 -pg 1 -lvl 35 -y 850 -defaultsOSRD
+preplace inst MatchTemplateBin_0 -pg 1 -lvl 33 -y 840 -defaultsOSRD
+preplace inst MeanFitter_0 -pg 1 -lvl 10 -y 1300 -defaultsOSRD
+preplace inst ColorRgb2Vga_0 -pg 1 -lvl 41 -y 1200 -defaultsOSRD
+preplace inst Color16to24_0 -pg 1 -lvl 4 -y 1130 -defaultsOSRD
+preplace inst camCap_0 -pg 1 -lvl 3 -y 1190 -defaultsOSRD
+preplace inst Rows1x512_0 -pg 1 -lvl 18 -y 1300 -defaultsOSRD
+preplace inst Rows1x512_1 -pg 1 -lvl 24 -y 1310 -defaultsOSRD
+preplace inst Rows1x512_2 -pg 1 -lvl 31 -y 1100 -defaultsOSRD
+preplace inst Bram8x320x240_0 -pg 1 -lvl 6 -y 1330 -defaultsOSRD
+preplace inst Rows1x512_3 -pg 1 -lvl 21 -y 1310 -defaultsOSRD
+preplace inst Bram8x320x240_1 -pg 1 -lvl 38 -y 1400 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -y 740 -defaultsOSRD
+preplace inst Mux4_0 -pg 1 -lvl 40 -y 1200 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 34 -y 760 -defaultsOSRD
+preplace inst Mux2_0 -pg 1 -lvl 28 -y 1060 -defaultsOSRD
+preplace inst Mux2_1 -pg 1 -lvl 37 -y 1230 -defaultsOSRD
+preplace inst Mux2_2 -pg 1 -lvl 28 -y 1230 -defaultsOSRD
+preplace inst Bram1x320x240_0 -pg 1 -lvl 16 -y 1150 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 3 -y 910 -defaultsOSRD
+preplace inst Mux2_3 -pg 1 -lvl 37 -y 570 -defaultsOSRD
+preplace inst Bram1x320x240_1 -pg 1 -lvl 29 -y 1110 -defaultsOSRD
+preplace netloc Mux2_4_o 1 37 1 9910
+preplace netloc Rows1x512_3_out_enable 1 21 1 N
+preplace netloc Crop_0_out_enable 1 11 26 3140 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ 1410 NJ
+preplace netloc Frame_1_out_enable 1 15 23 4130 1250 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1160 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1160 9860
+preplace netloc ErosionDilationBin_4_out_data 1 34 1 8980
+preplace netloc Frame_5_ram_addr 1 28 3 7450 1000 NJ 1000 7890
+preplace netloc camCap_0_we 1 3 3 NJ 1200 NJ 1200 1550
 preplace netloc Harris_0_out_data 1 14 1 N
-preplace netloc Window_2_out_enable 1 19 1 5400
-preplace netloc vga_readBRAM_0_vga_red 1 45 1 N
-preplace netloc Mux2_1_o 1 31 10 8500 1230 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 10880
-preplace netloc ErosionDilationBin_0_out_enable 1 26 1 7180
-preplace netloc Frame_3_ram_addr 1 30 10 8280 1310 NJ 1210 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 10540
-preplace netloc BoardInit_AXI_0_dilation0 1 4 22 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 6920
-preplace netloc vga_readBRAM_0_frame_addr 1 40 6 10960 1260 NJ 1260 NJ 1220 NJ 1220 NJ 1220 12020
-preplace netloc MeanFitter_0_out_data 1 10 1 3050
-preplace netloc BoardInit_AXI_0_rst_all_n 1 4 41 1330 690 NJ 690 1870 940 2130 1000 2520 1000 2790 1090 3090 1170 3340 900 3610 1100 NJ 960 4140 930 NJ 930 4600 1170 4900 1160 5150 1150 5390 940 5660 940 NJ 940 6150 990 6430 990 6680 960 6950 940 7200 980 7450 950 7720 960 7970 1150 NJ 1150 NJ 1150 8710 980 9000 980 9230 830 NJ 910 9820 940 NJ 880 10250 970 10580 1030 NJ 1050 NJ 1060 NJ 1060 NJ 1060 NJ
-preplace netloc Frame_6_out_data 1 40 1 10910
-preplace netloc xlconstant_3_dout 1 37 1 10090
-preplace netloc Window_5_out_enable 1 25 1 6940
-preplace netloc Frame_7_out_data 1 21 1 5900
-preplace netloc proc_sys_reset_0_interconnect_aresetn 1 2 1 700
-preplace netloc vga_readBRAM_0_vga_hsync 1 45 1 N
-preplace netloc Window_4_out_data 1 35 2 9540 680 9840
-preplace netloc Bram1x320x240_0_doutb 1 16 1 4610
-preplace netloc Frame_1_ram_addr 1 15 26 4400 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 970 NJ 970 NJ 910 NJ 910 NJ 920 NJ
+preplace netloc Window_2_out_enable 1 19 1 5130
+preplace netloc vga_readBRAM_0_vga_red 1 42 1 NJ
+preplace netloc Mux2_1_o 1 28 10 7440 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 960 NJ 960 NJ 960 NJ 960 9870
+preplace netloc ErosionDilationBin_0_out_enable 1 23 1 6150
+preplace netloc Frame_3_ram_addr 1 27 10 7220 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 9530
+preplace netloc BoardInit_AXI_0_dilation0 1 4 19 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 5880
+preplace netloc vga_readBRAM_0_frame_addr 1 37 6 9940 1500 NJ 1500 NJ 1500 NJ 1500 NJ 1500 11010
+preplace netloc GRAY2BIN_0_out_enable 1 35 1 9230
+preplace netloc MeanFitter_0_out_data 1 10 25 2890 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 9010
+preplace netloc BoardInit_AXI_0_rst_all_n 1 4 38 1280 1180 NJ 1180 1830 1240 2100 1240 2370 1240 2630 1090 2900 1250 3150 1240 3410 1220 NJ 1220 3880 1280 NJ 1280 4370 1220 4640 1220 4880 1190 5120 1330 5390 1230 5630 1200 5890 1340 6120 1230 6420 1210 6700 1140 6920 1320 NJ 1320 NJ 1320 7650 1170 7900 1020 8150 1000 NJ 1000 8690 940 NJ 930 9280 1340 9620 1320 NJ 1290 NJ 1290 NJ 1290 NJ 1290 10760
+preplace netloc Frame_6_out_data 1 37 1 9920
+preplace netloc xlconstant_3_dout 1 34 1 8970
+preplace netloc Frame_7_out_data 1 36 1 9530
+preplace netloc Window_5_out_enable 1 22 1 5880
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 2 1 650
+preplace netloc vga_readBRAM_0_vga_hsync 1 42 1 NJ
+preplace netloc Window_4_out_data 1 32 2 8390 760 8720
+preplace netloc Bram1x320x240_0_doutb 1 16 1 4340
+preplace netloc Frame_1_ram_addr 1 15 23 4150 1050 NJ 1050 NJ 1050 NJ 1050 NJ 1050 NJ 1050 NJ 1050 NJ 1050 NJ 1050 NJ 1050 NJ 1050 NJ 1090 NJ 1150 NJ 1230 NJ 1230 NJ 1210 NJ 1210 NJ 1210 NJ 1210 NJ 1210 NJ 1210 NJ 1150 N
 preplace netloc Harris_0_out_enable 1 14 1 N
-preplace netloc ErosionDilationBin_2_out_data 1 37 1 N
-preplace netloc BoardInit_AXI_0_bottom 1 4 7 NJ 940 NJ 940 NJ 960 NJ 1040 NJ 1040 NJ 1040 N
-preplace netloc Frame_5_out_enable 1 33 1 8990
-preplace netloc d_1 1 0 3 NJ 1200 NJ 1200 N
-preplace netloc DataDelay_0_out_data 1 37 1 10060
-preplace netloc Bram8x320x240_1_doutb 1 41 1 N
-preplace netloc Frame_2_ram_addr 1 15 3 4420 1150 NJ 1150 4860
-preplace netloc Window_0_out_enable 1 9 1 2770
-preplace netloc Color16to24_0_rgb24 1 4 1 N
-preplace netloc Rows8x512_1_out_data 1 12 1 3600
-preplace netloc Frame_0_ram_addr 1 5 3 1640 1070 NJ 1170 2170
-preplace netloc RGB2GRAY_0_out_data 1 5 1 1600
-preplace netloc Rows8x512_0_out_enable 1 8 1 2510
-preplace netloc Frame_8_out_enable 1 23 1 6420
-preplace netloc ErosionDilationBin_6_out_data 1 20 1 N
-preplace netloc ErosionDilationBin_1_out_enable 1 29 1 7960
-preplace netloc Rows8x512_0_out_data 1 8 1 2490
-preplace netloc BoardInit_AXI_0_erosion0 1 4 16 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 5400
-preplace netloc Frame_8_out_data 1 23 1 6410
-preplace netloc BoardInit_AXI_0_erosion1 1 4 25 NJ 1150 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 7720
-preplace netloc Rows1x512_3_out_data 1 24 1 6660
-preplace netloc BoardInit_AXI_0_right 1 4 7 NJ 980 NJ 980 NJ 980 NJ 1060 NJ 1060 NJ 1060 3040
-preplace netloc Frame_2_out_data 1 17 1 4870
-preplace netloc Mux2_2_o 1 31 10 8450 1440 NJ 1440 NJ 1440 NJ 1440 NJ 1440 NJ 1440 NJ 1440 NJ 1440 NJ 1440 NJ
-preplace netloc Frame_4_out_data 1 30 10 8220 1170 NJ 1170 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ
-preplace netloc BoardInit_AXI_0_erosion2 1 4 33 1300 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ
-preplace netloc Frame_6_ram_addr 1 40 1 10870
-preplace netloc Frame_8_ram_addr 1 21 3 5940 1140 NJ 960 6400
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 350 840 690
-preplace netloc BoardInit_AXI_0_erosion3 1 4 33 1320 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ
-preplace netloc Rows1x512_0_out_data 1 18 1 5120
-preplace netloc ErosionDilationBin_0_out_data 1 26 1 7170
-preplace netloc sel_1 1 0 40 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 8250 1320 NJ 1220 NJ 1320 NJ 1320 NJ 1320 NJ 1320 NJ 1320 NJ 1320 NJ 1320 NJ
-preplace netloc BoardInit_AXI_0_erosion4 1 4 33 NJ 840 NJ 840 NJ 840 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 9800
-preplace netloc BoardInit_AXI_0_erosion5 1 4 33 NJ 860 NJ 860 NJ 860 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 770 9830
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 2 730 930 NJ
-preplace netloc BoardInit_AXI_0_mode_dilation 1 4 22 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 6930
-preplace netloc Frame_4_out_enable 1 30 1 8230
-preplace netloc ErosionDilationBin_6_out_enable 1 20 1 N
-preplace netloc ErosionDilationBin_5_out_data 1 37 1 10080
-preplace netloc Frame_1_out_data 1 15 26 4390 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 960 NJ 960 NJ 900 NJ 900 NJ 900 NJ
-preplace netloc Bram8x320x240_0_doutb 1 6 1 1840
-preplace netloc Frame_7_out_enable 1 21 1 5910
-preplace netloc BoardInit_AXI_0_match0 1 4 32 NJ 880 NJ 880 NJ 880 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 N
-preplace netloc ErosionDilationBin_3_out_data 1 37 1 10100
-preplace netloc vga_readBRAM_0_vga_green 1 45 1 N
-preplace netloc Window_1_out_data 1 13 1 3870
-preplace netloc Frame_7_ram_addr 1 21 1 5920
-preplace netloc BoardInit_AXI_0_left 1 4 7 NJ 960 NJ 960 NJ 970 NJ 1050 NJ 1050 NJ 1050 3070
-preplace netloc Rows1x512_2_out_data 1 34 1 N
-preplace netloc ErosionDilationBin_1_out_data 1 29 1 7950
-preplace netloc ColorGray2Rgb_0_rgb24 1 42 1 11410
-preplace netloc Rows1x512_0_out_enable 1 18 1 5140
-preplace netloc Net 1 45 1 N
-preplace netloc Frame_3_out_enable 1 30 10 8270 1130 NJ 1130 NJ 960 NJ 960 NJ 960 NJ 1020 NJ 1020 NJ 1020 NJ 960 10540
-preplace netloc ColorBin2Rgb_0_rgb24 1 42 1 11380
-preplace netloc vga_readBRAM_0_vga_vsync 1 45 1 N
-preplace netloc vga_readBRAM_0_vga_blue 1 45 1 N
-preplace netloc Crop_0_out_data 1 11 29 3360 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 1000 NJ 1000 NJ 1000 NJ 940 NJ
-preplace netloc Frame_5_out_data 1 33 1 8980
-preplace netloc ColorBin2Rgb_1_rgb24 1 42 1 11390
-preplace netloc Bram1x320x240_2_doutb 1 41 1 N
-preplace netloc Window_2_out_data 1 19 1 5400
-preplace netloc clk_wiz_0_locked 1 1 3 340 850 NJ 940 1030
-preplace netloc camCap_0_dout 1 3 1 1020
-preplace netloc MatchTemplateBin_0_out_data 1 36 1 9800
-preplace netloc Mux2_0_o 1 31 10 8480 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ
-preplace netloc Window_3_out_data 1 28 1 7690
-preplace netloc Window_1_out_enable 1 13 1 3890
-preplace netloc Bram1x320x240_4_doutb 1 22 1 6130
-preplace netloc Frame_0_out_data 1 7 1 2210
-preplace netloc Or8_0_o 1 38 1 10270
-preplace netloc MeanFitter_0_out_enable 1 10 1 3080
-preplace netloc Rows1x512_2_out_enable 1 34 1 N
-preplace netloc Frame_6_out_enable 1 40 1 10890
-preplace netloc BoardInit_AXI_0_harris_th 1 4 10 NJ 930 NJ 930 NJ 950 NJ 1010 NJ 1010 NJ 1010 NJ 870 NJ 870 NJ 870 3910
-preplace netloc sel_1_1 1 0 43 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1340 NJ 1460 NJ 1460 NJ 1460 NJ 1460 NJ 1460 NJ 1460 NJ 1460 NJ 1460 NJ 1460 NJ 1460 NJ 1460 11400
-preplace netloc Frame_4_ram_addr 1 30 1 8240
-preplace netloc Bram1x320x240_3_doutb 1 41 1 N
-preplace netloc href_1 1 0 3 NJ 1180 NJ 1180 N
-preplace netloc BoardPreGridInit_0_mode_erosion 1 4 33 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 5420 1150 NJ 1150 NJ 1150 NJ 970 NJ 970 NJ 970 NJ 1140 NJ 960 NJ 960 7710 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 9780
-preplace netloc ColorRgb2Vga_0_vga 1 44 1 11780
-preplace netloc clk_wiz_0_clk_out1 1 1 40 NJ 1040 NJ 1040 NJ 1040 NJ 1030 1630 1060 1850 930 2220 990 2500 990 2780 1080 3030 1180 3330 890 3630 1090 NJ 950 4130 1090 4410 1140 4620 1160 4880 1150 5130 1160 5430 930 5650 1100 5930 1160 6160 980 6440 980 6670 950 6940 930 7210 970 7440 940 7730 950 7980 1160 NJ 1160 8470 1140 8690 970 9010 970 9240 840 NJ 920 9790 950 NJ 890 10240 980 10570 1040 10940
-preplace netloc rst_n_1 1 0 4 NJ 850 NJ 830 NJ 910 1010
-preplace netloc out_enable 1 37 1 N
-preplace netloc vsync_1 1 0 3 NJ 1160 NJ 1160 N
-preplace netloc Bram1x320x240_1_doutb 1 32 1 8720
+preplace netloc ErosionDilationBin_2_out_data 1 34 1 8950
+preplace netloc Mux2_3_o 1 37 1 9940
+preplace netloc GRAY2BIN_0_out_data 1 35 1 9240
+preplace netloc BoardInit_AXI_0_bottom 1 4 7 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 2910
+preplace netloc Frame_5_out_enable 1 30 1 7920
+preplace netloc d_1 1 0 3 NJ 1220 NJ 1220 NJ
+preplace netloc DataDelay_0_out_data 1 34 1 8960
+preplace netloc DataCombin2_0_o 1 39 1 10380
+preplace netloc Bram8x320x240_1_doutb 1 38 1 NJ
+preplace netloc Frame_2_ram_addr 1 15 3 4150 1380 NJ 1380 4610
+preplace netloc Window_0_out_enable 1 9 1 N
+preplace netloc Color16to24_0_rgb24 1 4 1 NJ
+preplace netloc Rows8x512_1_out_data 1 12 1 N
+preplace netloc GRAY2BIN_1_out_data 1 35 1 9240
+preplace netloc Frame_0_ram_addr 1 5 3 1600 1230 NJ 1250 2070
+preplace netloc RGB2GRAY_0_out_data 1 5 1 1590
+preplace netloc Rows8x512_0_out_enable 1 8 1 2360
+preplace netloc axi_interconnect_0_M01_AXI 1 3 1 990
+preplace netloc Frame_8_out_enable 1 36 1 9540
+preplace netloc ErosionDilationBin_6_out_data 1 20 1 5360
+preplace netloc ErosionDilationBin_1_out_enable 1 26 1 N
+preplace netloc Rows8x512_0_out_data 1 8 1 2350
+preplace netloc Mux2_5_o 1 37 1 9860
+preplace netloc Frame_8_out_data 1 36 1 9570
+preplace netloc BoardInit_AXI_0_erosion0 1 4 16 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 5110
+preplace netloc BoardInit_AXI_0_erosion1 1 4 22 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 6670
+preplace netloc Rows1x512_3_out_data 1 21 1 N
+preplace netloc BoardInit_AXI_0_right 1 4 7 NJ 890 NJ 890 NJ 890 NJ 890 NJ 890 NJ 890 2880
+preplace netloc Frame_2_out_data 1 17 1 4620
+preplace netloc Mux2_2_o 1 28 10 7390 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ 970 NJ 970 NJ 970 NJ 970 NJ
+preplace netloc Frame_4_out_data 1 27 10 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 9590
+preplace netloc BoardInit_AXI_0_white_th 1 4 31 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 8950
+preplace netloc BoardInit_AXI_0_erosion2 1 4 30 1260 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc Frame_6_ram_addr 1 37 1 9930
+preplace netloc Frame_8_ram_addr 1 36 1 9570
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 300 900 640
+preplace netloc BoardInit_AXI_0_erosion3 1 4 30 1270 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ
+preplace netloc Rows1x512_0_out_data 1 18 1 N
+preplace netloc ErosionDilationBin_0_out_data 1 23 1 6130
+preplace netloc sel_1 1 27 10 7190 1130 NJ 1010 NJ 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 9560
+preplace netloc sel_2 1 27 10 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ 990 NJ 990 NJ 990 9550
+preplace netloc BoardInit_AXI_0_erosion4 1 4 30 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 8700
+preplace netloc BoardInit_AXI_0_erosion5 1 4 30 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 NJ 750 8730
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 2 670 1070 1000
+preplace netloc BoardInit_AXI_0_mode_dilation 1 4 19 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 5900
+preplace netloc Frame_4_out_enable 1 27 1 7200
+preplace netloc ErosionDilationBin_6_out_enable 1 20 1 5370
+preplace netloc ErosionDilationBin_5_out_data 1 34 1 8970
+preplace netloc Frame_1_out_data 1 15 23 4120 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1040 NJ 1080 NJ 1140 NJ 1220 NJ 1220 NJ 1200 NJ 1200 NJ 1200 NJ 1200 NJ 1200 NJ 1200 NJ 1140 9890
+preplace netloc Bram8x320x240_0_doutb 1 6 1 1820
+preplace netloc Frame_7_out_enable 1 36 1 N
+preplace netloc BoardInit_AXI_0_match0 1 4 29 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 8380
+preplace netloc ErosionDilationBin_3_out_data 1 34 1 9010
+preplace netloc vga_readBRAM_0_vga_green 1 42 1 NJ
+preplace netloc Window_1_out_data 1 13 1 N
+preplace netloc Frame_7_ram_addr 1 36 1 9580
+preplace netloc BoardInit_AXI_0_left 1 4 7 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 2890
+preplace netloc Rows1x512_2_out_data 1 31 1 N
+preplace netloc ErosionDilationBin_1_out_data 1 26 1 N
+preplace netloc GRAY2BIN_1_out_enable 1 35 1 9250
+preplace netloc ColorGray2Rgb_0_rgb24 1 39 1 10380
+preplace netloc Rows1x512_0_out_enable 1 18 1 N
+preplace netloc Net 1 42 1 NJ
+preplace netloc Frame_3_out_enable 1 27 10 7220 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 950 NJ 950 NJ 950 9540
+preplace netloc ColorBin2Rgb_0_rgb24 1 39 1 10370
+preplace netloc vga_readBRAM_0_vga_vsync 1 42 1 NJ
+preplace netloc vga_readBRAM_0_vga_blue 1 42 1 NJ
+preplace netloc ColorBin2Rgb_1_rgb24 1 39 1 NJ
+preplace netloc Crop_0_out_data 1 11 26 3130 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ
+preplace netloc Frame_5_out_data 1 30 1 7910
+preplace netloc Bram1x320x240_2_doutb 1 38 1 N
+preplace netloc Window_2_out_data 1 19 1 5140
+preplace netloc clk_wiz_0_locked 1 1 3 300 1090 NJ 1050 970
+preplace netloc camCap_0_dout 1 3 1 990
+preplace netloc MatchTemplateBin_0_out_data 1 33 1 8710
+preplace netloc Mux2_0_o 1 28 10 7430 960 NJ 960 NJ 960 NJ 960 NJ 960 NJ 980 NJ 980 NJ 980 NJ 980 NJ
+preplace netloc Window_3_out_data 1 25 1 6690
+preplace netloc Window_1_out_enable 1 13 1 N
+preplace netloc Frame_0_out_data 1 7 1 2080
+preplace netloc Bram1x320x240_4_doutb 1 38 1 10150
+preplace netloc Or8_0_o 1 35 1 9260
+preplace netloc MeanFitter_0_out_enable 1 10 25 2880 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 9000
+preplace netloc Rows1x512_2_out_enable 1 31 1 N
+preplace netloc Frame_6_out_enable 1 37 1 9880
+preplace netloc BoardInit_AXI_0_black_th 1 4 31 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 8990
+preplace netloc BoardInit_AXI_0_harris_th 1 4 10 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 3650
+preplace netloc Frame_4_ram_addr 1 27 1 7210
+preplace netloc ColorBin2Rgb_2_rgb24 1 39 1 NJ
+preplace netloc Bram1x320x240_3_doutb 1 38 1 10160
+preplace netloc href_1 1 0 3 NJ 1200 NJ 1200 NJ
+preplace netloc BoardPreGridInit_0_mode_erosion 1 4 30 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 5140 1120 NJ 1120 NJ 1120 NJ 1120 NJ 1120 NJ 1120 6690 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 8730
+preplace netloc ColorRgb2Vga_0_vga 1 41 1 10750
+preplace netloc clk_wiz_0_clk_out1 1 1 37 NJ 1280 NJ 1280 NJ 1280 NJ 1280 1560 1170 1810 1230 2110 1230 2380 1230 2620 1060 2870 1010 3160 1230 3400 1210 NJ 1210 3870 1180 4140 1270 4360 1210 4650 1210 4870 1180 5100 1110 5400 1220 5620 1180 5890 1130 6160 1220 6410 1190 6680 1130 6930 1330 NJ 1330 7420 1210 7630 1160 7930 1190 8160 1160 NJ 1160 8670 930 NJ 920 9270 1330 9610 1310 9910
+preplace netloc out_enable 1 34 1 N
+preplace netloc vsync_1 1 0 3 NJ 1180 NJ 1180 NJ
+preplace netloc Bram1x320x240_1_doutb 1 29 1 N
 preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 N
-preplace netloc clk_wiz_0_clk_out2 1 1 45 N 1030 NJ 1030 NJ 1030 NJ 1010 NJ 1010 NJ 1010 NJ 1070 NJ 1070 NJ 1070 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 990 NJ 990 NJ 990 NJ 930 NJ 980 10900 1060 NJ 1070 NJ 1070 NJ 1070 11780 990 12020
-preplace netloc clk_wiz_0_clk_out3 1 1 3 320 800 720 920 NJ
-preplace netloc Frame_2_out_enable 1 17 1 4890
-preplace netloc ErosionDilationBin_2_out_enable 1 37 2 NJ 830 10260
-preplace netloc camCap_0_addr 1 3 3 NJ 1160 NJ 1160 1610
-preplace netloc camCap_0_wclk 1 3 3 NJ 1200 NJ 1200 1620
-preplace netloc Frame_0_out_enable 1 7 1 2150
-preplace netloc Rows1x512_1_out_data 1 27 1 7430
-preplace netloc Mux4_0_o 1 43 1 N
-preplace netloc Window_4_out_enable 1 35 2 9520 660 9810
-preplace netloc Rows8x512_1_out_enable 1 12 1 3620
-preplace netloc Window_5_out_data 1 25 1 6900
-preplace netloc clk_in1_1 1 0 1 N
-preplace netloc pclk_1 1 0 3 NJ 1140 NJ 1140 N
-preplace netloc Window_0_out_data 1 9 1 2760
-preplace netloc axi_interconnect_0_M00_AXI 1 3 1 N
-preplace netloc BoardInit_AXI_0_top 1 4 7 NJ 920 NJ 920 NJ 920 NJ 830 NJ 830 NJ 830 3100
-preplace netloc Rows1x512_1_out_enable 1 27 1 7440
-preplace netloc IICctrl_0_I2C_SCLK 1 45 1 N
-preplace netloc Frame_3_out_data 1 39 1 10560
-preplace netloc Window_3_out_enable 1 28 1 7700
-levelinfo -pg 1 130 240 520 870 1170 1480 1740 1990 2370 2640 2910 3220 3480 3750 4020 4260 4510 4740 5010 5270 5540 5780 6030 6280 6550 6790 7060 7320 7570 7840 8100 8360 8590 8850 9120 9350 9670 9950 10160 10420 10750 11060 11270 11490 11680 11900 12040
+preplace netloc clk_wiz_0_clk_out2 1 1 42 NJ 1270 NJ 1270 NJ 1270 NJ 1230 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1200 NJ 1200 NJ 1200 NJ 1320 NJ 1210 NJ 1210 NJ 1330 NJ 1210 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1320 NJ 1300 9900 1300 NJ 1300 NJ 1300 NJ 1300 10770 1160 NJ
+preplace netloc xlconstant_0_dout 1 3 1 N
+preplace netloc clk_wiz_0_clk_out3 1 1 3 270 910 660 1060 980
+preplace netloc Frame_2_out_enable 1 17 1 4630
+preplace netloc ErosionDilationBin_2_out_enable 1 34 2 8980 940 NJ
+preplace netloc camCap_0_addr 1 3 3 NJ 1190 NJ 1190 1580
+preplace netloc camCap_0_wclk 1 3 3 NJ 1220 NJ 1220 1540
+preplace netloc DataSplit4_0_o2 1 27 12 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1070 10140
+preplace netloc axi_gpio_0_gpio_io_o 1 4 23 NJ 1040 NJ 1040 NJ 1040 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 N
+preplace netloc Frame_0_out_enable 1 7 1 2090
+preplace netloc Rows1x512_1_out_data 1 24 1 6380
+preplace netloc Mux4_0_o 1 40 1 NJ
+preplace netloc Window_4_out_enable 1 32 2 8400 770 8710
+preplace netloc Rows8x512_1_out_enable 1 12 1 N
+preplace netloc DataSplit4_0_o3 1 27 12 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 NJ 1010 NJ 1010 NJ 1010 NJ 1010 NJ 1080 N
+preplace netloc Window_5_out_data 1 22 1 5900
+preplace netloc clk_in1_1 1 0 1 NJ
+preplace netloc pclk_1 1 0 3 NJ 1160 NJ 1160 NJ
+preplace netloc Window_0_out_data 1 9 1 N
+preplace netloc axi_interconnect_0_M00_AXI 1 3 1 960
+preplace netloc BoardInit_AXI_0_top 1 4 7 1260 1060 NJ 1060 NJ 1060 NJ 1100 NJ 1100 NJ 1100 NJ
+preplace netloc Rows1x512_1_out_enable 1 24 1 6390
+preplace netloc IICctrl_0_I2C_SCLK 1 42 1 NJ
+preplace netloc Frame_3_out_data 1 36 1 9570
+preplace netloc Window_3_out_enable 1 25 1 6670
+levelinfo -pg 1 80 190 470 820 1130 1420 1700 1950 2230 2500 2750 3020 3280 3530 3760 4000 4240 4490 4760 4990 5250 5510 5750 6010 6270 6540 6810 7050 7300 7540 7770 8040 8270 8510 8840 9120 9410 9740 10040 10260 10460 10650 10890 11030
 ",
 }
 0

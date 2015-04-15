@@ -7,6 +7,12 @@ BoardPreGrid/BoardPreGrid.srcs/sources_1/ipshared
 BoardPreGrid/BoardPreGrid.srcs/sources_1/bd/BoardPreGrid/ip
 !BoardPreGrid/*.xpr
 Gobang/*
+!Gobang/*.sdk/
+Gobang/Gobang.sdk/.metadata
+Gobang/Gobang.sdk/Gobang_bsp
+Gobang/Gobang.sdk/Gobang_wrapper_hw_platform_0
+Gobang/Gobang.sdkRemoteSystemsTempFiles
+Gobang/Gobang.sdk/webtalk
 !Gobang/*.srcs/
 Gobang/Gobang.srcs/sources_1/ipshared
 Gobang/Gobang.srcs/sources_1/bd/Gobang/ip

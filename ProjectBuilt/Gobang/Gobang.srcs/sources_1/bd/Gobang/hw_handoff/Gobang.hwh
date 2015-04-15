@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 14 21:55:16 2015" VIVADOVERSION="2014.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 15 18:33:16 2015" VIVADOVERSION="2014.4">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="Gobang_imp" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -7,13 +7,6 @@
     <PORT DIR="O" NAME="xclk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out2">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out2"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="sel_act" SIGIS="undef" SIGNAME="External_Ports_sel_act">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="Mux2_0" PORT="sel"/>
-        <CONNECTION INSTANCE="Mux2_1" PORT="sel"/>
-        <CONNECTION INSTANCE="Mux2_2" PORT="sel"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="pclk" SIGIS="undef" SIGNAME="External_Ports_pclk">
@@ -61,16 +54,6 @@
         <CONNECTION INSTANCE="vga_readBRAM_0" PORT="vga_vsync"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="External_Ports_rst_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="rst_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="1" NAME="sel_view" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sel_view">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="Mux4_0" PORT="sel"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="O" NAME="I2C_SCLK" SIGIS="undef" SIGNAME="IICctrl_0_I2C_SCLK">
       <CONNECTIONS>
         <CONNECTION INSTANCE="IICctrl_0" PORT="I2C_SCLK"/>
@@ -101,9 +84,9 @@
         <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0x43C0FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="External_Ports_rst_n">
+        <PORT DIR="I" NAME="rst_n" SIGIS="undef" SIGNAME="xlconstant_0_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="pll_locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
@@ -139,9 +122,6 @@
             <CONNECTION INSTANCE="Window_4" PORT="rst_n"/>
             <CONNECTION INSTANCE="Crop_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="Window_5" PORT="rst_n"/>
-            <CONNECTION INSTANCE="Frame_8" PORT="rst_n"/>
-            <CONNECTION INSTANCE="Frame_8" PORT="in_enable"/>
-            <CONNECTION INSTANCE="Frame_7" PORT="rst_n"/>
             <CONNECTION INSTANCE="ErosionDilationBin_6" PORT="rst_n"/>
             <CONNECTION INSTANCE="Rows1x512_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="Rows1x512_1" PORT="rst_n"/>
@@ -149,6 +129,8 @@
             <CONNECTION INSTANCE="Rows1x512_3" PORT="rst_n"/>
             <CONNECTION INSTANCE="Rows8x512_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="Rows8x512_1" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Frame_8" PORT="rst_n"/>
+            <CONNECTION INSTANCE="Frame_7" PORT="rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="mode_erosion" SIGIS="undef" SIGNAME="BoardInit_AXI_0_mode_erosion">
@@ -166,12 +148,12 @@
             <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="mode"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="8" NAME="dilation0" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_dilation0">
+        <PORT DIR="O" LEFT="24" NAME="dilation0" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_dilation0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="template"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="24" NAME="erosion0" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_erosion0">
+        <PORT DIR="O" LEFT="8" NAME="erosion0" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_erosion0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ErosionDilationBin_6" PORT="template"/>
           </CONNECTIONS>
@@ -229,6 +211,16 @@
         <PORT DIR="O" LEFT="8" NAME="right" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_right">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Crop_0" PORT="right"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="black_th" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_black_th">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GRAY2BIN_0" PORT="th"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="white_th" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_white_th">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GRAY2BIN_1" PORT="th"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="6" NAME="s00_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_s00_axi_awaddr">
@@ -546,18 +538,18 @@
     <MODULE FULLNAME="/Bram1x320x240_4" HWVERSION="1.0" INSTANCE="Bram1x320x240_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Bram1x320x240" VLNV="xilinx.com:ip:Bram1x320x240:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="Gobang_Bram1x320x240_4_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_Bram1x320x240_4_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="dina" SIGIS="undef" SIGNAME="Frame_7_out_data">
+        <PORT DIR="I" NAME="dina" SIGIS="undef" SIGNAME="Mux2_4_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Frame_7" PORT="out_data"/>
+            <CONNECTION INSTANCE="Mux2_4" PORT="o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="16" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="Frame_7_ram_addr">
+        <PORT DIR="I" LEFT="16" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_5_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Frame_7" PORT="ram_addr"/>
+            <CONNECTION INSTANCE="Mux2_5" PORT="o"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="clka" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
@@ -565,24 +557,24 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="wea" SIGIS="undef" SIGNAME="Frame_7_out_enable">
+        <PORT DIR="I" NAME="wea" SIGIS="undef" SIGNAME="Mux2_3_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Frame_7" PORT="out_enable"/>
+            <CONNECTION INSTANCE="Mux2_3" PORT="o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="clkb" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+        <PORT DIR="I" NAME="clkb" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="doutb" SIGIS="undef" SIGNAME="Bram1x320x240_4_doutb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Frame_8" PORT="in_data"/>
+            <CONNECTION INSTANCE="ColorBin2Rgb_2" PORT="b"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="16" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="Frame_8_ram_addr">
+        <PORT DIR="I" LEFT="16" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="vga_readBRAM_0_frame_addr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Frame_8" PORT="ram_addr"/>
+            <CONNECTION INSTANCE="vga_readBRAM_0" PORT="frame_addr"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -712,7 +704,7 @@
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="rgb24" RIGHT="0" SIGIS="undef" SIGNAME="ColorBin2Rgb_0_rgb24">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Mux4_0" PORT="i3"/>
+            <CONNECTION INSTANCE="Mux4_0" PORT="i2"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -732,8 +724,27 @@
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="rgb24" RIGHT="0" SIGIS="undef" SIGNAME="ColorBin2Rgb_1_rgb24">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Mux4_0" PORT="i2"/>
             <CONNECTION INSTANCE="Mux4_0" PORT="i1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/ColorBin2Rgb_2" HWVERSION="1.0" INSTANCE="ColorBin2Rgb_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ColorBin2Rgb" VLNV="dtysky:Image:ColorBin2Rgb:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_ColorBin2Rgb_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="Bram1x320x240_4_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="doutb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="rgb24" RIGHT="0" SIGIS="undef" SIGNAME="ColorBin2Rgb_2_rgb24">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux4_0" PORT="i3"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -846,6 +857,32 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE FULLNAME="/DataCombin2_0" HWVERSION="1.0" INSTANCE="DataCombin2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DataCombin2" VLNV="dtysky:User:DataCombin2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="data_width" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_DataCombin2_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="i0" RIGHT="0" SIGIS="undef" SIGNAME="DataSplit4_0_o2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataSplit4_0" PORT="o2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="i1" RIGHT="0" SIGIS="undef" SIGNAME="DataSplit4_0_o3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataSplit4_0" PORT="o3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="o" RIGHT="0" SIGIS="undef" SIGNAME="DataCombin2_0_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux4_0" PORT="sel"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE FULLNAME="/DataDelay_0" HWVERSION="1.0" INSTANCE="DataDelay_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DataDelay" VLNV="dtysky:Image:DataDelay:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -873,11 +910,51 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE FULLNAME="/DataSplit4_0" HWVERSION="1.0" INSTANCE="DataSplit4_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DataSplit4" VLNV="dtysky:User:DataSplit4:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="data_width" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_DataSplit4_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="o0" RIGHT="0" SIGIS="undef" SIGNAME="DataSplit4_0_o0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_3" PORT="sel"/>
+            <CONNECTION INSTANCE="Mux2_4" PORT="sel"/>
+            <CONNECTION INSTANCE="Mux2_5" PORT="sel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="o1" RIGHT="0" SIGIS="undef" SIGNAME="DataSplit4_0_o1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_0" PORT="sel"/>
+            <CONNECTION INSTANCE="Mux2_1" PORT="sel"/>
+            <CONNECTION INSTANCE="Mux2_2" PORT="sel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="o2" RIGHT="0" SIGIS="undef" SIGNAME="DataSplit4_0_o2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataCombin2_0" PORT="i0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="o3" RIGHT="0" SIGIS="undef" SIGNAME="DataSplit4_0_o3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataCombin2_0" PORT="i1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE FULLNAME="/ErosionDilationBin_0" HWVERSION="1.1" INSTANCE="ErosionDilationBin_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ErosionDilationBin" VLNV="dtysky:Image:ErosionDilationBin:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="window_size" VALUE="3"/>
-        <PARAMETER NAME="pip_counter" VALUE="3"/>
+        <PARAMETER NAME="window_size" VALUE="5"/>
+        <PARAMETER NAME="pip_counter" VALUE="4"/>
         <PARAMETER NAME="Component_Name" VALUE="Gobang_ErosionDilationBin_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -897,7 +974,7 @@
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="mode_dilation"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="8" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_dilation0">
+        <PORT DIR="I" LEFT="24" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_dilation0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="dilation0"/>
           </CONNECTIONS>
@@ -907,7 +984,7 @@
             <CONNECTION INSTANCE="Window_5" PORT="out_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="8" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_5_out_data">
+        <PORT DIR="I" LEFT="24" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_5_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Window_5" PORT="out_data"/>
           </CONNECTIONS>
@@ -1176,8 +1253,8 @@
     <MODULE FULLNAME="/ErosionDilationBin_6" HWVERSION="1.1" INSTANCE="ErosionDilationBin_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ErosionDilationBin" VLNV="dtysky:Image:ErosionDilationBin:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="window_size" VALUE="5"/>
-        <PARAMETER NAME="pip_counter" VALUE="4"/>
+        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="pip_counter" VALUE="3"/>
         <PARAMETER NAME="Component_Name" VALUE="Gobang_ErosionDilationBin_6_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1197,7 +1274,7 @@
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="mode_erosion"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="24" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_erosion0">
+        <PORT DIR="I" LEFT="8" NAME="template" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_erosion0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="erosion0"/>
           </CONNECTIONS>
@@ -1207,19 +1284,19 @@
             <CONNECTION INSTANCE="Window_2" PORT="out_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="24" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_2_out_data">
+        <PORT DIR="I" LEFT="8" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_2_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Window_2" PORT="out_data"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="ErosionDilationBin_6_out_enable">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Frame_7" PORT="in_enable"/>
+            <CONNECTION INSTANCE="Rows1x512_3" PORT="in_enable"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="out_data" SIGIS="undef" SIGNAME="ErosionDilationBin_6_out_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Frame_7" PORT="in_data"/>
+            <CONNECTION INSTANCE="Rows1x512_3" PORT="in_data"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1286,7 +1363,7 @@
         <PARAMETER NAME="im_height" VALUE="240"/>
         <PARAMETER NAME="addr_width" VALUE="17"/>
         <PARAMETER NAME="ram_read_latency" VALUE="1"/>
-        <PARAMETER NAME="row_init" VALUE="1"/>
+        <PARAMETER NAME="row_init" VALUE="3"/>
         <PARAMETER NAME="Component_Name" VALUE="Gobang_Frame_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1445,7 +1522,7 @@
         <PARAMETER NAME="im_height" VALUE="240"/>
         <PARAMETER NAME="addr_width" VALUE="17"/>
         <PARAMETER NAME="ram_read_latency" VALUE="1"/>
-        <PARAMETER NAME="row_init" VALUE="2"/>
+        <PARAMETER NAME="row_init" VALUE="5"/>
         <PARAMETER NAME="Component_Name" VALUE="Gobang_Frame_4_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1549,7 +1626,7 @@
         <PARAMETER NAME="im_height" VALUE="240"/>
         <PARAMETER NAME="addr_width" VALUE="17"/>
         <PARAMETER NAME="ram_read_latency" VALUE="1"/>
-        <PARAMETER NAME="row_init" VALUE="0"/>
+        <PARAMETER NAME="row_init" VALUE="2"/>
         <PARAMETER NAME="Component_Name" VALUE="Gobang_Frame_6_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1602,7 +1679,7 @@
         <PARAMETER NAME="addr_width" VALUE="17"/>
         <PARAMETER NAME="ram_read_latency" VALUE="1"/>
         <PARAMETER NAME="row_init" VALUE="2"/>
-        <PARAMETER NAME="Component_Name" VALUE="Gobang_Frame_7_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_Frame_7_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1616,29 +1693,29 @@
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="rst_all_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="ErosionDilationBin_6_out_enable">
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="GRAY2BIN_0_out_enable">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ErosionDilationBin_6" PORT="out_enable"/>
+            <CONNECTION INSTANCE="GRAY2BIN_0" PORT="out_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="ErosionDilationBin_6_out_data">
+        <PORT DIR="I" LEFT="7" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="GRAY2BIN_0_out_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ErosionDilationBin_6" PORT="out_data"/>
+            <CONNECTION INSTANCE="GRAY2BIN_0" PORT="out_data"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Frame_7_out_enable">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="wea"/>
+            <CONNECTION INSTANCE="Mux2_3" PORT="i0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_7_out_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="dina"/>
+            <CONNECTION INSTANCE="Mux2_4" PORT="i0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="16" NAME="ram_addr" RIGHT="0" SIGIS="undef" SIGNAME="Frame_7_ram_addr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="addra"/>
+            <CONNECTION INSTANCE="Mux2_5" PORT="i0"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1647,14 +1724,14 @@
     <MODULE FULLNAME="/Frame_8" HWVERSION="1.1" INSTANCE="Frame_8" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Frame" VLNV="dtysky:Image:Frame:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="mode" VALUE="1"/>
-        <PARAMETER NAME="color_width" VALUE="1"/>
+        <PARAMETER NAME="mode" VALUE="0"/>
+        <PARAMETER NAME="color_width" VALUE="8"/>
         <PARAMETER NAME="im_width" VALUE="320"/>
         <PARAMETER NAME="im_height" VALUE="240"/>
         <PARAMETER NAME="addr_width" VALUE="17"/>
         <PARAMETER NAME="ram_read_latency" VALUE="1"/>
-        <PARAMETER NAME="row_init" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="Gobang_Frame_8_0"/>
+        <PARAMETER NAME="row_init" VALUE="2"/>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_Frame_8_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1668,29 +1745,99 @@
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="rst_all_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="BoardInit_AXI_0_rst_all_n">
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="GRAY2BIN_1_out_enable">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="rst_all_n"/>
+            <CONNECTION INSTANCE="GRAY2BIN_1" PORT="out_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Bram1x320x240_4_doutb">
+        <PORT DIR="I" LEFT="7" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="GRAY2BIN_1_out_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="doutb"/>
+            <CONNECTION INSTANCE="GRAY2BIN_1" PORT="out_data"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Frame_8_out_enable">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Rows1x512_3" PORT="in_enable"/>
+            <CONNECTION INSTANCE="Mux2_3" PORT="i1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_8_out_data">
+        <PORT DIR="O" LEFT="7" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_8_out_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Rows1x512_3" PORT="in_data"/>
+            <CONNECTION INSTANCE="Mux2_4" PORT="i1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="16" NAME="ram_addr" RIGHT="0" SIGIS="undef" SIGNAME="Frame_8_ram_addr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="addrb"/>
+            <CONNECTION INSTANCE="Mux2_5" PORT="i1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/GRAY2BIN_0" HWVERSION="1.0" INSTANCE="GRAY2BIN_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GRAY2BIN" VLNV="dtysky:Image:GRAY2BIN:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_GRAY2BIN_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="th" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_black_th">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="black_th"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="MeanFitter_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MeanFitter_0" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="MeanFitter_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MeanFitter_0" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="GRAY2BIN_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_7" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_data" SIGIS="undef" SIGNAME="GRAY2BIN_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_7" PORT="in_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/GRAY2BIN_1" HWVERSION="1.0" INSTANCE="GRAY2BIN_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GRAY2BIN" VLNV="dtysky:Image:GRAY2BIN:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_GRAY2BIN_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="th" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_white_th">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="white_th"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="MeanFitter_0_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MeanFitter_0" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="MeanFitter_0_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MeanFitter_0" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="GRAY2BIN_1_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_8" PORT="in_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_data" SIGIS="undef" SIGNAME="GRAY2BIN_1_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_8" PORT="in_data"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1801,8 +1948,8 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="color_width" VALUE="8"/>
-        <PARAMETER NAME="window_size" VALUE="3"/>
-        <PARAMETER NAME="sum_counter" VALUE="3"/>
+        <PARAMETER NAME="window_size" VALUE="5"/>
+        <PARAMETER NAME="sum_counter" VALUE="4"/>
         <PARAMETER NAME="Component_Name" VALUE="Gobang_MeanFitter_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1822,7 +1969,7 @@
             <CONNECTION INSTANCE="Window_0" PORT="out_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="71" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_0_out_data">
+        <PORT DIR="I" LEFT="199" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_0_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Window_0" PORT="out_data"/>
           </CONNECTIONS>
@@ -1830,11 +1977,15 @@
         <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="MeanFitter_0_out_enable">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Crop_0" PORT="in_enable"/>
+            <CONNECTION INSTANCE="GRAY2BIN_0" PORT="in_enable"/>
+            <CONNECTION INSTANCE="GRAY2BIN_1" PORT="in_enable"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="MeanFitter_0_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Crop_0" PORT="in_data"/>
+            <CONNECTION INSTANCE="GRAY2BIN_0" PORT="in_data"/>
+            <CONNECTION INSTANCE="GRAY2BIN_1" PORT="in_data"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1848,9 +1999,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_sel_act">
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="DataSplit4_0_o1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="sel_act"/>
+            <CONNECTION INSTANCE="DataSplit4_0" PORT="o1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="i0" RIGHT="0" SIGIS="undef" SIGNAME="Frame_4_out_enable">
@@ -1880,9 +2031,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_sel_act">
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="DataSplit4_0_o1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="sel_act"/>
+            <CONNECTION INSTANCE="DataSplit4_0" PORT="o1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="i0" RIGHT="0" SIGIS="undef" SIGNAME="Frame_4_out_data">
@@ -1912,9 +2063,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_sel_act">
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="DataSplit4_0_o1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="sel_act"/>
+            <CONNECTION INSTANCE="DataSplit4_0" PORT="o1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="16" NAME="i0" RIGHT="0" SIGIS="undef" SIGNAME="Frame_4_ram_addr">
@@ -1936,6 +2087,99 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE FULLNAME="/Mux2_3" HWVERSION="1.0" INSTANCE="Mux2_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2" VLNV="dtysky:user:Mux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="data_width" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_Mux2_3_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="DataSplit4_0_o0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataSplit4_0" PORT="o0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="i0" RIGHT="0" SIGIS="undef" SIGNAME="Frame_7_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_7" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="i1" RIGHT="0" SIGIS="undef" SIGNAME="Frame_8_out_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_8" PORT="out_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="o" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_3_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="wea"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Mux2_4" HWVERSION="1.0" INSTANCE="Mux2_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2" VLNV="dtysky:user:Mux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="data_width" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_Mux2_4_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="DataSplit4_0_o0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataSplit4_0" PORT="o0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i0" RIGHT="0" SIGIS="undef" SIGNAME="Frame_7_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_7" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i1" RIGHT="0" SIGIS="undef" SIGNAME="Frame_8_out_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_8" PORT="out_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_4_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="dina"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Mux2_5" HWVERSION="1.0" INSTANCE="Mux2_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2" VLNV="dtysky:user:Mux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="data_width" VALUE="17"/>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_Mux2_5_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="DataSplit4_0_o0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataSplit4_0" PORT="o0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="16" NAME="i0" RIGHT="0" SIGIS="undef" SIGNAME="Frame_7_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_7" PORT="ram_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="16" NAME="i1" RIGHT="0" SIGIS="undef" SIGNAME="Frame_8_ram_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Frame_8" PORT="ram_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="16" NAME="o" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_5_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="addra"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE FULLNAME="/Mux4_0" HWVERSION="1.0" INSTANCE="Mux4_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux4" VLNV="dtysky:Image:Mux4:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -1944,9 +2188,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="1" NAME="sel" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sel_view">
+        <PORT DIR="I" LEFT="1" NAME="sel" RIGHT="0" SIGIS="undef" SIGNAME="DataCombin2_0_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="sel_view"/>
+            <CONNECTION INSTANCE="DataCombin2_0" PORT="o"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="23" NAME="i0" RIGHT="0" SIGIS="undef" SIGNAME="ColorGray2Rgb_0_rgb24">
@@ -1959,14 +2203,14 @@
             <CONNECTION INSTANCE="ColorBin2Rgb_1" PORT="rgb24"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="23" NAME="i2" RIGHT="0" SIGIS="undef" SIGNAME="ColorBin2Rgb_1_rgb24">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ColorBin2Rgb_1" PORT="rgb24"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="23" NAME="i3" RIGHT="0" SIGIS="undef" SIGNAME="ColorBin2Rgb_0_rgb24">
+        <PORT DIR="I" LEFT="23" NAME="i2" RIGHT="0" SIGIS="undef" SIGNAME="ColorBin2Rgb_0_rgb24">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ColorBin2Rgb_0" PORT="rgb24"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="i3" RIGHT="0" SIGIS="undef" SIGNAME="ColorBin2Rgb_2_rgb24">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ColorBin2Rgb_2" PORT="rgb24"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="o" RIGHT="0" SIGIS="undef" SIGNAME="Mux4_0_o">
@@ -2062,7 +2306,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="im_width" VALUE="320"/>
-        <PARAMETER NAME="rows_width" VALUE="5"/>
+        <PARAMETER NAME="rows_width" VALUE="3"/>
         <PARAMETER NAME="color_width" VALUE="1"/>
         <PARAMETER NAME="Component_Name" VALUE="Gobang_Rows1x512_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -2093,7 +2337,7 @@
             <CONNECTION INSTANCE="Window_2" PORT="in_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="4" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_0_out_data">
+        <PORT DIR="O" LEFT="2" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_0_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Window_2" PORT="in_data"/>
           </CONNECTIONS>
@@ -2191,7 +2435,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="im_width" VALUE="320"/>
-        <PARAMETER NAME="rows_width" VALUE="3"/>
+        <PARAMETER NAME="rows_width" VALUE="5"/>
         <PARAMETER NAME="color_width" VALUE="1"/>
         <PARAMETER NAME="Component_Name" VALUE="Gobang_Rows1x512_3_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -2207,14 +2451,14 @@
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="rst_all_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="Frame_8_out_enable">
+        <PORT DIR="I" NAME="in_enable" SIGIS="undef" SIGNAME="ErosionDilationBin_6_out_enable">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Frame_8" PORT="out_enable"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_6" PORT="out_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Frame_8_out_data">
+        <PORT DIR="I" LEFT="0" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="ErosionDilationBin_6_out_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Frame_8" PORT="out_data"/>
+            <CONNECTION INSTANCE="ErosionDilationBin_6" PORT="out_data"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="out_enable" SIGIS="undef" SIGNAME="Rows1x512_3_out_enable">
@@ -2222,7 +2466,7 @@
             <CONNECTION INSTANCE="Window_5" PORT="in_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_3_out_data">
+        <PORT DIR="O" LEFT="4" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_3_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Window_5" PORT="in_data"/>
           </CONNECTIONS>
@@ -2234,7 +2478,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="im_width" VALUE="320"/>
-        <PARAMETER NAME="rows_width" VALUE="3"/>
+        <PARAMETER NAME="rows_width" VALUE="5"/>
         <PARAMETER NAME="color_width" VALUE="8"/>
         <PARAMETER NAME="Component_Name" VALUE="Gobang_Rows8x512_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -2265,7 +2509,7 @@
             <CONNECTION INSTANCE="Window_0" PORT="in_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="23" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows8x512_0_out_data">
+        <PORT DIR="O" LEFT="39" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows8x512_0_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Window_0" PORT="in_data"/>
           </CONNECTIONS>
@@ -2320,7 +2564,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="color_width" VALUE="8"/>
-        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="window_size" VALUE="5"/>
         <PARAMETER NAME="Component_Name" VALUE="Gobang_Window_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -2340,7 +2584,7 @@
             <CONNECTION INSTANCE="Rows8x512_0" PORT="out_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="23" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows8x512_0_out_data">
+        <PORT DIR="I" LEFT="39" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows8x512_0_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Rows8x512_0" PORT="out_data"/>
           </CONNECTIONS>
@@ -2350,7 +2594,7 @@
             <CONNECTION INSTANCE="MeanFitter_0" PORT="in_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="71" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_0_out_data">
+        <PORT DIR="O" LEFT="199" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_0_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="MeanFitter_0" PORT="in_data"/>
           </CONNECTIONS>
@@ -2404,7 +2648,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="color_width" VALUE="1"/>
-        <PARAMETER NAME="window_size" VALUE="5"/>
+        <PARAMETER NAME="window_size" VALUE="3"/>
         <PARAMETER NAME="Component_Name" VALUE="Gobang_Window_2_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -2424,7 +2668,7 @@
             <CONNECTION INSTANCE="Rows1x512_0" PORT="out_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="4" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_0_out_data">
+        <PORT DIR="I" LEFT="2" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_0_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Rows1x512_0" PORT="out_data"/>
           </CONNECTIONS>
@@ -2434,7 +2678,7 @@
             <CONNECTION INSTANCE="ErosionDilationBin_6" PORT="in_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="24" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_2_out_data">
+        <PORT DIR="O" LEFT="8" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_2_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ErosionDilationBin_6" PORT="in_data"/>
           </CONNECTIONS>
@@ -2538,7 +2782,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="color_width" VALUE="1"/>
-        <PARAMETER NAME="window_size" VALUE="3"/>
+        <PARAMETER NAME="window_size" VALUE="5"/>
         <PARAMETER NAME="Component_Name" VALUE="Gobang_Window_5_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -2558,7 +2802,7 @@
             <CONNECTION INSTANCE="Rows1x512_3" PORT="out_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_3_out_data">
+        <PORT DIR="I" LEFT="4" NAME="in_data" RIGHT="0" SIGIS="undef" SIGNAME="Rows1x512_3_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Rows1x512_3" PORT="out_data"/>
           </CONNECTIONS>
@@ -2568,7 +2812,7 @@
             <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="in_enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="8" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_5_out_data">
+        <PORT DIR="O" LEFT="24" NAME="out_data" RIGHT="0" SIGIS="undef" SIGNAME="Window_5_out_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ErosionDilationBin_0" PORT="in_data"/>
           </CONNECTIONS>
@@ -2576,13 +2820,172 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE FULLNAME="/axi_gpio_0" HWVERSION="2.0" INSTANCE="axi_gpio_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio" VLNV="xilinx.com:ip:axi_gpio:2.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_gpio;v=v2_0;d=pg144-axi-gpio.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
+        <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="9"/>
+        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_GPIO_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_ALL_INPUTS" VALUE="0"/>
+        <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="0"/>
+        <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="1"/>
+        <PARAMETER NAME="C_ALL_OUTPUTS_2" VALUE="0"/>
+        <PARAMETER NAME="C_INTERRUPT_PRESENT" VALUE="0"/>
+        <PARAMETER NAME="C_DOUT_DEFAULT" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_TRI_DEFAULT" VALUE="0xFFFFFFFF"/>
+        <PARAMETER NAME="C_IS_DUAL" VALUE="0"/>
+        <PARAMETER NAME="C_DOUT_DEFAULT_2" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_TRI_DEFAULT_2" VALUE="0xFFFFFFFF"/>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_axi_gpio_0_0"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="GPIO_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="GPIO2_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0x41200000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x4120FFFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="s_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_AXI_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataSplit4_0" PORT="i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axi_interconnect_0_M01_AXI" NAME="S_AXI" TYPE="SLAVE">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="s_axi_araddr"/>
+            <PORTMAP PHYSICAL="s_axi_arready"/>
+            <PORTMAP PHYSICAL="s_axi_arvalid"/>
+            <PORTMAP PHYSICAL="s_axi_awaddr"/>
+            <PORTMAP PHYSICAL="s_axi_awready"/>
+            <PORTMAP PHYSICAL="s_axi_awvalid"/>
+            <PORTMAP PHYSICAL="s_axi_bready"/>
+            <PORTMAP PHYSICAL="s_axi_bresp"/>
+            <PORTMAP PHYSICAL="s_axi_bvalid"/>
+            <PORTMAP PHYSICAL="s_axi_rdata"/>
+            <PORTMAP PHYSICAL="s_axi_rready"/>
+            <PORTMAP PHYSICAL="s_axi_rresp"/>
+            <PORTMAP PHYSICAL="s_axi_rvalid"/>
+            <PORTMAP PHYSICAL="s_axi_wdata"/>
+            <PORTMAP PHYSICAL="s_axi_wready"/>
+            <PORTMAP PHYSICAL="s_axi_wstrb"/>
+            <PORTMAP PHYSICAL="s_axi_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO" TYPE="INITIATOR">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="gpio_io_o"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
     <MODULE FULLNAME="/axi_interconnect_0" HWVERSION="2.1" INSTANCE="axi_interconnect_0" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_interconnect" VLNV="xilinx.com:ip:axi_interconnect:2.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="NUM_SI" VALUE="1"/>
-        <PARAMETER NAME="NUM_MI" VALUE="1"/>
+        <PARAMETER NAME="NUM_MI" VALUE="2"/>
         <PARAMETER NAME="STRATEGY" VALUE="0"/>
         <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="0"/>
         <PARAMETER NAME="ENABLE_PROTOCOL_CHECKERS" VALUE="0"/>
@@ -2913,44 +3316,9 @@
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="S00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awaddr">
+        <PORT DIR="I" NAME="S00_AXI_arvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWLEN"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S00_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWSIZE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S00_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWBURST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S00_AXI_awlock" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awlock">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWLOCK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWCACHE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S00_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWPROT"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awqos" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awqos">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWQOS"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S00_AXI_awvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awvalid">
@@ -2958,19 +3326,14 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="S00_AXI_awready" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awready">
+        <PORT DIR="I" NAME="S00_AXI_bready" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWREADY"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_BREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="S00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_wdata">
+        <PORT DIR="I" NAME="S00_AXI_rready" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WSTRB"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S00_AXI_wlast" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_wlast">
@@ -2983,39 +3346,19 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="S00_AXI_wready" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_wready">
+        <PORT DIR="I" LEFT="11" NAME="S00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WREADY"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_bresp">
+        <PORT DIR="I" LEFT="11" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_BRESP"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="S00_AXI_bvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_bvalid">
+        <PORT DIR="I" LEFT="11" NAME="S00_AXI_wid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_wid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_BVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S00_AXI_bready" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_BREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="S00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARLEN"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S00_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARSIZE"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="1" NAME="S00_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arburst">
@@ -3028,9 +3371,24 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arcache">
+        <PORT DIR="I" LEFT="2" NAME="S00_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arsize">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARCACHE"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARSIZE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="S00_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWBURST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="S00_AXI_awlock" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWLOCK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S00_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWSIZE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="2" NAME="S00_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arprot">
@@ -3038,14 +3396,59 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARPROT"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S00_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWPROT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="S00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="S00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="S00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARCACHE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARLEN"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="3" NAME="S00_AXI_arqos" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arqos">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARQOS"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_arvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arvalid">
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awcache">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARVALID"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWCACHE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWLEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awqos" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWQOS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WSTRB"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="S00_AXI_arready" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arready">
@@ -3053,14 +3456,14 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="S00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_rdata">
+        <PORT DIR="O" NAME="S00_AXI_awready" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RDATA"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_rresp">
+        <PORT DIR="O" NAME="S00_AXI_bvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RRESP"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_BVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="S00_AXI_rlast" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_rlast">
@@ -3073,9 +3476,34 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_rready" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_rready">
+        <PORT DIR="O" NAME="S00_AXI_wready" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RREADY"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="S00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_bid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_BID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="S00_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_rid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="S00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="6" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_s00_axi_awaddr">
@@ -3083,18 +3511,11 @@
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awcache" SIGIS="undef"/>
         <PORT DIR="O" LEFT="2" NAME="M00_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_s00_axi_awprot">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_awprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awqos" SIGIS="undef"/>
         <PORT DIR="O" NAME="M00_AXI_awvalid" SIGIS="undef" SIGNAME="BoardInit_AXI_0_s00_axi_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_awvalid"/>
@@ -3115,7 +3536,6 @@
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_wlast" SIGIS="undef"/>
         <PORT DIR="O" NAME="M00_AXI_wvalid" SIGIS="undef" SIGNAME="BoardInit_AXI_0_s00_axi_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_wvalid"/>
@@ -3146,18 +3566,11 @@
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_arcache" SIGIS="undef"/>
         <PORT DIR="O" LEFT="2" NAME="M00_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="BoardInit_AXI_0_s00_axi_arprot">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_arprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_arqos" SIGIS="undef"/>
         <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="BoardInit_AXI_0_s00_axi_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_arvalid"/>
@@ -3178,7 +3591,6 @@
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_AXI_rlast" SIGIS="undef"/>
         <PORT DIR="I" NAME="M00_AXI_rvalid" SIGIS="undef" SIGNAME="BoardInit_AXI_0_s00_axi_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_rvalid"/>
@@ -3189,112 +3601,223 @@
             <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="S00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_arid">
+        <PORT DIR="I" NAME="M01_ACLK" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARID"/>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_awid">
+        <PORT DIR="I" LEFT="0" NAME="M01_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWID"/>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="11" NAME="S00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_bid">
+        <PORT DIR="O" LEFT="8" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_BID"/>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="11" NAME="S00_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_rid">
+        <PORT DIR="O" NAME="M01_AXI_awlen" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awsize" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awburst" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awlock" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awcache" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awregion" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awqos" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RID"/>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="S00_AXI_wid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S00_AXI_wid">
+        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WID"/>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_wlast" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_arlen" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arsize" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arburst" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arlock" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arcache" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arregion" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arqos" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_rlast" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="processing_system7_0_M_AXI_GP0" NAME="S00_AXI" TYPE="SLAVE">
           <PORTMAPS>
-            <PORTMAP PHYSICAL="S00_AXI_awaddr"/>
-            <PORTMAP PHYSICAL="S00_AXI_awlen"/>
-            <PORTMAP PHYSICAL="S00_AXI_awsize"/>
-            <PORTMAP PHYSICAL="S00_AXI_awburst"/>
-            <PORTMAP PHYSICAL="S00_AXI_awlock"/>
-            <PORTMAP PHYSICAL="S00_AXI_awcache"/>
-            <PORTMAP PHYSICAL="S00_AXI_awprot"/>
-            <PORTMAP PHYSICAL="S00_AXI_awqos"/>
+            <PORTMAP PHYSICAL="S00_AXI_arvalid"/>
             <PORTMAP PHYSICAL="S00_AXI_awvalid"/>
-            <PORTMAP PHYSICAL="S00_AXI_awready"/>
-            <PORTMAP PHYSICAL="S00_AXI_wdata"/>
-            <PORTMAP PHYSICAL="S00_AXI_wstrb"/>
+            <PORTMAP PHYSICAL="S00_AXI_bready"/>
+            <PORTMAP PHYSICAL="S00_AXI_rready"/>
             <PORTMAP PHYSICAL="S00_AXI_wlast"/>
             <PORTMAP PHYSICAL="S00_AXI_wvalid"/>
-            <PORTMAP PHYSICAL="S00_AXI_wready"/>
-            <PORTMAP PHYSICAL="S00_AXI_bresp"/>
-            <PORTMAP PHYSICAL="S00_AXI_bvalid"/>
-            <PORTMAP PHYSICAL="S00_AXI_bready"/>
-            <PORTMAP PHYSICAL="S00_AXI_araddr"/>
-            <PORTMAP PHYSICAL="S00_AXI_arlen"/>
-            <PORTMAP PHYSICAL="S00_AXI_arsize"/>
-            <PORTMAP PHYSICAL="S00_AXI_arburst"/>
-            <PORTMAP PHYSICAL="S00_AXI_arlock"/>
-            <PORTMAP PHYSICAL="S00_AXI_arcache"/>
-            <PORTMAP PHYSICAL="S00_AXI_arprot"/>
-            <PORTMAP PHYSICAL="S00_AXI_arqos"/>
-            <PORTMAP PHYSICAL="S00_AXI_arvalid"/>
-            <PORTMAP PHYSICAL="S00_AXI_arready"/>
-            <PORTMAP PHYSICAL="S00_AXI_rdata"/>
-            <PORTMAP PHYSICAL="S00_AXI_rresp"/>
-            <PORTMAP PHYSICAL="S00_AXI_rlast"/>
-            <PORTMAP PHYSICAL="S00_AXI_rvalid"/>
-            <PORTMAP PHYSICAL="S00_AXI_rready"/>
             <PORTMAP PHYSICAL="S00_AXI_arid"/>
             <PORTMAP PHYSICAL="S00_AXI_awid"/>
+            <PORTMAP PHYSICAL="S00_AXI_wid"/>
+            <PORTMAP PHYSICAL="S00_AXI_arburst"/>
+            <PORTMAP PHYSICAL="S00_AXI_arlock"/>
+            <PORTMAP PHYSICAL="S00_AXI_arsize"/>
+            <PORTMAP PHYSICAL="S00_AXI_awburst"/>
+            <PORTMAP PHYSICAL="S00_AXI_awlock"/>
+            <PORTMAP PHYSICAL="S00_AXI_awsize"/>
+            <PORTMAP PHYSICAL="S00_AXI_arprot"/>
+            <PORTMAP PHYSICAL="S00_AXI_awprot"/>
+            <PORTMAP PHYSICAL="S00_AXI_araddr"/>
+            <PORTMAP PHYSICAL="S00_AXI_awaddr"/>
+            <PORTMAP PHYSICAL="S00_AXI_wdata"/>
+            <PORTMAP PHYSICAL="S00_AXI_arcache"/>
+            <PORTMAP PHYSICAL="S00_AXI_arlen"/>
+            <PORTMAP PHYSICAL="S00_AXI_arqos"/>
+            <PORTMAP PHYSICAL="S00_AXI_awcache"/>
+            <PORTMAP PHYSICAL="S00_AXI_awlen"/>
+            <PORTMAP PHYSICAL="S00_AXI_awqos"/>
+            <PORTMAP PHYSICAL="S00_AXI_wstrb"/>
+            <PORTMAP PHYSICAL="S00_AXI_arready"/>
+            <PORTMAP PHYSICAL="S00_AXI_awready"/>
+            <PORTMAP PHYSICAL="S00_AXI_bvalid"/>
+            <PORTMAP PHYSICAL="S00_AXI_rlast"/>
+            <PORTMAP PHYSICAL="S00_AXI_rvalid"/>
+            <PORTMAP PHYSICAL="S00_AXI_wready"/>
             <PORTMAP PHYSICAL="S00_AXI_bid"/>
             <PORTMAP PHYSICAL="S00_AXI_rid"/>
-            <PORTMAP PHYSICAL="S00_AXI_wid"/>
+            <PORTMAP PHYSICAL="S00_AXI_bresp"/>
+            <PORTMAP PHYSICAL="S00_AXI_rresp"/>
+            <PORTMAP PHYSICAL="S00_AXI_rdata"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="axi_interconnect_0_M00_AXI" NAME="M00_AXI" TYPE="MASTER">
           <PORTMAPS>
             <PORTMAP PHYSICAL="M00_AXI_awaddr"/>
-            <PORTMAP PHYSICAL="M00_AXI_awlen"/>
-            <PORTMAP PHYSICAL="M00_AXI_awsize"/>
-            <PORTMAP PHYSICAL="M00_AXI_awburst"/>
-            <PORTMAP PHYSICAL="M00_AXI_awlock"/>
-            <PORTMAP PHYSICAL="M00_AXI_awcache"/>
             <PORTMAP PHYSICAL="M00_AXI_awprot"/>
-            <PORTMAP PHYSICAL="M00_AXI_awregion"/>
-            <PORTMAP PHYSICAL="M00_AXI_awqos"/>
             <PORTMAP PHYSICAL="M00_AXI_awvalid"/>
             <PORTMAP PHYSICAL="M00_AXI_awready"/>
             <PORTMAP PHYSICAL="M00_AXI_wdata"/>
             <PORTMAP PHYSICAL="M00_AXI_wstrb"/>
-            <PORTMAP PHYSICAL="M00_AXI_wlast"/>
             <PORTMAP PHYSICAL="M00_AXI_wvalid"/>
             <PORTMAP PHYSICAL="M00_AXI_wready"/>
             <PORTMAP PHYSICAL="M00_AXI_bresp"/>
             <PORTMAP PHYSICAL="M00_AXI_bvalid"/>
             <PORTMAP PHYSICAL="M00_AXI_bready"/>
             <PORTMAP PHYSICAL="M00_AXI_araddr"/>
-            <PORTMAP PHYSICAL="M00_AXI_arlen"/>
-            <PORTMAP PHYSICAL="M00_AXI_arsize"/>
-            <PORTMAP PHYSICAL="M00_AXI_arburst"/>
-            <PORTMAP PHYSICAL="M00_AXI_arlock"/>
-            <PORTMAP PHYSICAL="M00_AXI_arcache"/>
             <PORTMAP PHYSICAL="M00_AXI_arprot"/>
-            <PORTMAP PHYSICAL="M00_AXI_arregion"/>
-            <PORTMAP PHYSICAL="M00_AXI_arqos"/>
             <PORTMAP PHYSICAL="M00_AXI_arvalid"/>
             <PORTMAP PHYSICAL="M00_AXI_arready"/>
             <PORTMAP PHYSICAL="M00_AXI_rdata"/>
             <PORTMAP PHYSICAL="M00_AXI_rresp"/>
-            <PORTMAP PHYSICAL="M00_AXI_rlast"/>
             <PORTMAP PHYSICAL="M00_AXI_rvalid"/>
             <PORTMAP PHYSICAL="M00_AXI_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axi_interconnect_0_M01_AXI" NAME="M01_AXI" TYPE="MASTER">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="M01_AXI_awaddr"/>
+            <PORTMAP PHYSICAL="M01_AXI_awlen"/>
+            <PORTMAP PHYSICAL="M01_AXI_awsize"/>
+            <PORTMAP PHYSICAL="M01_AXI_awburst"/>
+            <PORTMAP PHYSICAL="M01_AXI_awlock"/>
+            <PORTMAP PHYSICAL="M01_AXI_awcache"/>
+            <PORTMAP PHYSICAL="M01_AXI_awprot"/>
+            <PORTMAP PHYSICAL="M01_AXI_awregion"/>
+            <PORTMAP PHYSICAL="M01_AXI_awqos"/>
+            <PORTMAP PHYSICAL="M01_AXI_awvalid"/>
+            <PORTMAP PHYSICAL="M01_AXI_awready"/>
+            <PORTMAP PHYSICAL="M01_AXI_wdata"/>
+            <PORTMAP PHYSICAL="M01_AXI_wstrb"/>
+            <PORTMAP PHYSICAL="M01_AXI_wlast"/>
+            <PORTMAP PHYSICAL="M01_AXI_wvalid"/>
+            <PORTMAP PHYSICAL="M01_AXI_wready"/>
+            <PORTMAP PHYSICAL="M01_AXI_bresp"/>
+            <PORTMAP PHYSICAL="M01_AXI_bvalid"/>
+            <PORTMAP PHYSICAL="M01_AXI_bready"/>
+            <PORTMAP PHYSICAL="M01_AXI_araddr"/>
+            <PORTMAP PHYSICAL="M01_AXI_arlen"/>
+            <PORTMAP PHYSICAL="M01_AXI_arsize"/>
+            <PORTMAP PHYSICAL="M01_AXI_arburst"/>
+            <PORTMAP PHYSICAL="M01_AXI_arlock"/>
+            <PORTMAP PHYSICAL="M01_AXI_arcache"/>
+            <PORTMAP PHYSICAL="M01_AXI_arprot"/>
+            <PORTMAP PHYSICAL="M01_AXI_arregion"/>
+            <PORTMAP PHYSICAL="M01_AXI_arqos"/>
+            <PORTMAP PHYSICAL="M01_AXI_arvalid"/>
+            <PORTMAP PHYSICAL="M01_AXI_arready"/>
+            <PORTMAP PHYSICAL="M01_AXI_rdata"/>
+            <PORTMAP PHYSICAL="M01_AXI_rresp"/>
+            <PORTMAP PHYSICAL="M01_AXI_rlast"/>
+            <PORTMAP PHYSICAL="M01_AXI_rvalid"/>
+            <PORTMAP PHYSICAL="M01_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -3853,11 +4376,7 @@
             <CONNECTION INSTANCE="Window_3" PORT="clk"/>
             <CONNECTION INSTANCE="Window_4" PORT="clk"/>
             <CONNECTION INSTANCE="Crop_0" PORT="clk"/>
-            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="clka"/>
-            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="clkb"/>
             <CONNECTION INSTANCE="ErosionDilationBin_6" PORT="clk"/>
-            <CONNECTION INSTANCE="Frame_7" PORT="clk"/>
-            <CONNECTION INSTANCE="Frame_8" PORT="clk"/>
             <CONNECTION INSTANCE="Window_5" PORT="clk"/>
             <CONNECTION INSTANCE="Rows1x512_0" PORT="clk"/>
             <CONNECTION INSTANCE="Rows1x512_1" PORT="clk"/>
@@ -3865,6 +4384,9 @@
             <CONNECTION INSTANCE="Rows1x512_3" PORT="clk"/>
             <CONNECTION INSTANCE="Rows8x512_0" PORT="clk"/>
             <CONNECTION INSTANCE="Rows8x512_1" PORT="clk"/>
+            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="clka"/>
+            <CONNECTION INSTANCE="Frame_7" PORT="clk"/>
+            <CONNECTION INSTANCE="Frame_8" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="25000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out2">
@@ -3875,16 +4397,19 @@
             <CONNECTION INSTANCE="Bram1x320x240_2" PORT="clkb"/>
             <CONNECTION INSTANCE="Bram1x320x240_3" PORT="clkb"/>
             <CONNECTION INSTANCE="Bram8x320x240_1" PORT="clkb"/>
+            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="clkb"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="50000000" DIR="O" NAME="clk_out3" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="ACLK"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M00_ACLK"/>
-            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_ACLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="200000000" DIR="O" NAME="clk_out4" SIGIS="clk"/>
@@ -3944,9 +4469,11 @@
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="M00_ARESETN"/>
-            <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="M01_ARESETN"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4006,11 +4533,29 @@
             <CONNECTION INSTANCE="Bram1x320x240_2" PORT="addrb"/>
             <CONNECTION INSTANCE="Bram1x320x240_3" PORT="addrb"/>
             <CONNECTION INSTANCE="Bram8x320x240_1" PORT="addrb"/>
+            <CONNECTION INSTANCE="Bram1x320x240_4" PORT="addrb"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="vga_in" RIGHT="0" SIGIS="undef" SIGNAME="ColorRgb2Vga_0_vga">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ColorRgb2Vga_0" PORT="vga"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="1"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="Gobang_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BoardInit_AXI_0" PORT="rst_n"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5643,6 +6188,7 @@
       </BUSINTERFACES>
       <MEMORYMAP>
         <MEMRANGE BASENAME="C_S_AXI_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_S_AXI_HIGHADDR" HIGHVALUE="0x0002FFFF" INSTANCE="ps7_ram_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MEMTYPE="MEMORY"/>
+        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x41200000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4120FFFF" INSTANCE="axi_gpio_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
         <MEMRANGE ADDRESSBLOCK="S00_AXI_reg" BASENAME="C_S00_AXI_BASEADDR" BASEVALUE="0x43C00000" HIGHNAME="C_S00_AXI_HIGHADDR" HIGHVALUE="0x43C0FFFF" INSTANCE="BoardInit_AXI_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
         <MEMRANGE BASENAME="C_S_AXI_BASEADDR" BASEVALUE="0xE0200000" HIGHNAME="C_S_AXI_HIGHADDR" HIGHVALUE="0xE0200FFF" INSTANCE="ps7_iop_bus_config_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
         <MEMRANGE BASENAME="C_S_AXI_BASEADDR" BASEVALUE="0xF8000000" HIGHNAME="C_S_AXI_HIGHADDR" HIGHVALUE="0xF8000FFF" INSTANCE="ps7_slcr_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
@@ -5672,6 +6218,7 @@
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="ps7_ram_0"/>
+        <PERIPHERAL INSTANCE="axi_gpio_0"/>
         <PERIPHERAL INSTANCE="BoardInit_AXI_0"/>
         <PERIPHERAL INSTANCE="ps7_iop_bus_config_0"/>
         <PERIPHERAL INSTANCE="ps7_slcr_0"/>
@@ -5852,6 +6399,7 @@
       </BUSINTERFACES>
       <MEMORYMAP>
         <MEMRANGE BASENAME="C_S_AXI_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_S_AXI_HIGHADDR" HIGHVALUE="0x0002FFFF" INSTANCE="ps7_ram_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MEMTYPE="MEMORY"/>
+        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x41200000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4120FFFF" INSTANCE="axi_gpio_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
         <MEMRANGE ADDRESSBLOCK="S00_AXI_reg" BASENAME="C_S00_AXI_BASEADDR" BASEVALUE="0x43C00000" HIGHNAME="C_S00_AXI_HIGHADDR" HIGHVALUE="0x43C0FFFF" INSTANCE="BoardInit_AXI_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
         <MEMRANGE BASENAME="C_S_AXI_BASEADDR" BASEVALUE="0xE0200000" HIGHNAME="C_S_AXI_HIGHADDR" HIGHVALUE="0xE0200FFF" INSTANCE="ps7_iop_bus_config_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
         <MEMRANGE BASENAME="C_S_AXI_BASEADDR" BASEVALUE="0xF8000000" HIGHNAME="C_S_AXI_HIGHADDR" HIGHVALUE="0xF8000FFF" INSTANCE="ps7_slcr_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
@@ -5881,6 +6429,7 @@
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="ps7_ram_0"/>
+        <PERIPHERAL INSTANCE="axi_gpio_0"/>
         <PERIPHERAL INSTANCE="BoardInit_AXI_0"/>
         <PERIPHERAL INSTANCE="ps7_iop_bus_config_0"/>
         <PERIPHERAL INSTANCE="ps7_slcr_0"/>
