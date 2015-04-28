@@ -23,10 +23,28 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Color16to24_0_0/Gobang_Color16to24_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_RGB2GRAY_0_0/Gobang_RGB2GRAY_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_camCap_0_0/Gobang_camCap_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_DataDelay_0_0/Gobang_DataDelay_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_DataSplit4_0_0/Gobang_DataSplit4_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="hdl/Gobang.v"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ColorBin2Rgb_2_0/Gobang_ColorBin2Rgb_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux2_5_0/Gobang_Mux2_5_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux2_4_0/Gobang_Mux2_4_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux2_3_0/Gobang_Mux2_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_4_1/Gobang_Bram1x320x240_4_1.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_8_1/Gobang_Frame_8_1.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_7_1/Gobang_Frame_7_1.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_GRAY2BIN_1_0/Gobang_GRAY2BIN_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_xlconstant_0_0/Gobang_xlconstant_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_5_0/Gobang_Window_5_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_3_0/Gobang_Bram1x320x240_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_2_0/Gobang_Bram1x320x240_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_DataCombin2_0_0/Gobang_DataCombin2_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_2_0/Gobang_Window_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_1_0/Gobang_Window_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_MeanFitter_0_0/Gobang_MeanFitter_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_0_0/Gobang_Window_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_5_0/Gobang_ErosionDilationBin_5_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_4_0/Gobang_ErosionDilationBin_4_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_3_0/Gobang_ErosionDilationBin_3_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux2_2_0/Gobang_Mux2_2_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux2_1_0/Gobang_Mux2_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ColorBin2Rgb_0_0/Gobang_ColorBin2Rgb_0_0.xci"/>
@@ -41,26 +59,11 @@
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Harris_0_0/Gobang_Harris_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_1_0/Gobang_Frame_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_0_0/Gobang_Frame_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_6_0/Gobang_Frame_6_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_vga_readBRAM_0_0/Gobang_vga_readBRAM_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_3_0/Gobang_Window_3_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_2_0/Gobang_Window_2_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_1_0/Gobang_Window_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_0_0/Gobang_Window_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_MeanFitter_0_0/Gobang_MeanFitter_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_5_0/Gobang_ErosionDilationBin_5_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_4_0/Gobang_ErosionDilationBin_4_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_3_0/Gobang_ErosionDilationBin_3_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_2_0/Gobang_ErosionDilationBin_2_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ColorRgb2Vga_0_0/Gobang_ColorRgb2Vga_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_4_0/Gobang_Window_4_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_1_0/Gobang_ErosionDilationBin_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_0_0/Gobang_ErosionDilationBin_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows1x512_1_0/Gobang_Rows1x512_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram8x320x240_1_0/Gobang_Bram8x320x240_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram8x320x240_0_0/Gobang_Bram8x320x240_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_3_0/Gobang_Bram1x320x240_3_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_2_0/Gobang_Bram1x320x240_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_DataDelay_0_0/Gobang_DataDelay_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Color16to24_0_0/Gobang_Color16to24_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_RGB2GRAY_0_0/Gobang_RGB2GRAY_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_camCap_0_0/Gobang_camCap_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_1_0/Gobang_Bram1x320x240_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_0_0/Gobang_Bram1x320x240_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows8x512_1_0/Gobang_Rows8x512_1_0.xci"/>
@@ -69,36 +72,32 @@
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ColorBin2Rgb_1_0/Gobang_ColorBin2Rgb_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ColorGray2Rgb_0_0/Gobang_ColorGray2Rgb_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux4_0_0/Gobang_Mux4_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_8_1/Gobang_Frame_8_1.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_7_1/Gobang_Frame_7_1.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_GRAY2BIN_1_0/Gobang_GRAY2BIN_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_xlconstant_0_0/Gobang_xlconstant_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Frame_6_0/Gobang_Frame_6_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_vga_readBRAM_0_0/Gobang_vga_readBRAM_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_3_0/Gobang_Window_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ColorRgb2Vga_0_0/Gobang_ColorRgb2Vga_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_4_0/Gobang_Window_4_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_2_0/Gobang_ErosionDilationBin_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_1_0/Gobang_ErosionDilationBin_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_GRAY2BIN_0_0/Gobang_GRAY2BIN_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Window_5_0/Gobang_Window_5_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_BoardInit_AXI_0_0/Gobang_BoardInit_AXI_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows1x512_0_0/Gobang_Rows1x512_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows1x512_1_0/Gobang_Rows1x512_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram8x320x240_1_0/Gobang_Bram8x320x240_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_clk_wiz_0_0/Gobang_clk_wiz_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows1x512_2_0/Gobang_Rows1x512_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_proc_sys_reset_0_0/Gobang_proc_sys_reset_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_processing_system7_0_0/Gobang_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram8x320x240_0_0/Gobang_Bram8x320x240_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_auto_pc_0/Gobang_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="Gobang_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_DataWidthConvert_0_0/Gobang_DataWidthConvert_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="hw_handoff/Gobang.hwh"/>
+        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="hw_handoff/Gobang_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows1x512_3_0/Gobang_Rows1x512_3_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ErosionDilationBin_6_0/Gobang_ErosionDilationBin_6_0.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Crop_0_1/Gobang_Crop_0_1.xci"/>
         <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_axi_interconnect_0_0/Gobang_axi_interconnect_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_proc_sys_reset_0_0/Gobang_proc_sys_reset_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_processing_system7_0_0/Gobang_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_BoardInit_AXI_0_0/Gobang_BoardInit_AXI_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_clk_wiz_0_0/Gobang_clk_wiz_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows1x512_0_0/Gobang_Rows1x512_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Rows1x512_2_0/Gobang_Rows1x512_2_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Bram1x320x240_4_1/Gobang_Bram1x320x240_4_1.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="hdl/Gobang.v"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_ColorBin2Rgb_2_0/Gobang_ColorBin2Rgb_2_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux2_5_0/Gobang_Mux2_5_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux2_4_0/Gobang_Mux2_4_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_Mux2_3_0/Gobang_Mux2_3_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_xbar_0/Gobang_xbar_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="hw_handoff/Gobang_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="hw_handoff/Gobang.hwh"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_DataSplit4_0_0/Gobang_DataSplit4_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_axi_gpio_0_0/Gobang_axi_gpio_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="Gobang_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_auto_pc_0/Gobang_auto_pc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="Gobang.bd" FileRelPathName="ip/Gobang_DataCombin2_0_0/Gobang_DataCombin2_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/Gobang/hdl/Gobang_wrapper.v">
         <FileInfo>

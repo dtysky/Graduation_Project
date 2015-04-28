@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
-//Date        : Wed Apr 15 18:33:19 2015
+//Date        : Thu Apr 16 15:40:28 2015
 //Host        : Dtysky running 64-bit major release  (build 9200)
 //Command     : generate_target Gobang_wrapper.bd
 //Design      : Gobang_wrapper

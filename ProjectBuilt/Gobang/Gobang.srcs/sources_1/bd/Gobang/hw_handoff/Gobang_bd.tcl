@@ -215,6 +215,9 @@ proc create_root_design { parentCell } {
   set DataSplit4_0 [ create_bd_cell -type ip -vlnv dtysky:User:DataSplit4:1.0 DataSplit4_0 ]
   set_property -dict [ list CONFIG.data_width {1}  ] $DataSplit4_0
 
+  # Create instance: DataWidthConvert_0, and set properties
+  set DataWidthConvert_0 [ create_bd_cell -type ip -vlnv dtysky:User:DataWidthConvert:1.0 DataWidthConvert_0 ]
+
   # Create instance: ErosionDilationBin_0, and set properties
   set ErosionDilationBin_0 [ create_bd_cell -type ip -vlnv dtysky:Image:ErosionDilationBin:1.1 ErosionDilationBin_0 ]
   set_property -dict [ list CONFIG.pip_counter {4} CONFIG.window_size {5}  ] $ErosionDilationBin_0
@@ -377,13 +380,9 @@ proc create_root_design { parentCell } {
   set Window_5 [ create_bd_cell -type ip -vlnv dtysky:Image:Window:1.0 Window_5 ]
   set_property -dict [ list CONFIG.color_width {1} CONFIG.window_size {5}  ] $Window_5
 
-  # Create instance: axi_gpio_0, and set properties
-  set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
-  set_property -dict [ list CONFIG.C_ALL_OUTPUTS {1} CONFIG.C_GPIO_WIDTH {4} CONFIG.C_IS_DUAL {0}  ] $axi_gpio_0
-
   # Create instance: axi_interconnect_0, and set properties
   set axi_interconnect_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0 ]
-  set_property -dict [ list CONFIG.NUM_MI {2}  ] $axi_interconnect_0
+  set_property -dict [ list CONFIG.NUM_MI {1}  ] $axi_interconnect_0
 
   # Create instance: camCap_0, and set properties
   set camCap_0 [ create_bd_cell -type ip -vlnv xilinx.com:XUP:camCap:1.0 camCap_0 ]
@@ -411,7 +410,6 @@ proc create_root_design { parentCell } {
 
   # Create interface connections
   connect_bd_intf_net -intf_net axi_interconnect_0_M00_AXI [get_bd_intf_pins BoardInit_AXI_0/S00_AXI] [get_bd_intf_pins axi_interconnect_0/M00_AXI]
-  connect_bd_intf_net -intf_net axi_interconnect_0_M01_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins axi_interconnect_0/M01_AXI]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins axi_interconnect_0/S00_AXI] [get_bd_intf_pins processing_system7_0/M_AXI_GP0]
 
   # Create port connections
@@ -430,6 +428,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net BoardInit_AXI_0_mode_dilation [get_bd_pins BoardInit_AXI_0/mode_dilation] [get_bd_pins ErosionDilationBin_0/mode]
   connect_bd_net -net BoardInit_AXI_0_right [get_bd_pins BoardInit_AXI_0/right] [get_bd_pins Crop_0/right]
   connect_bd_net -net BoardInit_AXI_0_rst_all_n [get_bd_pins BoardInit_AXI_0/rst_all_n] [get_bd_pins Crop_0/rst_n] [get_bd_pins ErosionDilationBin_0/rst_n] [get_bd_pins ErosionDilationBin_1/rst_n] [get_bd_pins ErosionDilationBin_2/rst_n] [get_bd_pins ErosionDilationBin_3/rst_n] [get_bd_pins ErosionDilationBin_4/rst_n] [get_bd_pins ErosionDilationBin_5/rst_n] [get_bd_pins ErosionDilationBin_6/rst_n] [get_bd_pins Frame_0/in_enable] [get_bd_pins Frame_0/rst_n] [get_bd_pins Frame_1/rst_n] [get_bd_pins Frame_2/in_enable] [get_bd_pins Frame_2/rst_n] [get_bd_pins Frame_3/rst_n] [get_bd_pins Frame_4/rst_n] [get_bd_pins Frame_5/in_enable] [get_bd_pins Frame_5/rst_n] [get_bd_pins Frame_6/rst_n] [get_bd_pins Frame_7/rst_n] [get_bd_pins Frame_8/rst_n] [get_bd_pins IICctrl_0/iRST_N] [get_bd_pins MeanFitter_0/rst_n] [get_bd_pins RGB2GRAY_0/in_enable] [get_bd_pins Rows1x512_0/rst_n] [get_bd_pins Rows1x512_1/rst_n] [get_bd_pins Rows1x512_2/rst_n] [get_bd_pins Rows1x512_3/rst_n] [get_bd_pins Rows8x512_0/rst_n] [get_bd_pins Rows8x512_1/rst_n] [get_bd_pins Window_0/rst_n] [get_bd_pins Window_1/rst_n] [get_bd_pins Window_2/rst_n] [get_bd_pins Window_3/rst_n] [get_bd_pins Window_4/rst_n] [get_bd_pins Window_5/rst_n]
+  connect_bd_net -net BoardInit_AXI_0_sels [get_bd_pins BoardInit_AXI_0/sels] [get_bd_pins DataWidthConvert_0/i]
   connect_bd_net -net BoardInit_AXI_0_top [get_bd_pins BoardInit_AXI_0/top] [get_bd_pins Crop_0/top]
   connect_bd_net -net BoardInit_AXI_0_white_th [get_bd_pins BoardInit_AXI_0/white_th] [get_bd_pins GRAY2BIN_1/th]
   connect_bd_net -net BoardPreGridInit_0_mode_erosion [get_bd_pins BoardInit_AXI_0/mode_erosion] [get_bd_pins ErosionDilationBin_1/mode] [get_bd_pins ErosionDilationBin_2/mode] [get_bd_pins ErosionDilationBin_3/mode] [get_bd_pins ErosionDilationBin_4/mode] [get_bd_pins ErosionDilationBin_5/mode] [get_bd_pins ErosionDilationBin_6/mode]
@@ -452,6 +451,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net DataDelay_0_out_data [get_bd_pins DataDelay_0/out_data] [get_bd_pins Or8_0/i2]
   connect_bd_net -net DataSplit4_0_o2 [get_bd_pins DataCombin2_0/i0] [get_bd_pins DataSplit4_0/o2]
   connect_bd_net -net DataSplit4_0_o3 [get_bd_pins DataCombin2_0/i1] [get_bd_pins DataSplit4_0/o3]
+  connect_bd_net -net DataWidthConvert_0_o [get_bd_pins DataSplit4_0/i] [get_bd_pins DataWidthConvert_0/o]
   connect_bd_net -net ErosionDilationBin_0_out_data [get_bd_pins ErosionDilationBin_0/out_data] [get_bd_pins Rows1x512_1/in_data]
   connect_bd_net -net ErosionDilationBin_0_out_enable [get_bd_pins ErosionDilationBin_0/out_enable] [get_bd_pins Rows1x512_1/in_enable]
   connect_bd_net -net ErosionDilationBin_1_out_data [get_bd_pins ErosionDilationBin_1/out_data] [get_bd_pins Frame_4/in_data]
@@ -534,7 +534,6 @@ proc create_root_design { parentCell } {
   connect_bd_net -net Window_4_out_enable [get_bd_pins ErosionDilationBin_2/in_enable] [get_bd_pins ErosionDilationBin_3/in_enable] [get_bd_pins ErosionDilationBin_4/in_enable] [get_bd_pins ErosionDilationBin_5/in_enable] [get_bd_pins MatchTemplateBin_0/in_enable] [get_bd_pins Window_4/out_enable]
   connect_bd_net -net Window_5_out_data [get_bd_pins ErosionDilationBin_0/in_data] [get_bd_pins Window_5/out_data]
   connect_bd_net -net Window_5_out_enable [get_bd_pins ErosionDilationBin_0/in_enable] [get_bd_pins Window_5/out_enable]
-  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins DataSplit4_0/i] [get_bd_pins axi_gpio_0/gpio_io_o]
   connect_bd_net -net camCap_0_addr [get_bd_pins Bram8x320x240_0/addra] [get_bd_pins camCap_0/addr]
   connect_bd_net -net camCap_0_dout [get_bd_pins Color16to24_0/rgb16] [get_bd_pins camCap_0/dout]
   connect_bd_net -net camCap_0_wclk [get_bd_pins Bram8x320x240_0/clka] [get_bd_pins camCap_0/wclk]
@@ -542,14 +541,14 @@ proc create_root_design { parentCell } {
   connect_bd_net -net clk_in1_1 [get_bd_ports clk_in1] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins Bram1x320x240_0/clka] [get_bd_pins Bram1x320x240_0/clkb] [get_bd_pins Bram1x320x240_1/clka] [get_bd_pins Bram1x320x240_1/clkb] [get_bd_pins Bram1x320x240_2/clka] [get_bd_pins Bram1x320x240_3/clka] [get_bd_pins Bram1x320x240_4/clka] [get_bd_pins Bram8x320x240_0/clkb] [get_bd_pins Bram8x320x240_1/clka] [get_bd_pins Crop_0/clk] [get_bd_pins DataDelay_0/clk] [get_bd_pins ErosionDilationBin_0/clk] [get_bd_pins ErosionDilationBin_1/clk] [get_bd_pins ErosionDilationBin_2/clk] [get_bd_pins ErosionDilationBin_3/clk] [get_bd_pins ErosionDilationBin_4/clk] [get_bd_pins ErosionDilationBin_5/clk] [get_bd_pins ErosionDilationBin_6/clk] [get_bd_pins Frame_0/clk] [get_bd_pins Frame_1/clk] [get_bd_pins Frame_2/clk] [get_bd_pins Frame_3/clk] [get_bd_pins Frame_4/clk] [get_bd_pins Frame_5/clk] [get_bd_pins Frame_6/clk] [get_bd_pins Frame_7/clk] [get_bd_pins Frame_8/clk] [get_bd_pins MeanFitter_0/clk] [get_bd_pins Rows1x512_0/clk] [get_bd_pins Rows1x512_1/clk] [get_bd_pins Rows1x512_2/clk] [get_bd_pins Rows1x512_3/clk] [get_bd_pins Rows8x512_0/clk] [get_bd_pins Rows8x512_1/clk] [get_bd_pins Window_0/clk] [get_bd_pins Window_1/clk] [get_bd_pins Window_2/clk] [get_bd_pins Window_3/clk] [get_bd_pins Window_4/clk] [get_bd_pins Window_5/clk] [get_bd_pins clk_wiz_0/clk_out1]
   connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_ports xclk] [get_bd_pins Bram1x320x240_2/clkb] [get_bd_pins Bram1x320x240_3/clkb] [get_bd_pins Bram1x320x240_4/clkb] [get_bd_pins Bram8x320x240_1/clkb] [get_bd_pins IICctrl_0/iCLK] [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins vga_readBRAM_0/clk25]
-  connect_bd_net -net clk_wiz_0_clk_out3 [get_bd_pins BoardInit_AXI_0/s00_axi_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins clk_wiz_0/clk_out3] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
+  connect_bd_net -net clk_wiz_0_clk_out3 [get_bd_pins BoardInit_AXI_0/s00_axi_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins clk_wiz_0/clk_out3] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins BoardInit_AXI_0/pll_locked] [get_bd_pins clk_wiz_0/locked] [get_bd_pins proc_sys_reset_0/dcm_locked]
   connect_bd_net -net d_1 [get_bd_ports d] [get_bd_pins camCap_0/d]
   connect_bd_net -net href_1 [get_bd_ports href] [get_bd_pins camCap_0/href]
   connect_bd_net -net out_enable [get_bd_pins ErosionDilationBin_3/out_enable]
   connect_bd_net -net pclk_1 [get_bd_ports pclk] [get_bd_pins camCap_0/pclk]
   connect_bd_net -net proc_sys_reset_0_interconnect_aresetn [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins proc_sys_reset_0/interconnect_aresetn]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins BoardInit_AXI_0/s00_axi_aresetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins BoardInit_AXI_0/s00_axi_aresetn] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
   connect_bd_net -net sel_1 [get_bd_pins DataSplit4_0/o1] [get_bd_pins Mux2_0/sel] [get_bd_pins Mux2_1/sel] [get_bd_pins Mux2_2/sel]
   connect_bd_net -net sel_2 [get_bd_pins DataSplit4_0/o0] [get_bd_pins Mux2_3/sel] [get_bd_pins Mux2_4/sel] [get_bd_pins Mux2_5/sel]
@@ -565,7 +564,6 @@ proc create_root_design { parentCell } {
 
   # Create address segments
   create_bd_addr_seg -range 0x10000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs BoardInit_AXI_0/S00_AXI/S00_AXI_reg] SEG_BoardInit_AXI_0_S00_AXI_reg
-  create_bd_addr_seg -range 0x10000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg
   
 
   # Restore current instance
