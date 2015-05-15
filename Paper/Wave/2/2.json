@@ -1,0 +1,10 @@
+
+{signal: [
+  {name: 'clk', wave: 'p.........'},
+  {name: 'in_enable', wave : '01........'},
+  {name: 'in_data', wave: 'x2345xxxxx', data: ['in_data1', 'in_data2', 'in_data3', 'in_data4']},
+  {name: 'out_ready', wave: '0....1....'},
+  {name: 'out_data', wave: 'xxxxx2....', data: ['out_data1']}
+],
+config: { hscale: 2 }
+}
