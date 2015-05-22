@@ -1,0 +1,18 @@
+
+
+{signal: [
+  {name: 'clk', wave: 'p.........'},
+  {name: 'in_enable', wave : '01........'},
+  {name: 'con_out', wave: '22222.....', data: ['0', '0', '1', '2', '3']},
+  {name: 'in_data', wave: 'x2222xxxxx', data: ['in_data1', 'in_data2', 'in_data3', 'in_data4']},
+  {name: 'buffer0', wave: 'xx2222xxxx', data: ['in_data1', 'in_data2', 'in_data3', 'in_data4']},
+  {name: 'buffer1', wave: 'xxx2222xxx', data: ['in_data1', 'in_data2', 'in_data3', 'in_data4']},
+  {name: 'buffer2', wave: 'xxxx2222xx', data: ['in_data1', 'in_data2', 'in_data3', 'in_data4']},
+  {name: 'buffer3', wave: 'xxxxx2222x', data: ['in_data1', 'in_data2', 'in_data3', 'in_data4']},
+  {name: 'ref_enable', wave : '0...1.....'},
+  {name: 'ref_data', wave: 'xxxx2222xx', data: ['ref_data1', 'ref_data2', 'ref_data3', 'ref_data4']},
+  {name: 'out_ready', wave: '0....1....'},
+  {name: 'out_data', wave: 'xxxxx2222x', data: ['buf2 > ref1', 'buf2 > ref2', 'buf3 > ref3', 'buf4 > ref4']}
+],
+config: { hscale: 2 }
+}
