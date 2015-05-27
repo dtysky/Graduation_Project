@@ -12,7 +12,7 @@
   {name: 'ref_enable', wave : '0...1.....'},
   {name: 'ref_data', wave: 'xxxx2222xx', data: ['ref_data1', 'ref_data2', 'ref_data3', 'ref_data4']},
   {name: 'out_ready', wave: '0....1....'},
-  {name: 'out_data', wave: 'xxxxx2222x', data: ['buf2 > ref1', 'buf2 > ref2', 'buf3 > ref3', 'buf4 > ref4']}
+  {name: 'out_data', wave: 'xxxxx2222x', data: ['buf2 > ref1', 'buf2 > ref2', 'buf2 > ref3', 'buf2 > ref4']}
 ],
 config: { hscale: 2 }
 }
