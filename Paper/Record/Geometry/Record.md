@@ -9,7 +9,7 @@ default
 ## Crop
 
 Top: 40  
-Bottom: 320  
+Bottom: 240  
 Left: 0  
 Right: 200  
 
