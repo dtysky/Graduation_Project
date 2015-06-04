@@ -1,0 +1,231 @@
+h1,h2,h3,h4,h5,h6,a,p{
+	font-family: "Microsoft YaHei" ! important;
+}
+
+html{
+
+}
+
+body{
+	margin: 0px;
+}
+
+a{
+	background: url(../image/jump.png) no-repeat right 0px;
+	padding-right:26px;
+}
+
+.return{
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.return a{
+	font-size: 12px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.return a:hover{
+	font-size: 13px;
+	color: #006688;
+}
+
+#page-top{
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+	font-size: 20px;
+}
+
+.step { 
+	width: 800px;
+	height: 600px;
+	margin: 0 auto 24px auto; 
+	text-align:center; 
+	background-color: rgba(0,0,0,0.5);
+}
+
+.no-support-message { 
+	display:none; 
+	width:800px; 
+	margin:0 auto 24px auto; 
+	text-align:center;
+}
+
+.impress-not-supported .no-support-message { 
+	display:block; 
+}
+
+/*first-page*/
+#first-blank{
+	width: 0px;
+	height: 0px;
+}
+
+#first-top{
+	margin-top: 100px;
+}
+
+#first-bottom{
+	margin-top: 50px;
+}
+
+#first-title{
+	margin: 0px;
+	font-size: 38px;
+}
+
+#first-desc{
+	margin: 0px;
+	font-size: 30px;
+}
+
+#first-hr{
+	width: 600px;
+	height: 2px;
+	background-color: black;
+	margin: 10px auto;
+}
+
+#first-authors{
+	font-size: 20px;
+}
+
+#first-link{
+	font-size: 20px;
+	text-align: center;
+}
+
+#first-link a{
+	line-height: 20px;
+	font-size: 20px;
+	color: #000000;
+	text-decoration: none;
+}
+
+#first-link a:hover{
+	color: #aaaaaa;
+}
+
+/*fpga-imaging-library*/
+
+#modules-blank{
+	width: 0px;
+	height: 0px;
+}
+
+.modules-img{
+	position: absolute;
+	margin-top: auto;
+	right: 20px;
+	width: 400px;
+	text-align: right;
+}
+
+.modules-img img{
+	max-height: 200px;
+}
+
+#fpga-imaging-library-title{
+	margin: 0px;
+	padding-top: 2%;
+	padding-left: 2%;
+	font-size: 48px;
+	font-weight: 500;
+}
+
+#fpga-imaging-library-desc-en{
+	width: 80%;
+	margin: 0px;
+	padding-left: 10%;
+	font-size: 24px;
+	
+}
+
+#fpga-imaging-library-desc-cn{
+	width: 80%;
+	margin: 0px;
+	padding-left: 10%;
+	font-size: 20px;
+}
+
+#fpga-imaging-library-src{
+	margin: 0px;
+	width: 80%;
+	padding-left: 10%;
+	font-weight: 500;
+}
+
+#fpga-imaging-library-src h2{
+	line-height: 30px;
+	font-size: 28px;
+}
+
+#fpga-imaging-library-src a{
+	line-height: 22px;
+	font-size: 20px;
+	text-decoration: none;
+	color: #000000;
+}
+
+#fpga-imaging-library-src a:hover{
+	font-size: 21px;
+	color: #006688;
+}
+
+/*gal2renpy*/
+
+#design-blank{
+	width: 0px;
+	height: 0px;
+}
+
+#gal2renpy-title{
+	margin: 0px;
+	padding-top: 2%;
+	padding-left: 2%;
+	font-size: 48px;
+	font-weight: 500;
+}
+
+#gal2renpy-desc-en{
+	width: 80%;
+	margin: 0px;
+	padding-left: 10%;
+	font-size: 24px;
+	
+}
+
+#gal2renpy-desc-cn{
+	width: 80%;
+	margin: 0px;
+	padding-left: 10%;
+	font-size: 20px;
+}
+
+#gal2renpy-src{
+	margin: 0px;
+	width: 80%;
+	padding-left: 10%;
+	font-weight: 500;
+}
+
+#gal2renpy-src h2{
+	line-height: 30px;
+	font-size: 28px;
+}
+
+#gal2renpy-src a{
+	line-height: 22px;
+	font-size: 20px;
+	text-decoration: none;
+	color: #000000;
+}
+
+#gal2renpy-src a:hover{
+	font-size: 21px;
+	color: #006688;
+}
