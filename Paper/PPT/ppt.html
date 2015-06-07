@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>dtyksy|Graduation-PPT</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<meta name="keywords" content="dtysky,project,software,开源,opensource" />
+	<meta name="description" content="This page is for recording my projects, some of them will be published here.这里是我的项目主页, 记录了一些发布的项目。" />
+	<meta name="author" content="dtysky" />
+	<link rel="shortcut icon" href="image/logo.ico" />
+	<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+	<div id="impress">
+		<div class="no-support-message">
+   			Your browser doesn't support impress.js.It can't phones.<br>
+   			你的浏览器不支持impress.js.请更换，它不支持手机。
+		</div>
+
+		<div id="first-page" class="step" data-x="0" data-y="150" data-scale="1.0">
+			<div id="first-top">
+				<h1 id="first-title">基于FPGA的机器视觉算法实现</h1>
+				<hr id="first-hr"/>
+				<p id="first-desc">FPGA-Imaging-Library</p>
+			</div>
+			<div id="first-bottom">
+				<p id="first-authors">作者：戴天宇 22011229，指导：王立辉，Xilinx</p>
+			</div>
+		</div>
+
+		<div id="first-blank" class="step" data-x="0" data-y="150" data-scale="1.6">
+		</div>
+
+		<div id="summary-page" class="step border-radius" data-x="0" data-y="-200" data-scale="0.6">
+			<h1 id="summary-0-title">简介</h1>
+			<div class="return"><a href="#/first-blank"><b>Return</b></a></div>
+		</div>
+		<div id="summary-1-page" class="step border-box" data-x="-300" data-y="-400" data-scale="0.3" data-rotate-z="-45">
+			<h1 class="summary-title">FPGA在机器视觉中的作用和特点</h1>
+			<div class="summary-desc">
+				<ul>
+					<li><P>图像预处理</P></li>
+					<li><p>高速，真并行</p></li>
+					<li><p>流水化</p></li>
+				</ul>
+			</div>
+		</div>
+		<div id="summary-2-page" class="step border-box" data-x="0" data-y="-600" data-scale="0.3">
+			<h1 class="summary-title">现有FPGA图像库</h1>
+			<div class="summary-desc">
+			<ul>
+				<li><p>原厂：闭源，只提供基础运算</p></li>
+				<li><p>其他：需要平台支持，并且支付费用，比如NI</p></li>
+			</ul>
+			</div>
+		</div>
+		<div id="summary-3-page" class="step border-box" data-x="300" data-y="-400" data-scale="0.3" data-rotate-z="45">
+			<h1 class="summary-title">项目实现</h1>
+			<div class="summary-desc">
+				<ul>
+					<li><p>开源的FPGA图像库</p></li>
+					<li><p>规范化的接口</p></li>
+					<li><p>提供软件仿真、功能仿真、板上测试</p></li>
+					<li><p>项目主页，完善的文档</p></li>
+					<li><p>针对开发者的开发接口</p></li>
+				</ul>
+			</div>
+			<div class="return"><a href="#/summary-page"><b>Return</b></a></div>
+		</div>
+
+
+		<div id="design-page" class="step border-radius" data-x="-450" data-y="450" data-scale="0.6">
+			<h1 id="design-0-title">设计与架构</h1>
+			<div class="return"><a href="#/first-blank"><b>Return</b></a></div>
+		</div>
+		<div id="design-1-page" class="step border-box" data-x="-720" data-y="300" data-scale="0.3" data-rotate-z="-60">
+			<h1 class="design-title">框架设计</h1>
+			<div class="design-desc">需要规范化和易用的接口协议，可以和软件协作</div>
+			<div class="design-img"><img src="image/show/main.png"></div>
+		</div>
+		<div id="design-2-page" class="step border-box" data-x="-750" data-y="600" data-scale="0.3" data-rotate-z="-120">
+			<h1 class="design-title">接口设计</h1>
+			<div class="design-desc">所有模块遵循相同的接口</div>
+			<div class="design-img"><img src="image/show/interface.png"></div>
+		</div>
+		<div id="design-3-page" class="step border-box" data-x="-450" data-y="750" data-scale="0.3" data-rotate-z="-180">
+			<h1 class="design-title">模式设计</h1>
+			<div class="design-img">
+				<img src="image/show/pipeline.png">
+				<div class="design-desc text-center">流水线模式</div>
+			</div>
+			<div class="design-img">
+				<img src="image/show/reqack.png">
+				<div class="design-desc text-center">请求响应模式</div>
+			</div>
+		</div>
+		<div id="design-4-page" class="step border-box" data-x="-450" data-y="950" data-scale="0.3" data-rotate-z="-180">
+			<h1 class="design-title">IP规范</h1>
+			<div class="design-desc">封装为Xilinx建议形式，明确的UI</div>
+			<div class="design-img"><img src="image/show/ip.png"></div>
+		</div>
+		<div id="design-6-page" class="step border-box" data-x="-920" data-y="700" data-scale="0.3" data-rotate-z="-120">
+			<h1 class="design-title">设计流程</h1>
+			<div class="design-desc">自定义测试图像+配置 -> 软件仿真 -> 功能仿真 -> 可信度分析 -> 板上测试</div>
+			<div class="design-img"><img src="image/show/design-flow.png"></div>
+		</div>
+		<div id="design-7-page" class="step border-box" data-x="-930" data-y="200" data-scale="0.3" data-rotate-z="-60">
+			<h1 class="design-title">面向开发者的开发接口规范</h1>
+			<div class="design-desc">
+				<div class="design-code">
+					def name_format(root, name, ex, conf): <br>
+					def transform(im, conf): <br>
+					def debug(im, conf): <br><br>
+					软件仿真规范
+				</div>
+				<div class="design-code">
+					def name_format(root, name, ex, conf): <br>
+					def conf_format(im, conf): <br>
+					def color_format(mode, color): <br>
+					def create_dat(im, conf): <br><br>
+					功能仿真数据生成规范
+				</div>
+				<div class="design-code">
+					interface TBInterface (input bit clk, input bit rst_n); <br>
+					task init_file(); <br>
+					task init_signal(); <br>
+					task work_pipeline(); <br>
+					task work_regack(); <br><br>
+					测试平台规范
+				</div>
+			</div>
+			<div class="return"><a href="#/design-page"><b>Return</b></a></div>
+		</div>
+
+
+		<div id="modules-page" class="step border-radius" data-x="450" data-y="450" data-scale="0.6">
+			<h1 id="modules-0-title">已实现模块及测试</h1>
+			<div class="return"><a href="#/first-blank"><b>Return</b></a></div>
+		</div>
+		<div id="modules-1-page" class="step border-box" data-x="750" data-y="300" data-scale="0.3" data-rotate-z="60">
+			<h1 id="modules-title">ZYNQ</h1>
+			<spac id="modules-desc">
+				<ul>
+					<li><p>SoC</p></li>
+					<li><p>双核ARM硬核</p></li>
+					<li><p>AXI总线</p></li>
+					<li><p>软件硬件协作</p></li>
+				</ul>
+			</span>
+			<span class="modules-img" style="position: absolute; right: 20px; bottom: 20px;">
+				<img src="image/show/axi.png"  style="max-width: 400px">
+			</span>
+		</div>
+		<div id="modules-2-page" class="step border-box" data-x="750" data-y="600" data-scale="0.3" data-rotate-z="120">
+			<h1 id="modules-title">测试框架</h1>
+			<div id="modules-desc">
+				OV7670 -> 帧缓存 -> 处理模块 -> MUX -> 帧缓存 ->VGA
+			</div>
+			<div class="modules-img">
+				<img src="image/show/test-flow.png">
+			</div>
+		</div>
+		<div id="modules-3-page" class="step border-box" data-x="450" data-y="750" data-scale="0.3" data-rotate-z="180">
+			<h1 id="modules-title">测试结果</h1>
+			<div id="modules-desc">
+				测试了点操作，局部滤波器，几何变换
+			</div>
+		</div>
+
+		<div id="modules-4-page" class="step border-box img-res-show" data-x="300" data-y="1050" data-scale="0.3">
+			<h1 id="modules-title">点操作</h1>
+			<span class="modules-img-sp">
+				<img src="image/point/0.jpg">
+				<p>原始图像</p>
+			</span>
+			<span class="modules-img-sp">
+				<img src="image/point/1.jpg">
+				<p>灰度化</p>
+			</span>
+		</div>
+		<div id="modules-5-page" class="step border-box img-res-show" data-x="300" data-y="1300" data-scale="0.3">
+			<h1 id="modules-title">点操作</h1>
+			<div class="modules-img-sp">
+				<img src="image/point/3.jpg">
+				<p>阈值化-等高线阈值化</p>
+			</div>
+			<div class="modules-img-sp">
+				<img src="image/point/4.jpg">
+				<p>对比度变换-增大</p>
+			</div>
+		</div>
+		<div id="modules-6-page" class="step border-box img-res-show" data-x="300" data-y="1550" data-scale="0.3">
+			<h1 id="modules-title">点操作</h1>
+			<div id="modules-desc"></div>
+			<div class="modules-img-sp">
+				<img src="image/point/6.jpg">
+				<p>亮度变换-增大</p>
+			</div>
+			<div class="modules-img-sp">
+				<img src="image/point/8.jpg">
+				<p>色彩反转</p>
+			</div>
+		</div>
+
+		<div id="modules-7-page" class="step border-box img-res-show" data-x="600" data-y="1050" data-scale="0.3">
+			<h1 id="modules-title">局部滤波器</h1>
+			<div class="modules-img-sp">
+				<img src="image/localfilter/1.jpg">
+				<p>原始图像</p>
+			</div>
+			<div class="modules-img-sp">
+				<img src="image/localfilter/2.jpg">
+				<p>均值滤波器</p>
+			</div>
+		</div>
+		<div id="modules-8-page" class="step border-box img-res-show" data-x="600" data-y="1300" data-scale="0.3">
+			<h1 id="modules-title">局部滤波器</h1>
+			<div id="modules-desc"></div>
+			<div class="modules-img-sp">
+				<img src="image/localfilter/3.jpg">
+				<p>中值滤波器</p>
+			</div>
+			<div class="modules-img-sp">
+				<img src="image/localfilter/4.jpg">
+				<p>最小值滤波器</p>
+			</div>
+		</div>
+		<div id="modules-9-page" class="step border-box img-res-show" data-x="600" data-y="1550" data-scale="0.3">
+			<h1 id="modules-title">局部滤波器</h1>
+			<div class="modules-img-sp">
+				<img src="image/localfilter/6.jpg">
+				<p>局部阈值化-前置均值滤波</p>
+			</div>
+			<div class="modules-img-sp">
+				<img src="image/localfilter/7.jpg">
+				<p>局部阈值化-前置中值滤波</p>
+			</div>
+		</div>
+		<div id="modules-10-page" class="step border-box img-res-show" data-x="600" data-y="1800" data-scale="0.3">
+			<h1 id="modules-title">腐蚀膨胀</h1>
+			<div class="modules-img-sp">
+				<img src="image/localfilter/6.jpg">
+				<p>膨胀</p>
+			</div>
+			<div class="modules-img-sp">
+				<img src="image/localfilter/7.jpg">
+				<p>腐蚀</p>
+			</div>
+		</div>
+
+		<div id="modules-11-page" class="step border-box img-res-show" data-x="900" data-y="1050" data-scale="0.3">
+			<h1 id="modules-title">几何变换</h1>
+			<div class="modules-img-sp">
+				<img src="image/geometry/1.jpg">
+				<p>原始图像</p>
+			</div>
+			<div class="modules-img-sp">
+				<img src="image/geometry/2.jpg">
+				<p>裁剪</p>
+			</div>
+		</div>
+		<div id="modules-12-page" class="step border-box img-res-show" data-x="900" data-y="1300" data-scale="0.3">
+			<h1 id="modules-title">几何变换</h1>
+			<div class="modules-img-sp">
+				<img src="image/geometry/5.jpg">
+				<p>镜像</p>
+			</div>
+			<div class="modules-img-sp">
+				<img src="image/geometry/7.jpg">
+				<p>平移</p>
+			</div>
+		</div>
+		<div id="modules-13-page" class="step border-box img-res-show" data-x="900" data-y="1550" data-scale="0.3">
+			<h1 id="modules-title">几何变换</h1>
+			<div class="modules-img-sp">
+				<img src="image/geometry/8.jpg">
+				<p>缩放</p>
+			</div>
+			<div class="modules-img-sp">
+				<img src="image/geometry/10.jpg">
+				<p>错切</p>
+			</div>
+		</div>
+		<div id="modules-14-page" class="step border-box img-res-show" data-x="900" data-y="1800" data-scale="0.3">
+			<h1 id="modules-title">几何变换</h1>
+			<div class="modules-img-sp">
+				<img src="image/geometry/12.jpg">
+				<p>旋转</p>
+			</div>
+			<div class="modules-img-sp">
+				<img src="image/geometry/13.jpg">
+				<p>旋转</p>
+			</div>
+			<div class="return"><a href="#/modules-page"><b>Return</b></a></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="impress.js"></script>
+	<script>impress().init();</script>
+
+</body>
+</html>

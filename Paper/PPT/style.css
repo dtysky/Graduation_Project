@@ -3,16 +3,30 @@ h1,h2,h3,h4,h5,h6,a,p{
 }
 
 html{
-
+	background-image: url(image/web/bg.png);
 }
 
 body{
 	margin: 0px;
 }
 
-a{
-	background: url(../image/jump.png) no-repeat right 0px;
-	padding-right:26px;
+.step { 
+	margin: 0 auto 24px auto; 
+	text-align:center;
+	color: white; 
+}
+
+.border-box{
+	border-style: none;
+	background-color: rgba(150,150,150,0.7);
+}
+
+.border-radius{
+	width: 600px;
+	height: 600px;
+	border-style: none;
+	border-radius: 500px;
+	color: white;
 }
 
 .return{
@@ -23,14 +37,39 @@ a{
 }
 
 .return a{
-	font-size: 12px;
+	font-size: 16px;
 	text-decoration: none;
-	color: #000000;
+	color: white;
 }
 
 .return a:hover{
-	font-size: 13px;
-	color: #006688;
+	font-size: 17px;
+}
+
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+.no-support-message { 
+	display:none; 
+	width:800px; 
+	height: 600px;
+	margin:0 auto 24px auto; 
+	text-align:center;
+}
+
+.impress-not-supported .no-support-message { 
+	display:block; 
 }
 
 #page-top{
@@ -40,33 +79,20 @@ a{
 	font-size: 20px;
 }
 
-.step { 
-	width: 800px;
-	height: 600px;
-	margin: 0 auto 24px auto; 
-	text-align:center; 
-	background-color: rgba(0,0,0,0.5);
-}
-
-.no-support-message { 
-	display:none; 
-	width:800px; 
-	margin:0 auto 24px auto; 
-	text-align:center;
-}
-
-.impress-not-supported .no-support-message { 
-	display:block; 
-}
-
 /*first-page*/
+#first-page{
+	width: 800px;
+	height: 300px;
+}
+
 #first-blank{
 	width: 0px;
 	height: 0px;
+	border: none;
 }
 
 #first-top{
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 #first-bottom{
@@ -80,13 +106,13 @@ a{
 
 #first-desc{
 	margin: 0px;
-	font-size: 30px;
+	font-size: 28px;
 }
 
 #first-hr{
 	width: 600px;
 	height: 2px;
-	background-color: black;
+	background-color: white;
 	margin: 10px auto;
 }
 
@@ -110,122 +136,215 @@ a{
 	color: #aaaaaa;
 }
 
-/*fpga-imaging-library*/
+/*summary*/
 
-#modules-blank{
-	width: 0px;
-	height: 0px;
+#summary-page{
+	background-color: rgba(200,0,0,0.5);
+}
+
+#summary-page:hover{
+	background-color: rgba(200,0,0,0.8);
+}
+
+#summary-0-title{
+	margin: 0px;
+	margin-top: 240px;
+	font-size: 80px;
+}
+
+#summary-1-page{
+	width: 600px;
+	height: 300px;
+}
+
+#summary-2-page{
+	width: 600px;
+	height: 300px;
+}
+
+#summary-3-page{
+	width: 600px;
+	height: 500px;
+}
+
+.summary-title{
+	text-align: left;
+	margin: 0px;
+	padding: 20px;
+	font-size: 36px;
+	color: rgb(200,0,0);
+}
+
+.summary-desc{
+	text-align: left;
+	margin: 0px;
+	margin-top: 20px;
+	font-size: 24px;
+}
+
+/*design*/
+
+#design-page{
+	background-color: rgba(0,200,0,0.5);
+}
+
+#design-page:hover{
+	background-color: rgba(0,200,0,0.8);
+}
+
+#design-0-title{
+	font-size: 60px;
+	margin-top: 240px;
+}
+
+#design-1-page{
+	width: 640px;
+	height: 400px;
+}
+
+#design-2-page{
+	width: 640px;
+	height: 450px;
+}
+
+#design-3-page{
+	width: 640px;
+	height: 400px;
+}
+
+#design-4-page{
+	width: 580px;
+	height: 450px;
+}
+
+#design-5-page{
+	width: 580px;
+	height: 450px;
+}
+
+#design-6-page{
+	width: 640px;
+	height: 480px;
+}
+
+#design-7-page{
+	width: 640px;
+	height: 600px;
+}
+
+.design-title{
+	text-align: left;
+	margin: 0px;
+	padding-top: 20px;
+	padding-left: 20px;
+	font-size: 32px;
+	color: rgb(0,200,0);
+}
+
+.design-desc{
+	text-align: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+.design-img{
+	text-align: left;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.design-img img{
+	max-height: 300px;
+	max-width: 600px;
+}
+
+.design-code{
+	text-align: left;
+	margin-top: 10px;
+	margin-right: 20px;
+	padding: 10px;
+	font-size: 18px;
+	background-color: rgba(50,50,50,0.5);
+}
+
+
+/*modules*/
+
+#modules-page{
+	background-color: rgba(0,0,200,0.5);
+}
+
+#modules-page:hover{
+	background-color: rgba(0,0,200,0.8);
+}
+
+#modules-0-title{
+	font-size: 60px;
+	margin-top: 240px;
+}
+
+#modules-1-page{
+	width: 640px;
+	height: 300px;
+}
+
+#modules-2-page{
+	width: 600px;
+	height: 450px;
+}
+
+#modules-3-page{
+	width: 500px;
+	height: 200px;
+}
+
+.img-res-show{
+	width: 800px;
+	height: 400px;
+}
+
+#modules-title{
+	text-align: left;
+	margin: 0px;
+	padding-top: 20px;
+	padding-left: 20px;
+	font-size: 32px;
+	color: rgb(0,0,200);
+}
+
+#modules-desc{
+	text-align: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: 20px;
 }
 
 .modules-img{
-	position: absolute;
-	margin-top: auto;
-	right: 20px;
-	width: 400px;
-	text-align: right;
+	text-align: left;
+	margin-left: 20px;
+	margin-top: 20px;
 }
 
 .modules-img img{
-	max-height: 200px;
+	max-width: 600px;
+	max-height: 300px;
 }
 
-#fpga-imaging-library-title{
-	margin: 0px;
-	padding-top: 2%;
-	padding-left: 2%;
-	font-size: 48px;
-	font-weight: 500;
+.modules-img-sp{
+	float: left;
+	text-align: center;
+	width: 350px;
+	height: 300px;
+	margin-left: 20px;
+	margin-top: 50px;
 }
 
-#fpga-imaging-library-desc-en{
-	width: 80%;
-	margin: 0px;
-	padding-left: 10%;
-	font-size: 24px;
-	
+.modules-img-sp img{
+	max-width: 350px;
+	max-height: 400px;
 }
 
-#fpga-imaging-library-desc-cn{
-	width: 80%;
-	margin: 0px;
-	padding-left: 10%;
-	font-size: 20px;
-}
-
-#fpga-imaging-library-src{
-	margin: 0px;
-	width: 80%;
-	padding-left: 10%;
-	font-weight: 500;
-}
-
-#fpga-imaging-library-src h2{
-	line-height: 30px;
-	font-size: 28px;
-}
-
-#fpga-imaging-library-src a{
-	line-height: 22px;
-	font-size: 20px;
-	text-decoration: none;
-	color: #000000;
-}
-
-#fpga-imaging-library-src a:hover{
-	font-size: 21px;
-	color: #006688;
-}
-
-/*gal2renpy*/
-
-#design-blank{
-	width: 0px;
-	height: 0px;
-}
-
-#gal2renpy-title{
-	margin: 0px;
-	padding-top: 2%;
-	padding-left: 2%;
-	font-size: 48px;
-	font-weight: 500;
-}
-
-#gal2renpy-desc-en{
-	width: 80%;
-	margin: 0px;
-	padding-left: 10%;
-	font-size: 24px;
-	
-}
-
-#gal2renpy-desc-cn{
-	width: 80%;
-	margin: 0px;
-	padding-left: 10%;
-	font-size: 20px;
-}
-
-#gal2renpy-src{
-	margin: 0px;
-	width: 80%;
-	padding-left: 10%;
-	font-weight: 500;
-}
-
-#gal2renpy-src h2{
-	line-height: 30px;
-	font-size: 28px;
-}
-
-#gal2renpy-src a{
-	line-height: 22px;
-	font-size: 20px;
-	text-decoration: none;
-	color: #000000;
-}
-
-#gal2renpy-src a:hover{
-	font-size: 21px;
-	color: #006688;
+.text-center{
+	text-align: center;
 }
