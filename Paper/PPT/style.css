@@ -107,6 +107,8 @@ body{
 #first-desc{
 	margin: 0px;
 	font-size: 28px;
+	text-decoration: none;
+	color: white;
 }
 
 #first-hr{
